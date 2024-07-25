@@ -3,7 +3,7 @@ import Logo from '../imagens/Logo.png'
 import { Link } from 'react-router-dom';
 const Header = () => {
   return (
-    <header className="  bg-white text-black h-[81px]">
+    <header className="  bg-white text-black h-[80px]">
       <div className="  flex justify-between container mx-auto py-4">
         {/* Logo */}
         <a href="/">

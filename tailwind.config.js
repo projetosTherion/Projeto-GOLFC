@@ -7,6 +7,7 @@ module.exports = {
       colors:{
         'Azul-Gol':'#0A1835',
         'Azul-GolClaro':'#1A3469',
+        'Verde-Gol':'#44D62D'
       }
     },
   },
