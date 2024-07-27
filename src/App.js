@@ -3,7 +3,7 @@ import React from 'react';
 import Home from './paginas/homeInstitucional';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Login from './components/Login';
+import Login from './paginas/Login';
 
 const App = () => {
   return (

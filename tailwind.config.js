@@ -4,11 +4,30 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors:{
-        'Azul-Gol':'#0A1835',
-        'Azul-GolClaro':'#1A3469',
-        'Verde-Gol':'#44D62D'
-      }
+      backgroundImage: {
+        'Estadio': "url('../src/imagens/soccer-stadium-full-people 1.jpg')",
+        // Adicione quantas imagens de fundo desejar
+      },
+      fontSize: {
+        sm: '0.8rem',
+        base: '1rem',
+        xl: '1.25rem',
+        '2xl': '2.000rem',
+        '3xl': '1.953rem',
+        '4xl': '2.441rem',
+        '5xl': '3.052rem',
+        'Tamanho24': '1.500rem',
+        responsive: ['clamp(15px, 2vw, 21px)'],
+        'customResponsive': ['clamp(15px, 2vw, 21px)'],
+      },fontFamily: {
+       Carbona: ["Carbona-Test", "sans-serif"],
+       tuskerGrotesk: ["tuskerGrotesk", "sans-serif"],
+      },
+      colors: {
+        'Azul-Gol': '#0A1835',
+        'Azul-GolClaro': '#1A3469',
+        'Verde-Gol': '#44D62D',
+      },
     },
   },
   plugins: [],

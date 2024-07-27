@@ -4,3 +4,11 @@
 
 
 
+@font-face {
+    font-family: "Carbona";
+    src: url("../public/fonts/Carbona Test/CarbonaTest-Medium.otf");
+font-family: "tuskerGrotesk";
+    src: url("../public/fonts/Tusker.Grotesk/TuskerGrotesk-6500Medium.ttf") format("ttf");
+  }
+  
+ 

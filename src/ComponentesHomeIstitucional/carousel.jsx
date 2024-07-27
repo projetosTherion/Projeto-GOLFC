@@ -1,8 +1,5 @@
 import { useState } from "react";
-import {
-  BsFillArrowRightCircleFill,
-  BsFillArrowLeftCircleFill,
-} from "react-icons/bs";
+
 
 export default function Carousel({ slides }) {
   let [current, setCurrent] = useState(0);
@@ -18,9 +15,9 @@ export default function Carousel({ slides }) {
   };
 
   return (
-    <div className="overflow-hidden relative">
+    <div className="overflow-hidden  relative">
       <div
-        className={`flex transition ease-out duration-40`}
+        className={`flex  transition ease-out h-15 duration-40`}
         style={{
           transform: `translateX(-${current * 100}%)`,
         }}
@@ -32,7 +29,7 @@ export default function Carousel({ slides }) {
 
       
 
-      <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
+      <div className="absolute bottom-0 py-4 flex shrink justify-center gap-3 w-full">
         {slides.map((s, i) => {
           return (
             <div
@@ -40,8 +37,8 @@ export default function Carousel({ slides }) {
                 setCurrent(i);
               }}
               key={"circle" + i}
-              className={`rounded-full w-5 h-5 border-2 border-Verde-Gol cursor-pointer  ${
-                i == current ? " bg-black" : "bg-gray-500"
+              className={`rounded-full - w-5 h-5 border-1  cursor-pointer  ${
+                i === current ? " bg-white" : "bg-gray-300"
               }`}
             ></div>
           );
