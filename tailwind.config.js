@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'Estadio': "url('../src/imagens/soccer-stadium-full-people 1.jpg')",
+        'FundoComFita': "url('../src/imagens/Component 3 (1).png')",
+      
         // Adicione quantas imagens de fundo desejar
       },
       fontSize: {
@@ -16,12 +18,15 @@ module.exports = {
         '3xl': '1.953rem',
         '4xl': '2.441rem',
         '5xl': '3.052rem',
-        'Tamanho24': '1.500rem',
+        'Tamanho24': '1.700rem',
         responsive: ['clamp(15px, 2vw, 21px)'],
         'customResponsive': ['clamp(15px, 2vw, 21px)'],
+        
       },fontFamily: {
        Carbona: ["Carbona-Test", "sans-serif"],
+       CarbonaBlack: ["CarbonaBlackSlanted", "sans-serif"],
        tuskerGrotesk: ["tuskerGrotesk", "sans-serif"],
+       NorthZone: ["NorthZone", "sans-serif"],
       },
       colors: {
         'Azul-Gol': '#0A1835',

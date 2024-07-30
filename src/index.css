@@ -5,10 +5,30 @@
 
 
 @font-face {
+    font-family: "tuskerGrotesk";
+    src: url("../public/fonts/Tusker.Grotesk/TuskerGrotesk-6500Medium.ttf") format("truetype");
+    
+
+
+  }
+  @font-face {
+    
     font-family: "Carbona";
-    src: url("../public/fonts/Carbona Test/CarbonaTest-Medium.otf");
-font-family: "tuskerGrotesk";
-    src: url("../public/fonts/Tusker.Grotesk/TuskerGrotesk-6500Medium.ttf") format("ttf");
+    src: url("../public/fonts/Carbona Test/CarbonaTest-Medium.otf")format("opentype");
+    
   }
   
  
+  @font-face {
+    
+    font-family: "NorthZone";
+    src: url("../public/fonts/Carbona Test/North-Zone.otf") format("opentype");
+
+
+  }
+  @font-face {
+    
+    font-family: "CarbonaBlack";
+    src: url("../public/fonts/CarbonaTest-BlackSlanted.otf") format("opentype");
+
+  }

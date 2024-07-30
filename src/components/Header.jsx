@@ -3,13 +3,13 @@ import Logo from '../imagens/Logo.png'
 import { Link } from 'react-router-dom';
 const Header = () => {
   return (
-    <header className="  bg-white text-black h-[80px]">
+    <header className="  relative w-[98vw] bg-opacity-90 z-20 bg-white text-black h-[90px]">
       <div className="  flex justify-between container mx-auto py-4">
         {/* Logo */}
         <a href="/">
-        <div className='bg-Azul-Gol absolute top-0 left-0 p-4 w-28 '> 
+        <div className='bg-Azul-Gol absolute top-0 left-0 p-4 h-[11vh] w-[16vw]  md:w-[7vw] '> 
             
-            <img src={Logo} alt="Logo GOL" className='  w-19 h-12  '  />
+            <img src={Logo} alt="Logo GOL" className='   '  />
         
         </div>
          
