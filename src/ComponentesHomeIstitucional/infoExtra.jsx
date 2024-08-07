@@ -36,7 +36,7 @@ const infoExtra = () => {
       <div classname='flex '>
         
         {Object.values(texts).map((item, index) => (
-          <div key={index} className=' border flex  flex-col mt-14 bg-Azul-Gol  ml-[18%] w-[100%] h-[17%]  border-Verde-Gol rounded-md '>
+          <div key={index} className=' border flex  flex-col mt-14 bg-Azul-Gol  ml-[18%] w-[90%] h-[17%]  border-Verde-Gol rounded-md '>
             <div className='flex justify-start font-tuskerGrotesk text-Verde-Gol text-4xl  '>
             <img src={item.img} className='mt-2 h-[98%] mx-2' alt='verificado'/>
               <div>{item.title}</div>
