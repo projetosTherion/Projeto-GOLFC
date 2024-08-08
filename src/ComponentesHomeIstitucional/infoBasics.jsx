@@ -31,8 +31,8 @@ const InfoBasics = () => {
   return (
     <div  className=''>
       <div className='font-tuskerGrotesk text-blue-950 text-4xl mt-9 text-center mr-[40%]'>
-        O MOMENTO <span className='text-Verde-Gol'>MÁGICO</span> DO FUTEBOL <br />
-        TRANSFORMADO EM <span className='text-Verde-Gol'>MEMÓRIAS!</span>
+        O MOMENTO <span className='text-Verde-Gol font-NorthZone'>MÁGICO</span> DO FUTEBOL <br />
+        TRANSFORMADO EM <span className='text-Verde-Gol font-NorthZone'>MEMÓRIAS!</span>
         <br />
       </div>
       <div className='flex relative '>
@@ -65,6 +65,9 @@ const InfoBasics = () => {
        
        </div>
       <img src={plaquinha} className='mt-[1vw]'/>
+        </div>
+        <div>
+       
         </div>
     </div>
   );

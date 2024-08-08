@@ -1,8 +1,8 @@
 import React from 'react';
-import qrCode from '../imagens/Frame (1).png';
+
 import LogoRedonda from '../imagens/logoRedonda.png';
 import pc from '../imagens/Component 4.png';
-import verificado from '../imagens/Frame.png';
+import { Link } from 'react-router-dom';
 
 const infoExtra = () => {
   const texts = {
@@ -29,19 +29,20 @@ const infoExtra = () => {
   };
 
   return (
-    <div  className='bg-FundoComFita'>
+    <div>
+    <div  className='bg-FundoComFita bg-cover'>
     
       <div className='flex '>
            <img src={pc} className='w-[30%] h-[30%] mt-48 mx-10'  />
       <div classname='flex '>
         
         {Object.values(texts).map((item, index) => (
-          <div key={index} className=' border flex  flex-col mt-14 bg-Azul-Gol  ml-[18%] w-[90%] h-[17%]  border-Verde-Gol rounded-md '>
+          <div key={index} className=' border flex  flex-col mt-14 bg-Azul-Gol  ml-[15%] w-[96%] h-[20%]  border-Verde-Gol rounded-md '>
             <div className='flex justify-start font-tuskerGrotesk text-Verde-Gol text-4xl  '>
-            <img src={item.img} className='mt-2 h-[98%] mx-2' alt='verificado'/>
+            <img src={item.img} className='mt-2 text-2xl h-[98%] mx-2' alt='verificado'/>
               <div>{item.title}</div>
             </div>
-            <div className='flex justify-start font-Carbona mt-2 mx-3 text-white  text-xl  '>
+            <div className='flex justify-start font-Carbona mt-2  mx-3 text-white  text-xl  '>
              
             {item.content}
              
@@ -53,11 +54,17 @@ const infoExtra = () => {
       </div >
       
  
-       
+    
      
        </div >
       
     </div>
+      <Link to={"/Login"}>
+        <button className="bg-Azul-Gol hover:bg-Azul-GolClaro -mt-2 text-white font-bold py-2 px-4 rounded-md mx-auto">
+          Login
+        </button>
+        </Link>
+        </div>
   );
 };
 
