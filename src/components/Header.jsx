@@ -7,7 +7,7 @@ const Header = () => {
       <div className="  flex justify-between container mx-auto py-4">
         {/* Logo */}
         <a href="/">
-        <div className='bg-Azul-Gol absolute top-0 left-0 p-4 h-[11vh] w-[16vw]  md:w-[7vw] '> 
+        <div className='bg-Azul-Gol absolute top-0  flex justify-center left-0 h-[100%] w-[10%]'> 
             
             <img src={Logo} alt="Logo GOL" className='   '  />
         

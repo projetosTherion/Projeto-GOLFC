@@ -32,7 +32,7 @@ export default function Carousel({ slides }) {
 
       
 
-      <div className="absolute bottom-0 py-4 flex shrink justify-center gap-3 w-full">
+      <div className="absolute bottom-6 py-4 flex shrink justify-center gap-3 w-full">
         {slides.map((s, i) => {
           return (
             <div

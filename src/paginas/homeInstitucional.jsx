@@ -15,9 +15,11 @@ const homeInstitucional = () => {
   
  <div className='  '>
     <Header/>
-  <div className="">
-      <img src={Frame2}/>
+ 
+  <div className="w-[100%] m-auto">
+      <Carousel slides={slides} />
     </div>
+   
 
     <div>
       <LinhaLogo/> 
