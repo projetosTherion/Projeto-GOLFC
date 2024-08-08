@@ -7,7 +7,7 @@ module.exports = {
       backgroundImage: {
         'Estadio': "url('../src/imagens/soccer-stadium-full-people 1.jpg')",
         'FundoComFita': "url('../src/imagens/Component 3 (1).png')",
-      
+        'Login': "url('../src/imagens/Tela de Login.png')",
         // Adicione quantas imagens de fundo desejar
       },
       fontSize: {
@@ -32,6 +32,7 @@ module.exports = {
         'Azul-Gol': '#0A1835',
         'Azul-GolClaro': '#1A3469',
         'Verde-Gol': '#44D62D',
+        'verde-gol-escuro':'#247018',
       },
     },
   },

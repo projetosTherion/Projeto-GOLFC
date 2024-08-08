@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LogoRedonda from '../imagens/logoRedonda.png';
-import pc from '../imagens/Component 4.png';
+import pc from '../imagens/Component 4 (1).png';
 import { Link } from 'react-router-dom';
 
 const infoExtra = () => {
@@ -29,15 +29,15 @@ const infoExtra = () => {
   };
 
   return (
-    <div>
+  
     <div  className='bg-FundoComFita bg-cover'>
     
       <div className='flex '>
-           <img src={pc} className='w-[30%] h-[30%] mt-48 mx-10'  />
+           <img src={pc} className='w-[35%] h-[35%] mt-48 '  />
       <div classname='flex '>
         
         {Object.values(texts).map((item, index) => (
-          <div key={index} className=' border flex  flex-col mt-14 bg-Azul-Gol  ml-[15%] w-[96%] h-[20%]  border-Verde-Gol rounded-md '>
+          <div key={index} className=' border flex  flex-col mt-14 bg-Azul-Gol  ml-[15%] w-[96%] h-[20%]  border-Verde-Gol rounded-xl'>
             <div className='flex justify-start font-tuskerGrotesk text-Verde-Gol text-4xl  '>
             <img src={item.img} className='mt-2 text-2xl h-[98%] mx-2' alt='verificado'/>
               <div>{item.title}</div>
@@ -50,20 +50,20 @@ const infoExtra = () => {
             
           </div>
         ))}
-       
+
+       <Link to={"/Login"}>
+        <button className="bg-gradient-to-b from-Verde-Gol to-verde-gol-escuro font-Carbona p-1 text-white mt-[3%] ml-[48%] justify-end w-[30%] rounded-md">
+         REGISTRE-SE
+        </button>
+        </Link>
       </div >
       
  
     
      
-       </div >
-      
+       
     </div>
-      <Link to={"/Login"}>
-        <button className="bg-Azul-Gol hover:bg-Azul-GolClaro -mt-2 text-white font-bold py-2 px-4 rounded-md mx-auto">
-          Login
-        </button>
-        </Link>
+     
         </div>
   );
 };
