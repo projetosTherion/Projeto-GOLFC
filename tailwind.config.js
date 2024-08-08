@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'Estadio': "url('../src/imagens/soccer-stadium-full-people 1.jpg')",
+        'Login': "url('../src/imagens/login.jpg')",
         // Adicione quantas imagens de fundo desejar
       },
       fontSize: {
