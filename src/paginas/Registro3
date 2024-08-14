@@ -1,0 +1,33 @@
+import React from 'react';
+import Logo from '../imagens/logo 21 3.png'
+import './App.css'; // Inclua aqui a importação das fontes
+
+const Form = () => {
+  const nextStep = () => {
+    alert("Próximo passo!");
+  };
+
+  return (
+    <div className="flex justify-center items-center h-screen bg-[#0A1A33] relative">
+      <img src={Logo} alt="Imagem de Fundo" className="absolute bottom-0 left-0 w-24 h-auto" />
+      <div className="bg-[#12264F] p-6 rounded-lg shadow-lg text-white w-72 relative">
+        <div className="flex justify-center mb-5">
+          <div className="w-2.5 h-2.5 rounded-full bg-white mx-1.5"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-[#32CD32] mx-1.5"></div>
+          <div className="w-2.5 h-2.5 rounded-full bg-white mx-1.5"></div>
+        </div>
+        <h2 className="text-center mb-3 text-lg">Qual o time do seu coração:</h2>
+        <div className="mb-4">
+          <label htmlFor="country" className="block mb-1 text-sm">Selecionar:</label>
+          <input type="text" id="country" placeholder="Encontre o time do seu coração!" className="w-full p-2.5 rounded-lg bg-[#1A2F5D] border-none text-sm text-white" />
+        </div>
+        <button onClick={nextStep} className="absolute right-5 bottom-5 flex items-center px-4 py-2 bg-[#32CD32] text-white rounded-lg text-sm hover:bg-[#44D62D]">
+          Próximo <span className="ml-1">→</span>
+        </button>
+        <div className="absolute bottom-0 left-0 w-full h-2.5 bg-gradient-to-r from-[#44D62D] to-[#3C2091] rounded-b-lg"></div>
+      </div>
+    </div>
+  );
+};
+
+export default Form;
