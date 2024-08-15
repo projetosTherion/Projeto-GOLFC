@@ -55,7 +55,7 @@ const Registro = () => {
 
 
 
-    <p className=" font-Carbona text-xl text-center text-white mt-4 mb-2">Endereço</p> 
+    <p className=" font-Carbona text-xl text-center text-white mt-4 mb-2">Crie sua conta</p> 
    {Object.values(texts).map((item, index) => (
        
         <div key={index}>
