@@ -57,7 +57,7 @@ const InfoBasics = () => {
        
      
        </div >
-       <div className="flex  ml-[15%]  mr-[22%] bg-gray-300 rounded-md w-fit h-fit ">
+       <div className="flex  ml-[10%] mt-[15%] mr-[22%] bg-gray-300 rounded-lg w-[80%] h-fit ">
        <img src={qrCode} className='w-[50%] h-[50%] mt-[3vw]'/>
        <div className='flex flex-col mx-[3%]'> 
         <span className='text-Azul-Gol mt-5 font-tuskerGrotesk text-Tamanho24'>O Processo Exclusivo do golfc</span>

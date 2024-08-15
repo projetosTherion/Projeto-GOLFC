@@ -30,16 +30,16 @@ const infoExtra = () => {
 
   return (
   
-    <div  className='bg-FundoComFita bg-cover'>
+    <div  className='bg-FundoComFita mt-[10%]  bg-cover'>
     
       <div className='flex '>
-           <img src={pc} className='w-[35%] h-[35%] mt-48 '  />
+           <img src={pc} className='w-[50%] h-[40%]  '  />
       <div classname='flex '>
         
         {Object.values(texts).map((item, index) => (
-          <div key={index} className=' border flex  flex-col mt-14 bg-Azul-Gol  ml-[15%] w-[96%] h-[20%]  border-Verde-Gol rounded-xl'>
-            <div className='flex justify-start font-tuskerGrotesk text-Verde-Gol text-4xl  '>
-            <img src={item.img} className='mt-2 text-2xl h-[98%] mx-2' alt='verificado'/>
+          <div key={index} className=' border flex  flex-col mt-[2%] bg-gradient-to-b from-Azul-GolClaro-50 via-Azul-GolClaro to-Azul-Gol   w-[96%] h-[17%]  border-Verde-Gol rounded-xl'>
+            <div className='flex justify-start font-tuskerGrotesk text-Verde-Gol text-2xl  '>
+            <img src={item.img} className='mt-2 text-xl h-[98%] mx-2' alt='verificado'/>
               <div>{item.title}</div>
             </div>
             <div className='flex justify-start font-Carbona mt-2  mx-3 text-white  text-xl  '>
@@ -52,7 +52,7 @@ const infoExtra = () => {
         ))}
 
        <Link to={"/Login"}>
-        <button className="bg-gradient-to-b from-Verde-Gol to-verde-gol-escuro font-Carbona p-1 text-white mt-[3%] ml-[48%] justify-end w-[30%] rounded-md">
+        <button className="bg-gradient-to-b from-Verde-Gol to-verde-gol-escuro font-Carbona p-1 text-white mt-[3%] ml-[32%] justify-end w-[30%] rounded-md">
          REGISTRE-SE
         </button>
         </Link>
