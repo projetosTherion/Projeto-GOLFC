@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "tuskerGrotesk";
+  src: url("../fonts/Tusker.Grotesk/TuskerGrotesk-6500Medium.ttf") format("truetype");
+  
+
+
+}
+@font-face {
+  
+  font-family: "Carbona";
+  src: url("../fonts/Carbona Test/CarbonaTest-Medium.otf")format("opentype");
+  
+}
+
+
+@font-face {
+  
+  font-family: "NorthZone";
+  src: url("../fonts/Carbona Test/North-Zone.otf") format("opentype");
+
+
+}
+@font-face {
+  
+  font-family: "CarbonaBlack";
+  src: url("../fonts/CarbonaTest-BlackSlanted.otf") format("opentype");
+
+}
