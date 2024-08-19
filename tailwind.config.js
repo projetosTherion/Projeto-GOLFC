@@ -9,6 +9,7 @@ module.exports = {
         'FundoComFita': "url('../src/imagens/Component 3 (1).png')",
         'Login': "url('../src/imagens/Tela de Login.png')",
         'Registro':"url('../src/imagens/Tela de Registro 1.jpg')",
+        'Senha': "url('../src/imagens/FundoSenha.png')",
         // Adicione quantas imagens de fundo desejar
       },
       fontSize: {

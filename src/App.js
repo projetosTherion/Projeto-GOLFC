@@ -7,6 +7,8 @@ import Login from './paginas/Login';
 import Registro from './paginas/registro/registro';
 import Registro2 from './paginas/registro/registro2';
 import Registro3 from './paginas/registro/registro3';
+import Senha from './paginas/Senha';
+
 const App = () => {
   return (
    
@@ -17,6 +19,7 @@ const App = () => {
       <Route path='/Registro' element={<Registro/>}/>
       <Route path='/Registro2' element={<Registro2/>}/>
       <Route path='/Registro3' element={<Registro3/>}/>
+      <Route path='/Senha' element={<Senha/>} />
     </Routes>
       
      

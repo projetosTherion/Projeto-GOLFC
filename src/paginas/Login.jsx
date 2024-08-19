@@ -88,12 +88,14 @@ const Login = () => {
           Entrar
         </button>
 
-        <a
-          href="/esqueci-senha"
-          className="text-white text-base mb-4 text-center w-full hover:underline"
-        >
-          Esqueceu sua senha?
-        </a>  
+        <Link to={"/Senha"}>
+          <button
+            
+            className="text-white text-base mb-4 bg-transparent border border-transparent rounded-md px-4 py-2 flex items-center justify-center hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            Esqueceu sua senha?
+          </button>
+        </Link>
        
          <div className='text-Verde-Gol text-base mb-4 text-center w-full '>
         <Link to={"/Registro"}>
