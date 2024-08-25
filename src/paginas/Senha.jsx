@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Senha() {
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen bg-Senha">
+    <div className="relative flex flex-col items-center justify-center h-screen bg-Registro">
       
       {/* Botão no canto superior esquerdo com margem ajustada */}
       <Link
@@ -17,7 +17,7 @@ function Senha() {
       {/* Contêiner para ajustar a posição do conteúdo */}
       <div className="flex flex-col items-center justify-center transform -translate-y-30">
         
-        <h1 className="text-4xl font-bold text-white mb-8">
+        <h1 className="text-4xl font-Carbona text-white mb-8">
           Esqueceu sua senha?
         </h1>
 

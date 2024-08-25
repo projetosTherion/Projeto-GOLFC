@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import LogoBranca from '../imagens/logo 05 6.svg'
-import Ficha from '../imagens/icon.png'
+import Ficha from '../imagens/Frame 4797 (1).png'
 import cartao from '../imagens/Frame 4795 (1).png'
 import bola from '../imagens/Frame 4796.png'
-const comoFunciona = () => {
+const ComoFunciona = () => {
   const nome = {
     0: {
       title: "COMPRE CRÉDITOS",
@@ -21,26 +21,44 @@ const comoFunciona = () => {
       content: "Depois de adquirir seus GolCards, você está pronto para entrar nos sorteios. Cada sorteio é uma chance de ganhar prêmios exclusivos, incluindo bolas de futebol autografadas e outros itens colecionáveis."
     }
   }
+ 
+ 
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const larguraTela = window.innerWidth;
+      setIsVisible(larguraTela >= 640);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className=' flex flex-col  bg-Estadio text-white bg-cover '>
       <div className='flex justify-center'>
-        <img src={LogoBranca} alt="Logo GOL" className=' h-15 w-17 mt-20' />
+        <img src={LogoBranca} alt="Logo GOL" className='md:mr-[3%] h-[10%] w-[10%] mt-[5%]' />
       </div>
 
-      <div className='flex font-tuskerGrotesk justify-center  mt-5 mr-3  text-2xl'>
+      <div className='flex font-tuskerGrotesk justify-center  mt-[2%] mr-[3%]  text-responsive'>
         COMO FUNCIONA?
       </div>
-      <div className='pb-44'>
+      <div className='pb-[20%]'>
         <div className="flex flex-col   items-center justify-center">
           {Object.values(nome).map((item, index) => (
-            <div key={index}  className=" border flex h-[15%]   w-[100vw] md:w-[60%] mt-10  border-white rounded-md p-4">
-              <img src={item.img} alt="" className="h-24 mt-7  w-31" />
-              <div className="flex flex-col  ml-20">
+            <div key={index}  className=" border flex md:h-[15%]   w-[90%] md:w-[60%] mt-[2%]  border-white rounded-md p-4">
+             <img src={item.img} alt="" className="w-[10%] h-[10%]" />
+              
+              
+              <div className="flex flex-col  ml-[3%]">
                 <span className=" font-tuskerGrotesk uppercase text-responsive">
                   {item.title}
                 </span>
-                <span className=" mt-2 font-Carbona text-responsive mr-8">
+                <span className=" mt-2 font-Carbona  text-customResponsive mr-8">
                   {item.content}
                 </span>
               </div>
@@ -52,4 +70,4 @@ const comoFunciona = () => {
   );
 };
 
-export default comoFunciona;
+export default ComoFunciona;

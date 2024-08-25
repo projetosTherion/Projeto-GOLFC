@@ -16,9 +16,9 @@ const Login = () => {
   
     <div className="h-screen  flex flex-col items-center justify-center  relative">
       {/* Imagem acima do quadrado */}
-      <div className=' ml-[22%] justify-center'>
+      <div className=' ml-[22%] md:ml-[10%] justify-center'>
         <Link to={"/"}>
-        <button >
+        <button className='ml-[25%]'>
           <img
         src={Logo}
         alt="Logo GOL"
@@ -29,7 +29,7 @@ const Login = () => {
       
        
       
-      <div className="w-[386px] mt-4 h-[452px] bg-blue-950 bg-opacity-20 rounded-lg border border-gray-300 p-4 flex flex-col  ">
+      <div className="w-[80%] md:w-[29%] mt-4 h-[452px] bg-blue-950 bg-opacity-20 rounded-lg border border-gray-300 p-4 flex flex-col  ">
         
         <p className=" font-Carbona text-xl justify-start text-white mb-6">Login</p>
 
@@ -38,7 +38,7 @@ const Login = () => {
         <input
           type="text"
           placeholder="exemplo@golfc.com"
-          className="w-[339px] h-[50px] text-white bg-transparent border border-white rounded-2xl px-2 "
+          className="w-[98%] h-[50px] text-white bg-transparent border border-white rounded-2xl px-2 "
         />
 
 <div className="mb-4 mt-2 ">
@@ -47,7 +47,7 @@ const Login = () => {
         <input
           type={showPassword ? 'text' : 'password'}
           placeholder="seugol"
-          className="w-[339px]  text-white  bg-transparent border border-white rounded-2xl px-2 pr-10"
+          className="w-[98%]   text-white  bg-transparent border border-white rounded-2xl px-2 pr-10"
         />
         <button
           onClick={togglePasswordVisibility}
@@ -83,19 +83,14 @@ const Login = () => {
         </div>
     
         <button
-          className="w-[339px] h-[50px] bg-Verde-Gol text-white font-Carbona rounded-2xl hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 mb-4"
+          className="w-[98%] h-[50px] bg-Verde-Gol text-white font-Carbona rounded-2xl hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 mb-4"
         >
           Entrar
         </button>
-
-        <Link to={"/Senha"}>
-          <button
-            
-            className="text-white text-base mb-4 bg-transparent border border-transparent rounded-md px-4 py-2 flex items-center justify-center hover:bg-blue-950 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          >
-            Esqueceu sua senha?
-          </button>
+        <Link to={"/RecuperaçãoSenha"}>
+        <div className="text-white text-base mb-2 text-center w-full hover:underline">  Esqueceu sua senha? </div>
         </Link>
+      
        
          <div className='text-Verde-Gol text-base mb-4 text-center w-full '>
         <Link to={"/Registro"}>
@@ -107,14 +102,14 @@ const Login = () => {
 </div>
 
         <button
-          className="w-[339px] h-[36px] bg-transparent border border-white text-white rounded-2xl mb-2 flex items-center justify-center hover:bg-white hover:text-blue-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
+          className="w-[98%] h-[36px] bg-transparent border border-white text-white rounded-2xl mb-2 flex items-center justify-center hover:bg-white hover:text-blue-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
         >
           <FaGoogle className="mr-2 font-Carbona" />
           Login com Google
         </button>
    
         <button
-          className="w-[339px] font-Carbona h-[36px] bg-transparent border border-white text-white rounded-2xl mb-2 flex items-center justify-center hover:bg-white hover:text-blue-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
+          className="w-[98%] font-Carbona h-[36px] bg-transparent border border-white text-white rounded-2xl mb-2 flex items-center justify-center hover:bg-white hover:text-blue-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
         >
           <FaApple className="mr-2" />
           Login com iOS

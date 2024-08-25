@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from 'react-router-dom';
@@ -56,7 +56,7 @@ const Registro = () => {
          <input
            type="text"
            placeholder={item.content}
-           className="w-[97%]  text-white mb-[4%] bg-transparent border border-white rounded-2xl px-2 "
+           className="w-[97%]  text-white mb-[4%] bg-Azul-Gol border border-white rounded-2xl px-2 "
          /> 
          
          

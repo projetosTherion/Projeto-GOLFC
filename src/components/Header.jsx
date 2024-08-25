@@ -3,21 +3,19 @@ import Logo from '../imagens/Logo.png'
 import { Link } from 'react-router-dom';
 const Header = () => {
   return (
-    <header className="  relative w-[98vw] bg-opacity-90 z-20 bg-white text-black h-[90px]">
-      <div className="  flex justify-between container mx-auto py-4">
+    <header className="  relative  bg-opacity-90  bg-white text-black ">
+      <div className="  flex justify-between   ">
         {/* Logo */}
-        <a href="/">
-        <div className='bg-Azul-Gol absolute top-0  flex justify-center left-0 h-[100%] w-[10%]'> 
-            
-            <img src={Logo} alt="Logo GOL" className='   '  />
-        
+        <div className='bg-Azul-Gol w-[10%]  '>
+          <img src={Logo} alt="Logo Gol" className='ml-[10%] w-[80%] mt-[10%] md:mt-[5%] md:w-[60%] md:h-[87%] ' />
         </div>
          
-        </a>
+      
+      
           
       
         {/* Menu de navegação */}
-        <nav className="  flex flex-row justify-between  mt-3 gap-7">
+        <nav className="  flex flex-row justify-between md:ml-[20%] gap-7 mt-[2%] ">
           <a href="/" className="hover:text-gray-300">
             Início
           </a>
@@ -25,8 +23,8 @@ const Header = () => {
             Sobre
           </a>
       <Link to={"/Login"}>
-        <button className="bg-Azul-Gol hover:bg-Azul-GolClaro -mt-2 text-white font-bold py-2 px-4 rounded-md mx-auto">
-          Login
+        <button className="bg-Azul-Gol   hover:bg-Azul-GolClaro -mt-2  text-white font-bold py-2 px-4 rounded-md mx-auto">
+          <span className='md:text-xl'>Login</span>
         </button>
         </Link>
        

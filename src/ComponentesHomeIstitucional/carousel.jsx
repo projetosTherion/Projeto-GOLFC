@@ -32,7 +32,7 @@ export default function Carousel({ slides }) {
 
       
 
-      <div className="absolute bottom-6 py-4 flex shrink justify-center gap-3 w-full">
+      <div className="absolute bottom-6  flex shrink justify-center gap-3 w-full">
         {slides.map((s, i) => {
           return (
             <div
@@ -40,7 +40,7 @@ export default function Carousel({ slides }) {
                 setCurrent(i);
               }}
               key={"circle" + i}
-              className={`rounded-full - w-5 h-5 border-1  cursor-pointer  ${
+              className={`rounded-full  w-[1.6%] h-[1.5vw] border-1  cursor-pointer  ${
                 i === current ? " bg-white" : "bg-gray-300"
               }`}
             ></div>

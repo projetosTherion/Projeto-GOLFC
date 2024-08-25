@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useEffect } from 'react';
 import qrCode from '../imagens/Frame (1).png';
 import fundoColorido from '../imagens/Component 2.png';
 import plaquinha from '../imagens/Group 39751.png';
@@ -28,9 +28,26 @@ const InfoBasics = () => {
     },
   };
 
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const larguraTela = window.innerWidth;
+      setIsVisible(larguraTela >= 740);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+ 
   return (
+
+
     <div  className=''>
-      <div className='font-tuskerGrotesk text-blue-950 text-4xl mt-9 text-center mr-[40%]'>
+      <div className='font-tuskerGrotesk text-blue-950 text-customResponsiveTitulo mt-[5%] text-center mr-[20%]'>
         O MOMENTO <span className='text-Verde-Gol font-NorthZone'>MÁGICO</span> DO FUTEBOL <br />
         TRANSFORMADO EM <span className='text-Verde-Gol font-NorthZone'>MEMÓRIAS!</span>
         <br />
@@ -39,11 +56,11 @@ const InfoBasics = () => {
       <div >
         {Object.values(texts).map((item, index) => (
           <div key={index}>
-            <div className='flex justify-start font-tuskerGrotesk text-blue-950 ml-[7%] text-4xl mt-20 '>
-              <img src={item.img} className='-mt-2 h-[98%]' alt='verificado'/>
-              <div>{item.title}</div>
+            <div className='flex justify-start font-tuskerGrotesk text-blue-950 ml-[7%] text-customResponsiveTitulo mt-[2%] '>
+              <img src={item.img} className='  w-[10%]  h-[18%]' alt='verificado'/>
+              <div className='mt-[1%]'>{item.title}</div>
             </div>
-            <div className='flex justify-start font-Carbona text-blue-950  text-xl  ml-[10%]'>
+            <div className='flex justify-start font-Carbona text-blue-950  text-customResponsiveConteudo ml-[10%]'>
              
             {item.content}
              
@@ -53,18 +70,19 @@ const InfoBasics = () => {
        
       </div >
       
-       <img src={fundoColorido} className='w-[40%] h-[45%]  mt-64'/>
+       <img src={fundoColorido} className='w-[35%] h-[5%]  mt-[5%]'/>
        
      
        </div >
-       <div className="flex  ml-[10%] mt-[15%] mr-[22%] bg-gray-300 rounded-lg w-[80%] h-fit ">
-       <img src={qrCode} className='w-[50%] h-[50%] mt-[3vw]'/>
-       <div className='flex flex-col mx-[3%]'> 
-        <span className='text-Azul-Gol mt-5 font-tuskerGrotesk text-Tamanho24'>O Processo Exclusivo do golfc</span>
-       <span className='text-black text-xl font-Carbona '>Um código QR exclusivo é atribuído a cada bola, contendo todos os detalhes do gol e certificação Golfc. Este código só pode ser escaneado com a bola física, ou seja, a própria bola carrega sua certificação para visualizar uma versão digital que comprova sua autenticidade. </span>
+       <div className="flex  ml-[10%] mt-[15%] mr-[22%] p-4 bg-gray-300 rounded-lg w-[80%] h-[10%] ">
+       {isVisible && <img src={qrCode} className='w-[45%] h-[45%] ml-[2%] mt-[5%]'/>}
+      
+       <div className='flex flex-col h-[10%] overflow-auto  mx-[3%]'> 
+       <span className='text-Azul-Gol mt-5 font-tuskerGrotesk text-customResponsiveTitulo'>O Processo Exclusivo do golfc</span>
+       <span className='text-black text-customResponsiveConteudo font-Carbona'>Um código QR exclusivo é atribuído a cada bola, contendo todos os detalhes do gol e certificação Golfc. Este código só pode ser escaneado com a bola física, ou seja, a própria bola carrega sua certificação para visualizar uma versão digital que comprova sua autenticidade. </span>
        
        </div>
-      <img src={plaquinha} className='mt-[1vw]'/>
+       {isVisible &&<img src={plaquinha} className='h-[10%] w-[20%] mt-[2%]'/>}
         </div>
         <div>
        

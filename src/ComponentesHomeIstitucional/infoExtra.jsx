@@ -33,16 +33,16 @@ const infoExtra = () => {
     <div  className='bg-FundoComFita mt-[10%]  bg-cover'>
     
       <div className='flex '>
-           <img src={pc} className='w-[50%] h-[40%]  '  />
+           <img src={pc} className='w-[30%] mt-[5%] md:mt-[0%] h-[30%] md:w-[50%] md:-ml-[5%]   '  />
       <div classname='flex '>
         
         {Object.values(texts).map((item, index) => (
-          <div key={index} className=' border flex  flex-col mt-[2%] bg-gradient-to-b from-Azul-GolClaro-50 via-Azul-GolClaro to-Azul-Gol   w-[96%] h-[17%]  border-Verde-Gol rounded-xl'>
-            <div className='flex justify-start font-tuskerGrotesk text-Verde-Gol text-2xl  '>
-            <img src={item.img} className='mt-2 text-xl h-[98%] mx-2' alt='verificado'/>
-              <div>{item.title}</div>
+          <div key={index} className=' border flex  flex-col mt-[3%] bg-gradient-to-b from-Azul-GolClaro-50 via-Azul-GolClaro to-Azul-Gol w-[90%]  md:w-[96%] md:h-[17%]  border-Verde-Gol rounded-xl'>
+            <div className='flex justify-start font-tuskerGrotesk  text-Verde-Gol text-customResponsiveTitulo  '>
+            <img src={item.img} className='mt-[1%] ml-[3%] w-[7%] h-[5%] md:h-[98%] ' alt='verificado'/>
+              <div className='ml-[2%] mt-[2%]'>{item.title}</div>
             </div>
-            <div className='flex justify-start font-Carbona mt-2  mx-3 text-white  text-xl  '>
+            <div className='flex justify-center font-Carbona  ml-[12%] text-white  text-customResponsiveConteudo  '>
              
             {item.content}
              
@@ -52,7 +52,7 @@ const infoExtra = () => {
         ))}
 
        <Link to={"/Login"}>
-        <button className="bg-gradient-to-b from-Verde-Gol to-verde-gol-escuro font-Carbona p-1 text-white mt-[3%] ml-[32%] justify-end w-[30%] rounded-md">
+        <button className="bg-gradient-to-b mb-[3%] text-customResponsiveConteudo w-[60%] from-Verde-Gol to-verde-gol-escuro font-Carbona ml-[20%] p-1 text-white mt-[3%]  md:ml-[32%] md:justify-end md:w-[30%] rounded-md">
          REGISTRE-SE
         </button>
         </Link>

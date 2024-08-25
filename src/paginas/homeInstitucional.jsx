@@ -4,6 +4,7 @@ import Frame1 from'../imagens/Frame 4808 (2).svg'
 import Frame2 from'../imagens/Frame 4827 (5).jpg'
 import Frame3 from'../imagens/Frame 4828 (1).svg'
 import Header from '../components/Header'
+import Footer from '../components/Footer.jsx'
 import LinhaLogo from '../ComponentesHomeIstitucional/linhaLogo.jsx'
 import Funciona from '../ComponentesHomeIstitucional/comoFunciona.jsx'
 import Basics from '../ComponentesHomeIstitucional/infoBasics.jsx'
@@ -13,10 +14,10 @@ let slides = [Frame2,Frame1,Frame3];
 const homeInstitucional = () => {
   return (
   
- <div className='  '>
+ <div className=' overflow-hidden  '>
     <Header/>
  
-  <div className="w-[100%] m-auto">
+  <div className="w-[100%] h-[50%] m-auto">
       <Carousel slides={slides} />
     </div>
    
@@ -26,7 +27,7 @@ const homeInstitucional = () => {
     </div>
       <div className='relative'>
        <Funciona/>
-       <img src={waves} className='absolute bottom-0 -mb-9 '/>
+       <img src={waves} className=' absolute bottom-0 -mb-4 md:absolute md:bottom-0 md:-mb-9 '/>
   
    </div>
    <div>
@@ -35,7 +36,9 @@ const homeInstitucional = () => {
    <div>
     <Extra/>
    </div>
-   
+   <div>
+    <Footer/>
+   </div>
     </div> 
      
     

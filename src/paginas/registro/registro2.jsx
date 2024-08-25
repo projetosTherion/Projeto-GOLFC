@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { Link } from 'react-router-dom';
@@ -6,31 +6,36 @@ const Registro = () => {
  
     const texts = {
         0: {
+        title: "CEP:",
+       
+        content: "00000-0",
+      },  
+      1: {
           title: "País:",
          
           content: "País em que o usuário reside",
         },
-        1: {
+        2: {
           title: "Estado:",
          
           content: "Estado aonde você reside",
         },
-        2: {
+        3: {
           title: "Cidade:",
           
           content: "exemplo@golfc.com",
         },
-        3: {
+        4: {
           title: "Rua:",
          
           content: "Nome da rua onde o usuário mora",
         },
-        4: {
+        5: {
             title: "Número:",
            
             content: "N 123",
           },
-        5: {
+        6: {
             title: "Complemento:",
            
             content: "Informações adicionais sobre o endereço",
@@ -39,8 +44,8 @@ const Registro = () => {
   return (
     <div className=' bg-Registro bg-cover h-screen  flex justify-center  '>
  
-  <div className="w-[386px]    justify-center h-[85%] mt-[5%] bg-blue-950 bg-opacity-20 rounded-lg border border-gray-300 p-4 flex flex-col  ">
-   <div className='flex justify-center ml-[5%]' >
+  <div className="w-[386px]    justify-center h-[93%] mt-[2%] bg-blue-950 bg-opacity-20 rounded-lg border border-gray-300 p-4 flex flex-col  ">
+   <div className='flex justify-center mt-[3%] ml-[5%]' >
      <div className='rounded-full flex justify-center text-black  hover:bg-white hover:text-black border mt-2 w-[9%] mr-[10%] h-[90%]	 '>
     1
     </div>
@@ -66,7 +71,7 @@ const Registro = () => {
          <input
            type="text"
            placeholder={item.content}
-           className="w-[97%]  text-white mb-[4%] bg-transparent border border-white rounded-2xl px-2 "
+           className="w-[97%]  text-white mb-[2%] bg-Azul-Gol border border-white rounded-2xl px-2 "
          /> 
          
          
@@ -79,7 +84,7 @@ const Registro = () => {
           <button
         className="  justify-center p-1 text-align: center h-[90%] flex bg-Verde-Gol text-gray-800 font-Carbona rounded-2xl hover:bg-verde-gol-escuro  focus:ring-2  hover:text-black"
       >
-        <span className='mt-[6%] '>Próximo </span><span className='mt-[10%] text-black ml-[3%] '><IoIosArrowDroprightCircle /></span>
+        <span className='mt-[2%] text-white '>Próximo </span><span className='mt-[9%] text-white ml-[3%] '><IoIosArrowDroprightCircle /></span>
       </button></div> </Link>
       
       </div>
