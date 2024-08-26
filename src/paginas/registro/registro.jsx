@@ -67,9 +67,9 @@ const Registro = () => {
         <Link to={"/Registro2"}>
         <div className='p-2'>
           <button
-        className="  justify-center p-1 text-align: center h-[90%] flex bg-Verde-Gol text-gray-800 font-Carbona rounded-2xl hover:bg-verde-gol-escuro  focus:ring-2  hover:text-black"
+        className="  justify-center p-1 text-align: center h-[90%] flex bg-Verde-Gol text-white font-Carbona rounded-2xl hover:bg-verde-gol-escuro  focus:ring-2  "
       >
-        <span className='mt-[6%] '>Próximo </span><span className='mt-[10%] text-black ml-[3%] '><IoIosArrowDroprightCircle /></span>
+        <span className='mt-[6%] '>Próximo </span><span className='mt-[10%]  text-white ml-[3%] '><IoIosArrowDroprightCircle /></span>
       </button></div> </Link>
       
       </div>
