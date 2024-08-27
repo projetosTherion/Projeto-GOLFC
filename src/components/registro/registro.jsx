@@ -64,6 +64,7 @@ const Registro = () => {
       
         ))}
         <div className='flex  justify-end'>
+        
         <Link to={"/Registro2"}>
         <div className='p-2'>
           <button
