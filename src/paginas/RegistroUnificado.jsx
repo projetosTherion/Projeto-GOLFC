@@ -59,7 +59,7 @@ const RegistroUnificado = () => {
         6: {
             title: "Complemento:",
             value: "",
-            content: "Informações adicionais sobre o endereço",
+            content: "Informações adicionais ",
         },
     });
 

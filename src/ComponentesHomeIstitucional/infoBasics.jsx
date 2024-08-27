@@ -28,20 +28,7 @@ const InfoBasics = () => {
     },
   };
 
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const larguraTela = window.innerWidth;
-      setIsVisible(larguraTela >= 740);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  
  
   return (
 
@@ -75,14 +62,14 @@ const InfoBasics = () => {
      
        </div >
        <div className="flex  ml-[10%] mt-[15%] mr-[22%] p-4 bg-gray-300 rounded-lg w-[80%] h-[10%] ">
-       {isVisible && <img src={qrCode} className='w-[45%] h-[45%] ml-[2%] mt-[5%]'/>}
+     <img src={qrCode} className='w-[45%] h-[45%] ml-[2%] mt-[5%] hidden md:block'/>
       
        <div className='flex flex-col h-[10%] overflow-auto  mx-[3%]'> 
        <span className='text-Azul-Gol mt-5 font-tuskerGrotesk text-customResponsiveTitulo'>O Processo Exclusivo do golfc</span>
        <span className='text-black text-customResponsiveConteudo font-Carbona'>Um código QR exclusivo é atribuído a cada bola, contendo todos os detalhes do gol e certificação Golfc. Este código só pode ser escaneado com a bola física, ou seja, a própria bola carrega sua certificação para visualizar uma versão digital que comprova sua autenticidade. </span>
        
        </div>
-       {isVisible &&<img src={plaquinha} className='h-[10%] w-[20%] mt-[2%]'/>}
+       <img src={plaquinha} className='h-[10%] w-[20%] mt-[2%] hidden md:block'/>
         </div>
         <div>
        

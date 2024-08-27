@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
         <div className='text-white w-[30%] md:w-[10%] text-center mt-[1%] text-customResponsiveFooter md:mr-[5%] md:mt-[3%]'>
         Redes Sociais
-      <div className='flex ml-[35%] md:ml-[0%]  w-[20%]  md:mr-[0%] md:justify-between md:w-[100%]'>
+      <div className='flex ml-[28%] md:ml-[0%]  w-[20%]  md:mr-[0%] md:justify-between md:w-[100%]'>
       <Link to={"/Registro"}>
         <FaFacebook />
         </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
               <div className="border h-px w-screen md:w-[90%] md:ml-[5%]  justify-center bg-white"></div>
               <div className='bg-Azul-Gol  justify-center'>
-                <div className='flex  text-gray-500 justify-between md:ml-[30%] md:mt-[1%] md:w-[35%]'>
+                <div className='flex w-[90%] ml-[3%] text-gray-500 justify-between md:ml-[30%] md:mt-[1%] md:w-[35%]'>
                 <Link to={"/Registro"}>
         <button >
         <span className='text-customResponsiveFooter '>Politica de Privacidade</span>
