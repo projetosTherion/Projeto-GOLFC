@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Footer from '../components/Footer'
+import Logo from '../imagens/Logo.png'; 
 function Senha() {
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen bg-Registro">
+    <div className='h-screen'>
+    <div className="relative flex flex-col items-center justify-center h-[90%] bg-Senha">
       
       {/* Botão no canto superior esquerdo com margem ajustada */}
       <Link
@@ -13,11 +15,22 @@ function Senha() {
       >
         Voltar
       </Link>
+      <Link
+        to={"/"}
+        className="absolute flex items-center justify-center w-[20%] "
+        style={{ top: '12%', right: '10%' }}
+      >
+       <img
+        src={Logo}
+        alt="Logo GOL"
+        className="h-[85%] md:w-[30%] md:h-[40%] w-[85%]"
+      />
+      </Link>
 
       {/* Contêiner para ajustar a posição do conteúdo */}
-      <div className="flex flex-col items-center justify-center transform ">
+      <div className="flex md:w-[30%] flex-col items-center justify-center transform ">
         
-        <h1 className="text-4xl font-Carbona text-white mb-[4%]">
+        <h1 className=" font-Carbona text-customResponsiveTituloRecuperação text-white mb-[4%]">
           Esqueceu sua senha?
         </h1>
 
@@ -26,12 +39,12 @@ function Senha() {
           <input
             type="text"
             placeholder="Número de celular/Email"
-            className="w-[100%] h-[50%] bg-transparent border-2 border-white rounded-xl px-4 py-3 text-white placeholder-white"
+            className=" w-[90%] ml-[5%] md:ml-[0%] md:w-[100%] h-[50%] bg-transparent border-2 border-white rounded-xl px-4 py-3 text-white placeholder-white"
           />
           <input
             type="text"
             placeholder="Confirmar"
-            className="w-[100%] h-[50%] bg-transparent border-2 border-white rounded-xl px-4 py-3 text-white placeholder-white"
+            className="w-[90%] ml-[5%] md:ml-[0%] md:w-[100%] h-[50%] bg-transparent border-2 border-white rounded-xl px-4 py-3 text-white placeholder-white"
           />
         </div>
 
@@ -46,7 +59,10 @@ function Senha() {
           </Link>
         </div>
       </div>
-    </div>
+      
+    </div><div className='mb-[10%]'>
+      <Footer/>
+    </div></div>
   );
 }
 

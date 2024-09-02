@@ -6,8 +6,8 @@ const Header = () => {
     <header className="  relative  bg-opacity-90  bg-white text-black ">
       <div className="  flex justify-between   ">
         {/* Logo */}
-        <div className='bg-Azul-Gol w-[10%]  '>
-          <img src={Logo} alt="Logo Gol" className='ml-[10%] w-[80%] mt-[10%] md:mt-[5%] md:w-[60%] md:h-[87%] ' />
+        <div className='bg-Azul-Gol w-[16%] md:w-[10%]  '>
+          <img src={Logo} alt="Logo Gol" className='ml-[10%] w-[75%] mt-[10%] md:mt-[5%] md:w-[60%] md:h-[87%] ' />
         </div>
          
       

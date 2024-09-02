@@ -147,7 +147,7 @@ const RegistroUnificado = () => {
                 ))}
                 <div className='flex justify-end'>
                     <div className=''>
-                        <Link to={valorTexto === 2 ? "/" : "#"}>
+                        <Link to={valorTexto === 2 ? "/HomeLogada" : "#"}>
                             <button
                                 onClick={() => setValorTexto(valorTexto < 2 ? valorTexto + 1 : valorTexto)}
                                 className="justify-center p-1 text-align: center h-[90%] mr-[3%] flex bg-Verde-Gol text-white font-Carbona rounded-2xl hover:bg-verde-gol-escuro focus:ring-2"

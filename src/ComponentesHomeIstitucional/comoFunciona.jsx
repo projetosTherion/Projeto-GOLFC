@@ -51,7 +51,7 @@ const ComoFunciona = () => {
         <div className="flex flex-col   items-center justify-center">
           {Object.values(nome).map((item, index) => (
             <div key={index}  className=" border flex md:h-[15%]   w-[90%] md:w-[60%] mt-[2%]  border-white rounded-md p-4">
-             <img src={item.img} alt="" className="w-[10%] h-[10%]" />
+             <img src={item.img} alt="" className="w-[20%] md:w-[10%] md:h-[10%] h-[30%]" />
               
               
               <div className="flex flex-col  ml-[3%]">

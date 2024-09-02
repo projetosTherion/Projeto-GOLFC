@@ -8,7 +8,9 @@ module.exports = {
         'Estadio': "url('../src/imagens/soccer-stadium-full-people 1.jpg')",
         'FundoComFita': "url('../src/imagens/Component 3 (1).png')",
         'Login': "url('../src/imagens/Tela de Login.png')",
-        'Registro':"url('../src/imagens/Tela de Registro 1.jpg')",
+        'Registro':"url('../src/imagens/Tela de Registro 3.jpg')",
+        'Senha':"url('../src/imagens/Página de recuperção de senha via numero de celular (3).jpg')",
+        'Card':"url('../src/imagens/Frame 4749 (6).jpg')"
         // Adicione quantas imagens de fundo desejar
       },
       fontSize: {
@@ -23,8 +25,12 @@ module.exports = {
         responsive: ['clamp(15px, 1.4vw, 71px)'],
         'customResponsive': ['clamp(10px, 1.5vw, 21px)'],
         'customResponsiveTitulo': ['clamp(13px, 2vw, 51px)'],
+        'customResponsiveTituloRecuperação': ['clamp(25px, 2vw, 51px)'],
         'customResponsiveConteudo': ['clamp(13px, 1.5vw, 41px)'],
         'customResponsiveFooter': ['clamp(10px, 0.5vw, 41px)'],
+        'customResponsiveHeader': ['clamp(10px, 1vw, 41px)'],
+        'customResponsiveNumber': ['clamp(10px, 0.5vw, 41px)'],
+        'customResponsiveNumberPlayer': ['clamp(10px, 0.5vw, 41px)'],
         
       },fontFamily: {
        Carbona: ["Carbona-Test", "sans-serif"],
@@ -36,6 +42,7 @@ module.exports = {
         'Azul-Gol': '#0A1835',
         'Azul-GolClaro': '#1A3469',
         'Azul-GolClaro-50': '#20469B',
+        'Azul-GolClaro100': ' #1D469B',
         'Verde-Gol': '#44D62D',
         'verde-gol-escuro':'#247018',
       },

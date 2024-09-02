@@ -6,27 +6,11 @@ import { FaTiktok } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 const Footer = () => {
 
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const larguraTela = window.innerWidth;
-      setIsVisible(larguraTela >= 640);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-
   return (
    <div className=' w-[100%]   bg-Azul-Gol'> 
     <div className='flex justify-between'>
      
-    {isVisible && <img src={Logo} alt=""  className=' w-[10%] ml-[5%] h-[20%] mt-[1%] md:w-[5%] md:ml-[4%] md:mt-[2%] '/>}
+     <img src={Logo} alt=""  className=' w-[10%] ml-[5%] h-[20%] mt-[1%] md:w-[5%] md:ml-[4%] md:mt-[2%] '/>
     
     
     <div className='  md:mb-4 w-[70%] flex justify-between ml-[10%] md:w-[50%] md:mt-[3%] md:mr-[20%] '>

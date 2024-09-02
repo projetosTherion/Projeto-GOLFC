@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './paginas/Login';
 import RegistroUnificado from './paginas/RegistroUnificado'
 import Senha from './paginas/Senha';
+import HomeLogada from './paginas/homeLogada'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Route path='/Login' element={<Login/>}/>
       <Route path='/Registro' element={<RegistroUnificado/>}/>
       <Route path='/RecuperaçãoSenha' element={<Senha/>} />
+      <Route path='/HomeLogada' element={<HomeLogada/>} />
     </Routes>
       
      
