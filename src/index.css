@@ -32,3 +32,9 @@
     src: url("../public/fonts/CarbonaTest-BlackSlanted.otf") format("opentype");
 
   }
+  @font-face {
+    
+    font-family: "CarbonaBold";
+    src: url("../public/fonts/Carbona Test/CarbonaTest-Bold.otf") format("opentype");
+
+  }

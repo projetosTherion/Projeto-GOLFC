@@ -38,7 +38,7 @@ const Login = () => {
         <input
           type="text"
           placeholder="exemplo@golfc.com"
-          className="w-[98%] h-[50px] text-white bg-transparent border border-white rounded-2xl px-2 "
+          className="w-[98%] h-[8%] text-white bg-transparent border border-white rounded-2xl px-2 "
         />
 
 <div className="mb-4 mt-2 ">

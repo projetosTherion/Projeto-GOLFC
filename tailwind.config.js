@@ -10,7 +10,8 @@ module.exports = {
         'Login': "url('../src/imagens/Tela de Login.png')",
         'Registro':"url('../src/imagens/Tela de Registro 3.jpg')",
         'Senha':"url('../src/imagens/Página de recuperção de senha via numero de celular (3).jpg')",
-        'Card':"url('../src/imagens/Frame 4749 (6).jpg')"
+        'Card':"url('../src/imagens/Frame 4749 (7).jpg')",
+        'FuturosJogos':"url('../src/imagens/Frame 5003 (2).png')",
         // Adicione quantas imagens de fundo desejar
       },
       fontSize: {
@@ -31,12 +32,14 @@ module.exports = {
         'customResponsiveHeader': ['clamp(10px, 1vw, 41px)'],
         'customResponsiveNumber': ['clamp(10px, 0.5vw, 41px)'],
         'customResponsiveNumberPlayer': ['clamp(10px, 0.5vw, 41px)'],
+        'customResponsiveJogosFuturos': ['clamp(5px, 1vw, 41px)'],
         
       },fontFamily: {
        Carbona: ["Carbona-Test", "sans-serif"],
        CarbonaBlack: ["CarbonaBlackSlanted", "sans-serif"],
        tuskerGrotesk: ["tuskerGrotesk", "sans-serif"],
        NorthZone: ["NorthZone", "sans-serif"],
+       CarbonaBold:['CarbonaBold', 'bold'],
       },
       colors: {
         'Azul-Gol': '#0A1835',

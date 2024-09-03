@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import HeaderLogado from '../components/HeaderHomeLogado'
 import CarouselHome from '../componentesHomeLogado/carouselHome'
-import Cards from'../componentesHomeLogado/Card'
+import FuturosJogos from'../componentesHomeLogado/FuturosJogos'
 const HomeLogada = () => {
  
   
     
  return(
 
-    <div className=' '>
+    <div className=' bg-gradient-to-b from-Azul-Gol to-Azul-GolClaro100 '>
         <div> 
               <HeaderLogado/>
         </div>
@@ -16,7 +16,7 @@ const HomeLogada = () => {
      < CarouselHome/>
         </div>
         <div>
-            <Cards/>
+            <FuturosJogos/>
         </div>
     </div>
 

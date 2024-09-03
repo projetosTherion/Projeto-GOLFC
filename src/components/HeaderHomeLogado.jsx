@@ -15,7 +15,7 @@ const HeaderHomeLogado = () => {
         setNav(!nav)
     }
   return (
-    <div className='bg-Azul-Gol flex justify-between '>
+    <div className='bg-transparent bg-opacity-55 flex justify-between '>
    <div className='flex w-[50%]'>   
      <img src={Logo} alt="Logo Gol" className='md:ml-[2%] ml-[2%] md:mt-[2%] mt-[1%] mr-[1%] w-[26%] h-[25 %] md:md:w-[10%] md:h-[75%] ' />
    
@@ -63,7 +63,7 @@ const HeaderHomeLogado = () => {
 </Link>
     </div>
 
-    <div className='mt-[2%] ml-[40%] md:ml-[0%]md: md:hidden text-white' >
+    <div className='mt-[2%] ml-[40%] md:ml-[0%]  md:hidden text-white' >
     <div onClick={handleNav} className='block md:items-center  '>
         {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
     </div>
@@ -71,7 +71,7 @@ const HeaderHomeLogado = () => {
  
 </div>
 <div>
-<div className={!nav ? 'text-Verde-Gol h-full pt-[5%] uppercase bg-Azul-Gol fixed left-0 top-0 w-[60%] border-r-white ease-in-out duration-500  ':  'fixed left-[-15000%]'}>
+<div className={!nav ? 'z-50 text-Verde-Gol h-full pt-[5%] uppercase bg-Azul-Gol fixed left-0 top-0 w-[60%] border-r-white ease-in-out duration-500  ':  'fixed left-[-15000%]'}>
 
 <div className='flex justify-between ml-[5%] h-[6%] '><img src={Logo} alt="Logo Gol" className='w-[20%] h-[80%] ' />
 <div className=' rounded-full  mr-[10%]  border  w-[15%] h-[70%]  '>
