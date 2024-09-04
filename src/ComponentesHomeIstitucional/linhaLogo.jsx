@@ -22,7 +22,7 @@ const LinhaLogo = () => {
     <img key={index} src={imageUrl} alt={`Imagem ${index + 1}`} className='w-[6%] h-[10%] md:w-fit md:h-fit' />
   ));
 
-  return <div className='bg-Azul-Gol flex justify-between'>{imageElements}</div>;
+  return <div className='bg-Azul-Gol flex justify-between'>{imageElements} </div>;
 };
 
 export default LinhaLogo;

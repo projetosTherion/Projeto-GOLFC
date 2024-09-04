@@ -61,7 +61,7 @@ const InfoBasics = () => {
        
      
        </div >
-       <div className="flex  ml-[10%] mt-[15%] mr-[22%] p-4 bg-gray-300 rounded-lg w-[80%] h-[10%] ">
+       <div className="md:flex   ml-[10%] mt-[15%] mr-[22%] p-4 bg-gray-300 rounded-lg w-[80%] h-[10%] ">
      <img src={qrCode} className='w-[45%] h-[45%] ml-[2%] mt-[5%] hidden md:block'/>
       
        <div className='flex flex-col h-[10%] overflow-auto  mx-[3%]'> 
@@ -69,7 +69,7 @@ const InfoBasics = () => {
        <span className='text-black text-customResponsiveConteudo font-Carbona'>Um código QR exclusivo é atribuído a cada bola, contendo todos os detalhes do gol e certificação Golfc. Este código só pode ser escaneado com a bola física, ou seja, a própria bola carrega sua certificação para visualizar uma versão digital que comprova sua autenticidade. </span>
        
        </div>
-       <img src={plaquinha} className='h-[10%] w-[20%] mt-[2%] hidden md:block'/>
+       <img src={plaquinha} className='md:h-[10%] flex justify-center h-[80%] md:ml-[0%] w-[50%] ml-[20%]  md:w-[20%] md:mt-[2%]  md:block'/>
         </div>
         <div>
        
