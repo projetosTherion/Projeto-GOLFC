@@ -1,52 +1,61 @@
-import { useState } from "react";
-import {
-  BsFillArrowRightCircleFill,
-  BsFillArrowLeftCircleFill,
-} from "react-icons/bs";
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import Frame1 from'../imagens/Frame 4808 (2).svg'
+import Frame2 from'../imagens/Frame 4827 (5).jpg'
+import Frame3 from'../imagens/Frame 4828 (1).svg'
 
-export default function Carousel({ slides }) {
-  let [current, setCurrent] = useState(0);
+const CarouselHome = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+   
+      slidesToSlide: 1 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+     
+      
+      slidesToSlide: 1 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
 
-  let previousSlide = () => {
-    if (current === 0) setCurrent(slides.length - 1);
-    else setCurrent(current - 1);
+      slidesToSlide: 1 // optional, default to 1.
+    }
   };
 
-  let nextSlide = () => {
-    if (current === slides.length - 1) setCurrent(0);
-    else setCurrent(current + 1);
-  };
+ 
 
   return (
-    <div className="overflow-hidden  relative">
-      <div
-        className={`flex  transition ease-out  h-15 duration-40`}
-        style={{
-          transform: `translateX(-${current * 100}%)`,
-        }}
-      >
-        {slides.map((s) => {
-          return <img   src={s} />;
-        })}
-      </div>
-
+    <div>
       
-
-      <div className="absolute bottom-6  flex shrink justify-center gap-3 w-full">
-        {slides.map((s, i) => {
-          return (
-            <div
-              onClick={() => {
-                setCurrent(i);
-              }}
-              key={"circle" + i}
-              className={`rounded-full  w-[1.6%] h-[1.5vw] border-1  cursor-pointer  ${
-                i === current ? " bg-white" : "bg-gray-300"
-              }`}
-            ></div>
-          );
-        })}
+      <div className='flex justify-center'>
+        <Carousel
+         infinite={true}
+         autoPlay={true}
+        autoPlaySpeed={3000}
+          className=' md:w-[100%]  '
+          partialVisible={true}
+          draggable={true}
+     
+           removeArrowOnDeviceType={["tablet", "mobile"]}
+           responsive={responsive}
+           showDots={true}
+       >
+          <img src={Frame1} alt="" className='' />
+          <img src={Frame2} alt="" className='' />
+          <img src={Frame3} alt=""  className='' />
+          
+    </Carousel>
+    
       </div>
-    </div>
-  );
-}
+      </div>
+
+);
+};
+
+export default CarouselHome;

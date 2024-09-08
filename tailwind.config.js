@@ -31,7 +31,7 @@ module.exports = {
         'customResponsiveFooter': ['clamp(10px, 0.5vw, 41px)'],
         'customResponsiveHeader': ['clamp(10px, 1vw, 41px)'],
         'customResponsiveNumber': ['clamp(10px, 0.5vw, 41px)'],
-        'customResponsiveNumberPlayer': ['clamp(10px, 0.5vw, 41px)'],
+        'customResponsiveNumberPlayer': ['clamp(10px, 1vw, 41px)'],
         'customResponsiveJogosFuturos': ['clamp(5px, 1vw, 41px)'],
         
       },fontFamily: {

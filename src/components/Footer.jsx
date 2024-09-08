@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
 
   return (
-   <div className=' w-[100%]   bg-Azul-Gol'> 
+   <div className=' w-[100%]    bg-Azul-Gol'> 
     <div className='flex justify-between'>
      
-     <img src={Logo} alt=""  className=' w-[10%] ml-[5%] h-[20%] mt-[1%] md:w-[5%] md:ml-[4%] md:mt-[2%] '/>
+     <img src={Logo} alt=""  className=' w-[10%] ml-[5%] h-[20%] mb-[1%] md:w-[5%] md:ml-[4%] md:mt-[2%] '/>
     
     
     <div className='  md:mb-4 w-[70%] flex justify-between ml-[10%] md:w-[50%] md:mt-[3%] md:mr-[20%] '>
@@ -46,18 +46,18 @@ const Footer = () => {
         Redes Sociais
       <div className='flex ml-[28%] md:ml-[0%]  w-[20%]  md:mr-[0%] md:justify-between md:w-[100%]'>
       <Link to={"/Registro"}>
-        <FaFacebook />
+        <FaFacebook size={20}/>
         </Link>
         <Link to={"/Registro"}>
-        <FaInstagram />
+        <FaInstagram size={20} />
         </Link>
         <Link to={"/Registro"}>
-        <FaTiktok />
+        <FaTiktok size={20} />
         </Link>
         <Link to={"/Registro"}>
-        <FaYoutube /></Link>
+        <FaYoutube  size={20} /></Link>
         <Link to={"/Registro"}>
-        <FaLinkedin /></Link>
+        <FaLinkedin  size={20} /></Link>
         </div>
        </div>
 
