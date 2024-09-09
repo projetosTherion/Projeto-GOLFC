@@ -25,7 +25,7 @@ const homeInstitucional = () => {
     </div>
       <div className='relative'>
        <Funciona/>
-       <img src={waves} className=' absolute bottom-0 -mb-4 md:absolute md:bottom-0 md:-mb-9 '/>
+       <img src={waves} className='md:w-screen absolute bottom-0 -mb-4 md:absolute md:bottom-0 md:-mb-9 '/>
   
    </div>
    <div>

@@ -29,9 +29,15 @@ const HomeLogada = () => {
     </div>
     </div>
    
-    <div className='flex justify-center mt-[5%] md:h-[20vh]  h-[5vh] '>
+    <div className='flex justify-center mt-[5%]   h-[90%] '>
       <div className='bg-white w-[80%]  h-[100%] border rounded-xl border-gray-300'>
-
+<span>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+</span>
 
       </div>
     </div>

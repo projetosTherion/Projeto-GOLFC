@@ -62,7 +62,7 @@ const InfoBasics = () => {
      
        </div >
        <div className="md:flex   ml-[10%] mt-[15%] mr-[22%] p-4 bg-gray-300 rounded-lg w-[80%] h-[10%] ">
-     <img src={qrCode} className='w-[45%] h-[45%] ml-[2%] mt-[5%] hidden md:block'/>
+     <img src={qrCode} className=' md:w-[45%] xl:w-[20%] md:h-[45%] xl:h-[50%] ml-[2%] xl:mt-[1%] hidden md:block'/>
       
        <div className='flex flex-col h-[10%] overflow-auto  mx-[3%]'> 
        <span className='text-Azul-Gol mt-5 font-tuskerGrotesk text-customResponsiveTitulo'>O Processo Exclusivo do golfc</span>
