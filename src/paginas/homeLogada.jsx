@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeaderLogado from '../components/HeaderHomeLogado'
 import CarouselHome from '../componentesHomeLogado/carouselHome'
 import FuturosJogos from'../componentesHomeLogado/FuturosJogos'
@@ -7,14 +7,15 @@ import LogoRedondaFundo from '../imagens/Frame 4751.jpg'
 import GrandeCarousel from'../componentesHomeLogado/GrandeCarousel'
 import Footer from'../components/Footer'
 const HomeLogada = () => {
- 
-  
-    
+   useEffect(() => {
+      document.title = "Home - GolFC"
+   }, [])
+   
  return(
 
     <div className='  overflow-hidden bg-gradient-to-b from-Azul-Gol to-Azul-GolClaro100 '>
         <div> 
-              <HeaderLogado/>
+         <HeaderLogado/>
         </div>
         <div className=''>
      < CarouselHome/>

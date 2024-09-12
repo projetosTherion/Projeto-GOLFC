@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer'
 import Logo from '../imagens/Logo.png'; 
 function Senha() {
+  useEffect(() => {
+    document.title = "Esqueci a senha - GolFC";
+  }, [])
+  
   return (
     <div className='h-screen'>
     <div className="relative flex flex-col items-center justify-center h-[90%] bg-Senha">

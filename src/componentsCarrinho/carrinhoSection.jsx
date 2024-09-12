@@ -95,19 +95,11 @@ export default function CarrinhoSection() {
                 <div className="flex mt-2 items-center">
                   <div className="flex text-white text-center items-center p-1 border-2 border-solid border-white rounded-2xl">
                     <p className="text-white font-Carbona tracking-wide">Qtd:</p>
-                    <select
-                      value={qtd[index] || min}
-                      onChange={(e) => handleChange(e, index)}
-                      className="bg-[#0A1835] font-CarbonaBold text-white ring-0"
-                    >
-                      {Array.from({ length: max - min + 1 }, (_, i) => i + min).map(
-                        (num) => (
-                          <option key={num} value={num}>
-                            {num}
-                          </option>
-                        )
-                      )}
-                    </select>
+                    <button
+                    onClick={() => totalItens < 9 ? setTotalItens(totalItens + 1) : null}>+</button>
+                    {totalItens}
+                    <button
+                    onClick={() => totalItens === 1 ? null : setTotalItens(totalItens - 1)}>-</button>
                   </div>
                   <div className="h-[65%] w-[1px] bg-white mx-5" />
                   <div className="flex cursor-pointer">

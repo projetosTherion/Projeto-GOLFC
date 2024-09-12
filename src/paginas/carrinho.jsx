@@ -4,8 +4,13 @@ import { IoIosArrowBack } from "react-icons/io";
 import CarrinhoSection from "../componentsCarrinho/carrinhoSection";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 export default function Carrinho() {
+  useEffect(() => {
+    document.title = "Carrinho - GolFC"
+  }, [])
+  
   return(
     <div 
     className="bg-[#0A1835] max-w-screen min-w-screen w-screen overflow-hidden">

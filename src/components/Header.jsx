@@ -15,7 +15,7 @@ const Header = () => {
           
       
         {/* Menu de navegação */}
-        <nav className="  flex flex-row justify-between md:ml-[20%] gap-7 mt-[2%] ">
+        <nav className="  flex flex-row justify-between items-center gap-7">
           <a href="/" className="hover:text-gray-300">
             Início
           </a>

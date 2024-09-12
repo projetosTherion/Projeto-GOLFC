@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Carousel from '../ComponentesHomeIstitucional/carousel';
 
 import Header from '../components/Header'
@@ -9,9 +9,12 @@ import Basics from '../ComponentesHomeIstitucional/infoBasics.jsx'
 import waves from '../imagens/Rectangle 866.svg'
 import Extra from '../ComponentesHomeIstitucional/infoExtra.jsx'
 
-const homeInstitucional = () => {
-  return (
+export default function HomeInstitucional() {
+  useEffect(() => {
+    document.title = "Home - GolFC"
+  }, [])
   
+  return (
  <div className=' overflow-hidden  '>
     <Header/>
  
@@ -43,5 +46,3 @@ const homeInstitucional = () => {
     
   );
 };
-
-export default homeInstitucional;

@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 
 const RegistroUnificado = () => {
+    useEffect(() => {
+        document.title = "Registro - GolFC"
+      }, [])
     const [texts1, setTexts1] = useState({
         0: {
             title: "Nome:",

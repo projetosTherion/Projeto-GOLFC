@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../imagens/Logo.png'; // Importa a imagem da logo
 import { FaGoogle, FaApple } from 'react-icons/fa'; // Importa os ícones do Google e da Apple
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { Link } from 'react-router-dom';
 const Login = () => {
- 
+  
+  useEffect(() => {
+    document.title = "Login - GolFC";
+  }, [])
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -29,11 +32,11 @@ const Login = () => {
       
        
       
-      <div className="w-[80%] md:w-[29%] mt-4 h-[452px] bg-blue-950 bg-opacity-20 rounded-lg border border-gray-300 p-4 flex flex-col  ">
+      <div className="w-[80%] md:w-[29%] mt-4 h-[452px] filter backdrop-blur-xl rounded-2xl border border-gray-300 p-5 flex flex-col  ">
         
         <p className=" font-Carbona text-xl justify-start text-white mb-6">Login</p>
 
-        <p className="text-white font-Carbona text-base mb-1 text-left w-full">Email</p>
+        <p className="text-white font-Carbona text-base mb-1 text-left w-full">E-mail:</p>
 
         <input
           type="text"
@@ -42,7 +45,7 @@ const Login = () => {
         />
 
 <div className="mb-4 mt-2 ">
-      <p className="text-white text-base mb-1  font-Carbona text-left w-full">Senha</p>
+      <p className="text-white text-base mb-1  font-Carbona text-left w-full">Senha:</p>
       <div className="relative ">
         <input
           type={showPassword ? 'text' : 'password'}
