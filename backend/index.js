@@ -1,8 +1,9 @@
-import express, { response } from "express";
+import express from "express";
 import { PORT, mongodbUrl } from "./config.js";
 import mongoose from "mongoose";
 import usersRoute from './routes/usersRoute.js';
 import cors from 'cors';
+import correiosRoute from './routes/correiosRoute.js';  // Importa a rota dos Correios
 
 const app = express();
 
@@ -17,12 +18,14 @@ app.use(cors());
 //     })
 // );
 
-app.get("/", (req, res, next) => {
+app.get("/", (req, res) => {
   console.log(req);
   return res.status(234).send("Welcome!");
 });
 
+
 app.use('/users', usersRoute);
+app.use('/correios', correiosRoute);  // Usa a rota dos Correios
 
 mongoose
   .connect(mongodbUrl)

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const userSchema = mongoose.Schema(
     {
-        name: {
+        nome: {
             type: String,
             required: true
         },
@@ -10,19 +10,51 @@ const userSchema = mongoose.Schema(
             type: String,
             required: true
         },
-        dtNasc: {
+        data_nascimento: {
+            type: Date,
+            required: true
+        },
+        documentoID: {
             type: String,
             required: true
         },
-        docId: {
-            type: String,
-            required: true
-        },
-        cel: {
+        celular: {
             type: String,
             required: true
         },
         cep: {
+            type: String,
+            required: true
+        },
+        pais: {
+            type: String,
+            required: true
+        },
+        estado: {
+            type: String,
+            required: true
+        },
+        cidade: {
+            type: String,
+            required: true
+        },
+        bairro: {
+            type: String,
+            required: true
+        },
+        rua: {
+            type: String,
+            required: true
+        },
+        numero: {
+            type: String,
+            required: true
+        },
+        complemento: {
+            type: String,
+            required: true
+        },
+        time_do_usuario: {
             type: String,
             required: true
         },
