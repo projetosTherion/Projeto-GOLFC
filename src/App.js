@@ -7,6 +7,7 @@ import Login from './paginas/Login';
 import RegistroUnificado from './paginas/RegistroUnificado'
 import Senha from './paginas/Senha';
 import HomeLogada from './paginas/homeLogada'
+import Carrinho from "./paginas/carrinho";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Route path='/Registro' element={<RegistroUnificado/>}/>
       <Route path='/RecuperaçãoSenha' element={<Senha/>} />
       <Route path='/HomeLogada' element={<HomeLogada/>} />
+      <Route path='/Carrinho' element={<Carrinho/>} />
     </Routes>
       
      

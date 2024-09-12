@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import HeaderLogado from '../components/HeaderHomeLogado'
 import CarouselHome from '../componentesHomeLogado/carouselHome'
 import FuturosJogos from'../componentesHomeLogado/FuturosJogos'
