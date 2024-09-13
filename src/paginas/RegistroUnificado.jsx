@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 const RegistroUnificado = () => {
     useEffect(() => {
@@ -9,7 +10,7 @@ const RegistroUnificado = () => {
         0: {
             title: "Nome:",
             value: "",
-            content: "exemplo: João Gol da Silva",
+            content: "João da Silva",
         },
         1: {
             title: "Cpf, SSN ou NIF:",
@@ -115,23 +116,23 @@ const RegistroUnificado = () => {
         }
     };
 
-    React.useEffect(() => {
-      console.log(texts1);
-      console.log(texts2);
-      console.log(texts3)
-    }, [texts1])
-
     return (
-        <div className=' bg-Registro bg-cover h-screen flex justify-center '>
-            <div className="w-[90%] md:w-[30%] justify-center h-[80%] md:h-[97%] mt-[10%] md:mt-[1%] bg-blue-950 bg-opacity-20 rounded-lg border border-gray-300 p-4 flex flex-col ">
-                <div className='flex justify-center mt-[5%] ml-[5%]'>
-                    <div className={`rounded-full flex justify-center ${valorTexto === 0 ? 'text-white' : 'text-gray-400'} hover:bg-white hover:text-black border mt-2 w-[10%] md:w-[9%] mr-[10%] h-[86%]`}>
+        <div className=' bg-Registro bg-cover min-h-screen flex justify-center items-center'>
+            <div className="w-[90%] md:w-[30%] justify-around h-[80%] md:min-h-[20%] md:my-[1%] filter backdrop-blur-md bg-opacity-20 rounded-xl border border-gray-300 p-4 flex flex-col ">
+                <div className='flex justify-center mt-[5%]'>
+                    <div 
+                    onClick={() => valorTexto === 0 ? null : setValorTexto(0)}
+                    className={`rounded-[100%] flex justify-center ${valorTexto === 0 ? 'bg-white text-Azul-Gol' : 'text-gray-400 hover:text-white hover:font-bold cursor-pointer'} border w-7 h-7 items-center mr-[10%] mt-2 ease-in-out transition-colors duration-300`}>
                         1
                     </div>
-                    <div className={`rounded-full flex justify-center ${valorTexto === 1 ? 'text-white' : 'text-gray-400'} border mt-2 mr-[10%]  md:w-[9%] w-[10%] h-[86%]`}>
+                    <div 
+                    onClick={() => valorTexto === 1 ? null : setValorTexto(1)}
+                    className={`rounded-[100%] flex justify-center ${valorTexto === 1 ? 'bg-white text-Azul-Gol' : 'text-gray-400 hover:text-white hover:font-bold cursor-pointer'} border w-7 h-7 items-center mr-[10%] mt-2 ease-in-out transition-colors duration-300`}>
                         2
                     </div>
-                    <div className={`rounded-full flex justify-center ${valorTexto === 2 ? 'text-white' : 'text-gray-400'} border mt-2 w-[10%]  md:w-[9%] h-[86%]`}>
+                    <div 
+                    onClick={() => valorTexto === 2 ? null : setValorTexto(2)}
+                    className={`rounded-[100%] flex justify-center ${valorTexto === 2 ? 'bg-white text-Azul-Gol' : 'text-gray-400 hover:text-white hover:font-bold cursor-pointer'} border w-7 h-7 items-center mt-2 ease-in-out transition-colors duration-300`}>
                         3
                     </div>
                 </div>
@@ -144,7 +145,7 @@ const RegistroUnificado = () => {
                             placeholder={item.content}
                             value={item.value}
                             onChange={(event) => handleInputChange(event, index)}
-                            className="w-[97%] text-white mb-[4%] bg-Azul-Gol border border-white rounded-2xl px-2"
+                            className="w-[97%] text-white mb-[3%] bg-[#060f20] rounded-2xl px-2 py-2"
                         />
                     </div>
                 ))}
@@ -153,9 +154,12 @@ const RegistroUnificado = () => {
                         <Link to={valorTexto === 2 ? "/HomeLogada" : "#"}>
                             <button
                                 onClick={() => setValorTexto(valorTexto < 2 ? valorTexto + 1 : valorTexto)}
-                                className="justify-center p-1 text-align: center h-[90%] mr-[3%] flex bg-Verde-Gol text-white font-Carbona rounded-2xl hover:bg-verde-gol-escuro focus:ring-2"
+                                className="justify-center hover:animate-pulse items-center p-2 mr-[3%] flex bg-Verde-Gol font-Carbona text-black rounded-2xl hover:bg-verde-gol-escuro focus:ring-2"
                             >
-                                <span className='mt-[6%]'>Próximo </span><span className='mt-[0%] text-white ml-[3%]'></span>
+                                Próximo
+                                <IoIosArrowDroprightCircle
+                                size={22}
+                                className='ml-2 fill-[#0a1835]'/>
                             </button>
                         </Link>
                     </div>
