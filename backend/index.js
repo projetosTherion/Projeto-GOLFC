@@ -19,8 +19,7 @@ app.use(cors());
 // );
 
 app.get("/", (req, res) => {
-  console.log(req);
-  return res.status(234).send("Welcome!");
+  res.send("Welcome to the API!");
 });
 
 
@@ -30,9 +29,9 @@ app.use('/correios', correiosRoute);  // Usa a rota dos Correios
 mongoose
   .connect(mongodbUrl)
   .then(() => {
-    console.log("Connected");
+    console.log("Conexão com o MongoDB realizada com sucesso!");
     app.listen(PORT, () => {
-      console.log(`App is listening to port: ${PORT}`);
+      console.log(`Porta: ${PORT} - http://localhost:5555/`);
     });
   })
   .catch((err) => {
