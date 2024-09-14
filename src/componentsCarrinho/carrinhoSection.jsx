@@ -68,7 +68,7 @@ export default function CarrinhoSection() {
         <div key={index} className="flex flex-col">
           <div className="flex justify-between md:flex-row flex-col">
             <div className="flex items-center">
-              <div className="md:inline hidden w-6 h-6 bg-gray-300 mx-4" />
+            <input type="checkbox" className="md:inline hidden w-6 h-6 bg-gray-300 mx-4" />
               <div className="w-[30%] h-auto md:inline hidden">
                 <Cards />
               </div>

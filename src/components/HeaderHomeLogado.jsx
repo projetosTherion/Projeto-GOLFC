@@ -16,7 +16,7 @@ const HeaderHomeLogado = () => {
   }
   return (
     <div 
-    className='bg-opacity-70 filter backdrop-blur-lg py-[0.6%] px-[3%] flex justify-between items-center'>
+    className='bg-opacity-70 filter md:backdrop-blur-lg py-[0.6%] px-[3%] flex justify-between items-center'>
       <div className='flex w-[50%]'>
         <img src={Logo} alt="Logo Gol" className='mr-[7%] my-[1%] w-[26%] h-[25%] md:w-[10%] md:h-auto ' />
 
@@ -46,13 +46,13 @@ const HeaderHomeLogado = () => {
           </div>
         </Link>
 
-        <Link to="/">
+        <Link to="/Carrinho">
           <div className='flex  hover:underline  justify-between items-center'>  <IoCartOutline size={20} />
             <div className='text-white text-customResponsiveHeader ml-1'>Carrinho</div>
           </div>
         </Link>
 
-        <Link to="/">
+        <Link to="/Favoritos">
           <div className='flex   hover:underline   justify-between items-center'>< FaRegHeart size={20} />
             <div className='text-white  text-customResponsiveHeader ml-1'>Favorito</div>
           </div> </Link>
@@ -91,12 +91,17 @@ const HeaderHomeLogado = () => {
               pesquisar
             </div>
           </div>
+          <Link to="/Carrinho"> 
           <div className='flex mb-[5%]  border-b-white ml-[5%] '>  <IoCartOutline size={20} />
             <div className='text-white  text-customResponsiveHeader ml-[3%] '>carrinho</div>
-          </div>
+          </div></Link>
+          <Link to="/Favoritos"> 
           <div className='flex mb-[5%] border-b-white  ml-[5%]  '>< FaRegHeart size={20} />
-            <div className='text-white   text-customResponsiveHeader ml-[4%] '>favorito</div>
-          </div>
+            <div className='text-white   text-customResponsiveHeader ml-[4%] '>favorito
+              </div> 
+              
+             
+          </div> </Link>
           <div className='flex mb-[5%] border-b-white ml-[5%] '> <AiOutlineQuestionCircle size={20} />
             <div className='text-white   text-customResponsiveHeader ml-[3%]  '>suporte</div></div>
 

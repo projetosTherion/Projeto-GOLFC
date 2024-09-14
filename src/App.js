@@ -8,7 +8,7 @@ import RegistroUnificado from './paginas/RegistroUnificado'
 import Senha from './paginas/Senha';
 import HomeLogada from './paginas/homeLogada'
 import Carrinho from "./paginas/carrinho";
-
+import Favorito from "./paginas/Favoritos";
 const App = () => {
   return (
    
@@ -20,6 +20,7 @@ const App = () => {
       <Route path='/RecuperaçãoSenha' element={<Senha/>} />
       <Route path='/HomeLogada' element={<HomeLogada/>} />
       <Route path='/Carrinho' element={<Carrinho/>} />
+      <Route path='/Favoritos' element={<Favorito/>} />
     </Routes>
       
      

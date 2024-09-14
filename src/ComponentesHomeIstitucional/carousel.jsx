@@ -46,8 +46,9 @@ const CarouselHome = () => {
            responsive={responsive}
            showDots={true}
        >
-          <img src={Frame1} alt="" className='' />
+          
           <img src={Frame2} alt="" className='' />
+          <img src={Frame1} alt="" className='' />
           <img src={Frame3} alt=""  className='' />
           
     </Carousel>
