@@ -10,10 +10,10 @@ import { FaRegHeart } from "react-icons/fa";
 import Cards from '../componentesHomeLogado/Card.jsx';
 const Favoritos = () => {
    useEffect(() => {
-      document.title = "Home - GolFC"
+      document.title = "Favoritos - GolFC"
    }, [])
    
-   const cardData = Array.from({ length: 8 }, (_, index) => ({ id: index + 1 }));
+   const cardData = Array.from({ length: 16 }, (_, index) => ({ id: index + 1 }));
  return(
 
     <div className='   overflow-hidden bg-gradient-to-b from-Azul-Gol to-Azul-GolClaro100 '>
@@ -30,7 +30,7 @@ const Favoritos = () => {
 
  </div>
  <Link
-      to="/">
+      to="/Home">
       <button
       className="bg-white text-[#0A1835] absolute center-0 left-[5%] md:left-[10%] md:-translate-x-[80%]
       translate-y-2 py-1 px-2 font-CarbonaBold rounded-2xl flex items-center">

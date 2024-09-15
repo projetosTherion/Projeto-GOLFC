@@ -18,8 +18,9 @@ const HeaderHomeLogado = () => {
     <div 
     className='bg-opacity-70 filter md:backdrop-blur-lg py-[0.6%] px-[3%] flex justify-between items-center'>
       <div className='flex w-[50%]'>
-        <img src={Logo} alt="Logo Gol" className='mr-[7%] my-[1%] w-[26%] h-[25%] md:w-[10%] md:h-auto ' />
-
+      <Link to="/Home" className='w-[20%]'>
+        <img src={Logo} alt="Logo Gol" className='mr-[7%] my-[1%] w-[96%] h-[100%] md:w-[50%] md:h-auto ' />
+     </Link>
         <div className=' md:flex hidden  justify-between md:w-[15%] items-center  text-white'>
           <FaFacebook
             className='cursor-pointer hover:fill-black transition-colors ease-in-out duration-300'

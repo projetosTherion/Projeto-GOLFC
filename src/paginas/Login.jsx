@@ -84,7 +84,7 @@ const Login = () => {
           
         
         </div>
-        <Link to={"/HomeLogada"}>
+        <Link to={"/Home"}>
         <button
           className="w-[98%] h-[80%] bg-Verde-Gol text-white font-Carbona rounded-2xl hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 mb-4"
         >

@@ -23,10 +23,10 @@ export default function Carrinho() {
       className="w-screen max-w-screen h-auto"
       src={imagemCarrinho}/>  
       <Link
-      to="/">
+      to="/Home">
       <button
       className="bg-white text-[#0A1835] absolute bottom-0 left-[5%] md:left-[10%] md:-translate-x-[50%]
-      translate-y-1/2 py-1 px-2 font-CarbonaBold rounded-2xl flex items-center">
+      translate-y-1/2 py-1 px-2 font-Carbona rounded-2xl flex items-center">
         <IoIosArrowBack
         className="mb-0.5 hover:animate-pulse"
         size={20}/>

@@ -11,7 +11,7 @@ import Extra from '../ComponentesHomeIstitucional/infoExtra.jsx'
 
 export default function HomeInstitucional() {
   useEffect(() => {
-    document.title = "Home - GolFC"
+    document.title = "GolFC"
   }, [])
   
   return (
