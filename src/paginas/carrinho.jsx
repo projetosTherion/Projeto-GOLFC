@@ -13,9 +13,9 @@ export default function Carrinho() {
   
   return(
     <div 
-    className="bg-[#0A1835] max-w-screen min-w-screen w-screen overflow-hidden">
+    className="bg-[#0A1835] max-w-[100vw] w-full overflow-hidden">
       <div 
-      className="md:absolute top-0 left-0 w-screen h-auto z-50">
+      className="md:absolute top-0 left-0 w-full max-w-[100vw] h-auto z-50">
       <HeaderHomeLogado/>
       </div>
       <div className="relative">
@@ -38,7 +38,7 @@ export default function Carrinho() {
       style={{
         maxWidth: "100vw"
       }}
-      className="max-w-screen mt-8 overflow-hidden flex w-screen justify-center">
+      className="max-w-[100vw] mt-8 overflow-hidden flex w-full justify-center">
       <CarrinhoSection/>
       </div>
       <div className="mb-3">

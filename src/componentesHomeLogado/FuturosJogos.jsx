@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Time1 from '../imagens/Bahia.png';
 import Time2 from '../imagens/Athlético Paranaense.png';
 import { IoIosArrowDropdownCircle } from "react-icons/io";
+import Accordion from "../componentesGenericos/Accordion";
 
 const FuturosJogos = () => {
   const [showMore, setShowMore] = useState(false);
@@ -98,9 +99,9 @@ const FuturosJogos = () => {
 
   return (
     <div>
-    <div className='bg-FuturosJogos bg-cover'>
-      <div className='font-tuskerGrotesk mt-[2%] text-white md:ml-[10%]'>PROXIMAS PARTIDAS</div>
-      <div className='flex justify-center mt-[1%]'>
+    <div className='bg-FuturosJogos filter bg-clip-content my-5 bg-cover'>
+      <div className='font-tuskerGrotesk py-3 text-white md:ml-[10%]'>PROXIMAS PARTIDAS</div>
+      <div className='flex justify-center mb-[1%]'>
         {Object.values(nome).map((item, index) => (
          <div
          key={index}
@@ -121,33 +122,36 @@ const FuturosJogos = () => {
       </div>
 
 
-      {showMore && (
-  <div className={`mt-4     `}>
-    <div className='flex  justify-center mt-[1%]'>
-      {Object.values(nomeExtendido).map((item, index) => (
-        <div
-        key={index}
-        className={`bg-white rounded-lg mr-[5%] ${
-          index < 2 ? 'w-[40%] md:w-[20%]' : 'hidden md:block md:w-[20%]'
-        }`}
-      >
-          <div className='flex'>
-            <div className='flex mb-[5%]'>
-              <img src={item.img1} alt="" className='md:mt-[4%] md:w-[60%] md:h-[80%]  mt-[10%] w-[40%] h-[70%] ' />
-              <span className='font-bold mt-[15%]'> X </span>
-              <img src={item.img2} alt="" className='md:mt-[4%] md:w-[60%] md:h-[80%]  mt-[10%] w-[40%] h-[70%]  ' />
-            </div>
-            <span className=''> {item.content}</span>
+      <Accordion
+      isOpen={showMore}
+      customClass={"mt-4"}>
+        <div>
+          <div className='flex  justify-center'>
+            {Object.values(nomeExtendido).map((item, index) => (
+              <div
+              key={index}
+              className={`bg-white rounded-lg mr-[5%] ${
+                index < 2 ? 'w-[40%] md:w-[20%]' : 'hidden md:block md:w-[20%]'
+              }`}
+            >
+                <div className='flex'>
+                  <div className='flex mb-[5%]'>
+                    <img src={item.img1} alt="" className='md:mt-[4%] md:w-[60%] md:h-[80%]  mt-[10%] w-[40%] h-[70%]' />
+                    <span className='font-bold mt-[15%]'> X </span>
+                    <img src={item.img2} alt="" className='md:mt-[4%] md:w-[60%] md:h-[80%]  mt-[10%] w-[40%] h-[70%]' />
+                  </div>
+                  <span className=''> {item.content}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-)}
+      </Accordion>
       <div className='flex mr-[5%] justify-end font-Carbona text-center text-white'>
-        <button className='flex  text-customResponsiveHeader' onClick={handleToggle}>
+        <button 
+        className='flex  text-customResponsiveHeader' 
+        onClick={() => setShowMore(!showMore)}>
           Ver mais 
-          
           <span className='mt-[5%] ml-[0%]  text-Verde-Gol'>
             <IoIosArrowDropdownCircle />
             </span>

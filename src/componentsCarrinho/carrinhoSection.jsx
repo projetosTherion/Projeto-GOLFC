@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { IoTrash } from "react-icons/io5";
 import LogoRedonda from "../imagens/logoRedonda.png";
-import Cards from "../componentesHomeLogado/Card";
+import Cards, { ref } from "../componentesHomeLogado/Card";
 
 export default function CarrinhoSection() {
   const golCardInfo = {
@@ -51,7 +51,7 @@ export default function CarrinhoSection() {
   }, []);
 
   return (
-    <div className="w-[95%] md:w-[80%] h-auto flex flex-col justify-center">
+    <div className="w-[95%] md:w-[85%] h-auto flex flex-col justify-center">
       <div className="flex justify-between items-center">
         <div className="flex items-center">
           <IoCartOutline size={30} color="#44d62d" className="mr-2" />

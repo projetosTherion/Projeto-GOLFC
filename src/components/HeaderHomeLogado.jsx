@@ -16,7 +16,7 @@ const HeaderHomeLogado = () => {
   }
   return (
     <div 
-    className='bg-opacity-70 filter md:backdrop-blur-lg py-[0.6%] px-[3%] flex justify-between items-center'>
+    className='bg-opacity-70 filter md:backdrop-blur-lg py-[0.6%] px-[3%] flex justify-between items-center max-w-[100vw] w-full'>
       <div className='flex w-[50%]'>
       <Link to="/Home" className='w-[20%]'>
         <img src={Logo} alt="Logo Gol" className='mr-[7%] my-[1%] w-[96%] h-[100%] md:w-[50%] md:h-auto ' />
