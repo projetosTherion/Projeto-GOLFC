@@ -34,7 +34,7 @@ const Cards = ({ content }) => {
          <div className='relative flex flex-col items-center'>
             {/*foto d jogador*/}
             <img src={PlaceHolder} alt="placeholder" className=' mt-[2%] h-[40%] w-[90%] md:h-[90%] md:w-[95%] ' />
-            <div className=' text-gray-300 absolute bottom-0 pt-[3%] rounded-tl-2xl rounded-tr-2xl bg-Azul-GolClaro px-[10%]  place-items-center  text-center  text-customResponsiveNumberPlayer    '>
+            <div className=' text-gray-300 font-CarbonaBold italic absolute bottom-0 pt-[3%] rounded-tl-2xl rounded-tr-2xl bg-Azul-GolClaro px-[10%]  place-items-center  text-center  text-customResponsiveNumberPlayer    '>
                Arrascaeta <span className='text-Verde-Gol'>00'</span>
             </div>
          </div>

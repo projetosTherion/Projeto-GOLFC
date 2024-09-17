@@ -74,7 +74,7 @@ export default function CarrinhoSection() {
               </div>
               <div className="flex flex-col justify-between h-full ml-[2%] text-nowrap">
                 <div className="flex flex-col">
-                  <h2 className="font-CarbonaBold text-white">
+                  <h2 className="font-Carbona text-white">
                     Golcard - {index}
                   </h2>
                   <h3 className="font-CarbonaBold text-white">

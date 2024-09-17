@@ -19,8 +19,8 @@ const Favoritos = () => {
     <div className='   overflow-hidden bg-gradient-to-b from-Azul-Gol to-Azul-GolClaro100 '>
 
 
-<div 
-      className="md:absolute top-0 left-0 w-screen h-auto z-50">
+      <div 
+      className="md:absolute top-0 left-0 w-full max-w-screen h-auto z-50">
       <HeaderLogado/>
       </div>
       <div className="relative">

@@ -2,22 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @font-face {
     font-family: "tuskerGrotesk";
     src: url("../public/fonts/Tusker.Grotesk/TuskerGrotesk-6500Medium.ttf") format("truetype");
     
-
-
   }
   @font-face {
-    
     font-family: "Carbona";
-    src: url("../public/fonts/Carbona Test/CarbonaTest-Medium.otf")format("opentype");
-    
+    src: url("../public/fonts/CarbonaTest-Regular.otf") format("opentype");
   }
-  
+
+  .font-Carbona {
+    font-family: "Carbona";
+  }
  
   @font-face {
     
