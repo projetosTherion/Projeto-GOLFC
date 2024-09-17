@@ -170,7 +170,7 @@ const FuturosJogos = () => {
 
     <div className="absolute top-1 left-1/2 transform -translate-x-1/2 h-[90%] w-[2px] bg-[#3C2290]  "></div>
   </span>
-     <span className=' ml-[3%] mt-[3%] mb-[3%] md:text-customResponsiveConteudo text-customResponsiveTitulo'>CONVITE AMIGOS(PLACEHOLDER)</span>
+     <span className='mt-[3%] mb-[3%] md:text-customResponsiveConteudo text-customResponsiveTitulo'>CONVITE AMIGOS(PLACEHOLDER)</span>
     </div></div>
     </div>
   );

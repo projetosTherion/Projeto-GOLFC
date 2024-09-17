@@ -118,7 +118,7 @@ const RegistroUnificado = () => {
 
     return (
         <div className=' bg-Registro bg-cover min-h-screen flex justify-center items-center'>
-            <div className="w-[90%] md:w-[30%] justify-around h-[80%] md:min-h-[20%] md:my-[1%] filter backdrop-blur-md bg-opacity-20 rounded-xl border border-gray-300 p-4 flex flex-col ">
+            <div className="w-[90%] md:w-[30%] justify-around h-[80%] md:min-h-[20%] md:my-[1%]  bg-opacity-20 rounded-xl border border-gray-300 p-4 flex flex-col ">
                 <div className='flex justify-center mt-[5%]'>
                     <div 
                     onClick={() => valorTexto === 0 ? null : setValorTexto(0)}
@@ -151,7 +151,7 @@ const RegistroUnificado = () => {
                 ))}
                 <div className='flex justify-end'>
                     <div className=''>
-                        <Link to={valorTexto === 2 ? "/HomeLogada" : "#"}>
+                        <Link to={valorTexto === 2 ? "/Home" : "#"}>
                             <button
                                 onClick={() => setValorTexto(valorTexto < 2 ? valorTexto + 1 : valorTexto)}
                                 className="justify-center hover:animate-pulse items-center p-2 mr-[3%] flex bg-Verde-Gol font-Carbona text-black rounded-2xl hover:bg-verde-gol-escuro focus:ring-2"
