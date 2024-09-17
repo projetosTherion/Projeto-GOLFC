@@ -25,11 +25,10 @@ const ComoFunciona = () => {
  
 
   return (
-    <div className=' flex flex-col  justify-center bg-Estadio text-white bg-cover'>
-      <div className='flex justify-center pt-[12%]'>
-        <img src={LogoBranca} alt="Logo GOL" className='size-[20%] md:h-[10%] md:w-[10%] mb-2' />
+    <div className=' flex flex-col items-center justify-center bg-Estadio text-white bg-cover'>
+      <div className='flex justify-center pt-[6%]'>
+        <img src={LogoBranca} alt="Logo GOL" className='size-[20%] md:size-[100%] mb-2' />
       </div>
-
       <div className='flex font-tuskerGrotesk justify-center text-responsive'>
         COMO FUNCIONA?
       </div>

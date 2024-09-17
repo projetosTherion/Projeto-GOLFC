@@ -147,12 +147,12 @@ const FuturosJogos = () => {
           </div>
         </div>
       </Accordion>
-      <div className='flex mr-[5%] justify-end font-Carbona text-center text-white'>
+      <div className='flex mr-[5%] justify-end font-Carbona items-center text-center text-white'>
         <button 
-        className='flex  text-customResponsiveHeader' 
+        className='flex  text-customResponsiveHeader tracking-wide font-CarbonaBold' 
         onClick={() => setShowMore(!showMore)}>
           Ver mais 
-          <span className='mt-[5%] ml-[0%]  text-Verde-Gol'>
+          <span className='mt-[5%] ml-1  text-Verde-Gol'>
             <IoIosArrowDropdownCircle />
             </span>
         </button>
