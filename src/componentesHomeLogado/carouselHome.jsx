@@ -27,7 +27,21 @@ const CarouselHome = () => {
     }
   };
 
- 
+  const CustomDot = ({ onClick, ...rest }) => {
+    const {
+      active,
+    } = rest;
+    // onMove means if dragging or swiping in progress.
+    // active is provided by this lib for checking if the item is active or not.
+    return (
+      <button
+        className={`${active ? "bg-white" : "bg-transparent"}
+        size-[4.6vw] md:size-[1.6vw] border-[1px] border-solid border-white ease-in-out duration-300
+        transition-colors rounded-full mx-2 mb-7`}
+        onClick={() => onClick()}
+      />
+    );
+  };
 
   return (
     <div>
@@ -37,10 +51,10 @@ const CarouselHome = () => {
          infinite={true}
          autoPlay={true}
         autoPlaySpeed={3000}
-          className=' md:w-[90%]  rounded-xl'
+          containerClass='w-screen h-screen'
           partialVisible={true}
           draggable={true}
-     
+          customDot={<CustomDot/>}
            removeArrowOnDeviceType={["tablet", "mobile"]}
            responsive={responsive}
            showDots={true}

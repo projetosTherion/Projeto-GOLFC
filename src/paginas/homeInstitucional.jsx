@@ -17,7 +17,6 @@ export default function HomeInstitucional() {
   return (
  <div className=' overflow-hidden  '>
     <Header/>
- 
   <div className="w-[100%] h-[50%] m-auto">
       <Carousel />
     </div>
