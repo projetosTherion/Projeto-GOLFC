@@ -8,6 +8,7 @@ router.post("/", async (req, res, next) => {
     const {
       nome,
       email,
+      senha,
       data_nascimento,
       documentoID,
       celular,
@@ -25,6 +26,7 @@ router.post("/", async (req, res, next) => {
     if (
       !nome ||
       !email ||
+      !senha,
       !data_nascimento ||
       !documentoID ||
       !celular ||
@@ -45,6 +47,7 @@ router.post("/", async (req, res, next) => {
     const newUser = {
       nome,
       email,
+      senha,
       data_nascimento,
       documentoID,
       celular,
