@@ -72,7 +72,7 @@ export default function CarrinhoSection() {
               <div className="w-[30%] h-auto md:inline hidden">
                 <Cards />
               </div>
-              <div className="flex flex-col justify-between h-full ml-[2%] text-nowrap">
+              <div className="flex flex-col justify-between h-full md:ml-[2%] text-nowrap">
                 <div className="flex flex-col">
                   <h2 className="font-Carbona text-white">
                     Golcard - {index}
@@ -81,7 +81,7 @@ export default function CarrinhoSection() {
                     Data do sorteio: {dataSorteio}
                   </h3>
                 </div>
-                <div className="flex md:hidden justify-between items-center my-3">
+                <div className="flex flex-col md:hidden my-3">
                   <div className="flex items-center relative">
                     <img src={LogoRedonda} alt="Logo Gol" className="w-[7vw] h-auto mr-2" />
                     <div className="text-[120%] font-CarbonaBold tracking-[0.3em] text-[#44d62d]">
@@ -92,7 +92,8 @@ export default function CarrinhoSection() {
                     Golcard: {id}
                   </div>
                 </div>
-                <div className="flex mt-2 items-center">
+                <div className="flex mt-2 md:items-center md:flex-row flex-col">
+                  <div className="flex items-center justify-start mb-2">
                   <div className="flex text-white text-center items-center p-1 border-2 border-solid border-white rounded-2xl">
                     <p className="text-white font-Carbona tracking-wide">Qtd:</p>
                     <button
@@ -106,9 +107,13 @@ export default function CarrinhoSection() {
                     <IoTrash color="white" size={20} className="mr-1" />
                     <p className="text-white tracking-wide font-Carbona text-[100%]">Excluir</p>
                   </div>
-                  <div className="h-[65%] w-[1px] bg-white mx-5" />
-                  <p className="text-white tracking-wide font-Carbona text-[100%] cursor-pointer">Compartilhar</p>
+                  </div>
+                  <div className="h-[65%] w-[1px] bg-white mx-5 md:inline hidden" />
+                  <p className="md:text-white md:rounded-none rounded-2xl bg-white md:bg-transparent w-fit text-Azul-Gol tracking-wide font-CarbonaBold p-2 text-[100%] cursor-pointer">Compartilhar</p>
                 </div>
+              </div>
+              <div className="md:hidden flex w-full h-fit justify-center items-center">
+                <Cards/>
               </div>
             </div>
             <div className="md:flex hidden w-[23%] flex-col justify-between">

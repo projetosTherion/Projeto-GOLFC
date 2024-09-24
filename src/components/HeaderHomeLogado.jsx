@@ -17,7 +17,7 @@ const HeaderHomeLogado = () => {
   return (
     <div 
     className='bg-opacity-70 filter md:backdrop-blur-lg py-[0.6%] px-[3%] flex justify-between items-center max-w-[100vw] w-full'>
-      <div className='flex w-[50%]'>
+      <div className='flex w-[50%] items-center'>
       <Link to="/Home" className='w-[20%]'>
         <img src={Logo} alt="Logo Gol" className='mr-[7%] my-[1%] w-[96%] h-[100%] md:w-[50%] md:h-auto ' />
      </Link>
@@ -74,7 +74,7 @@ const HeaderHomeLogado = () => {
       </div>
 
       <div className='mt-[2%] ml-[40%] md:ml-[0%]  md:hidden text-white' >
-        <div onClick={handleNav} className='block md:items-center  '>
+        <div onClick={handleNav} className='flex md:items-center  '>
           {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
 
