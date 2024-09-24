@@ -51,7 +51,7 @@ const CarouselHome = () => {
          infinite={true}
          autoPlay={true}
         autoPlaySpeed={3000}
-          containerClass='w-screen h-screen'
+          containerClass='w-screen'
           partialVisible={true}
           draggable={true}
           customDot={<CustomDot/>}

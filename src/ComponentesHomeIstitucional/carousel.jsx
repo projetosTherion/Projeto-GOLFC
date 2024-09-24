@@ -50,7 +50,6 @@ const CarouselHome = () => {
          infinite={true}
          autoPlay={true}
         autoPlaySpeed={3000}
-        containerClass='md:h-screen'
         renderDotsOutside={false}
         customDot={<CustomDot/>}
         className=' md:w-screen  '
