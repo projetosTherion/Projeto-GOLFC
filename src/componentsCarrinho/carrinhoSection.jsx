@@ -99,7 +99,7 @@ export default function CarrinhoSection() {
                   <div className="flex text-Azul-Gol bg-white text-center font-CarbonaBold items-center p-1 border-2 border-solid border-white rounded-2xl">
                     <p className="font-CarbonaBold tracking-wide">Qtd:</p>
                     <FaCirclePlus
-                    className="w-5 h-5 fill-Azul-Gol mx-1"
+                    className="w-5 h-5  fill-Azul-Gol mx-1"
                     onClick={() => totalItens < 9 ? setTotalItens(totalItens + 1) : null}/>
                     {totalItens}
                     <FaCircleMinus

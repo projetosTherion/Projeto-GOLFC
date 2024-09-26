@@ -23,13 +23,13 @@ const HeaderHomeLogado = () => {
      </Link>
         <div className=' md:flex hidden  justify-between md:w-[15%] items-center  text-white'>
           <FaFacebook
-            className='cursor-pointer hover:fill-black transition-colors ease-in-out duration-300'
+            className='cursor-pointer hover:fill-blue-900 transition-colors ease-in-out duration-300'
             size={16} />
           <FaInstagram
-            className='cursor-pointer hover:fill-black transition-colors ease-in-out duration-300'
+            className='cursor-pointer hover:fill-pink-500 transition-colors ease-in-out duration-300'
             size={16} />
           <FaLinkedin
-            className='cursor-pointer hover:fill-black transition-colors ease-in-out duration-300'
+            className='cursor-pointer hover:fill-blue-900 transition-colors ease-in-out duration-300'
             size={16} />
         </div>
 

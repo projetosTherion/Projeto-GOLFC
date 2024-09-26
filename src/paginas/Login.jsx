@@ -91,20 +91,29 @@ const Login = () => {
           Entrar
         </button> 
         </Link>
-        <Link to={"/RecuperaçãoSenha"}>
-        <div className="text-white text-base mb-2 text-center w-full hover:underline">  Esqueceu sua senha? </div>
+        <div className='text-base  text-center w-full'>
+        <Link to={"/Home"}>
+
+        <span className='hover:underline text-white'>Entrar como visitante</span>
+        
         </Link>
+        <Link to={"/RecuperaçãoSenha"}>
+        <div className="text-white text-base  text-center w-full hover:underline">  Esqueceu sua senha? </div>
+        </Link></div>
       
-       
-         <div className='text-Verde-Gol text-base mb-4 text-center w-full '>
+      
+        
+         <div className='text-Verde-Gol text-base mb-1 text-center w-full '>
         <Link to={"/Registro"}>
         <button >
         <span className='text-white'>Não possui uma conta? </span>
         <span className='hover:underline'>crie uma</span>
+      
         </button>
         </Link>
-</div>
 
+ 
+  </div>
         <button
           className="w-[98%] h-[36px] bg-transparent border border-white text-white rounded-2xl mb-2 flex items-center justify-center hover:bg-white hover:text-blue-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
         >
