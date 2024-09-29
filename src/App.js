@@ -2,7 +2,7 @@ import React from 'react';
 
 import Home from './paginas/homeInstitucional';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import PaginaPesquisa from './paginas/paginaPesquisa';
 import Login from './paginas/Login';
 import RegistroUnificado from './paginas/RegistroUnificado'
 import Senha from './paginas/Senha';
@@ -21,6 +21,7 @@ const App = () => {
       <Route path='/Home' element={<HomeLogada/>} />
       <Route path='/Carrinho' element={<Carrinho/>} />
       <Route path='/Favoritos' element={<Favorito/>} />
+      <Route path='/paginaPesquisa' element={<PaginaPesquisa/>} />
     </Routes>
       
      

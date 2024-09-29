@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Accordion = ({ customClass, children, isOpen }) => {
+const Accordion = ({ customClass, children, isOpen, hasDelay=true }) => {
 
   return (
     <div className={customClass}>
@@ -14,7 +14,7 @@ const Accordion = ({ customClass, children, isOpen }) => {
         <div
           className={`ease-in-out duration-500 transition-opacity
             ${isOpen ? 
-              "opacity-100 delay-500" 
+              (`opacity-100 ${hasDelay ? `delay-500` : ``}`)
               : 
               "opacity-0"}`}
         >
