@@ -38,7 +38,7 @@ const HeaderHomeLogado = () => {
 
       <div className='text-Verde-Gol md:flex font-Carbona w-[55%] lg:w-[50%] justify-between items-center hidden '>
 
-        <Link to="/">
+        <Link to="/PaginaPesquisa">
         <button className='relative group'>
               <span className='flex  text-Verde-Gol text-[90%]'>  <HiMiniMagnifyingGlass size={20} /> Pesquisar</span>
               <div className='absolute bottom-0 w-0 group-hover:w-full ease-in-out duration-300 transition-all bg-Verde-Gol h-[1px]'/>
@@ -88,11 +88,13 @@ const HeaderHomeLogado = () => {
 
               icon
             </div></div>
+            <Link to=" /PaginaPesquisa"> 
           <div className='flex mt-[5%] ml-[5%]  mb-[5%] '> <HiMiniMagnifyingGlass size={20} />
             <div className='text-white  text-customResponsiveHeader  ml-[3%] '>
               pesquisar
             </div>
           </div>
+          </Link>
           <Link to="/Carrinho"> 
           <div className='flex mb-[5%]  border-b-white ml-[5%] '>  <IoCartOutline size={20} />
             <div className='text-white  text-customResponsiveHeader ml-[3%] '>carrinho</div>
