@@ -1,7 +1,7 @@
 import { IoIosArrowDown } from "react-icons/io";
 import Accordion from "../componentesGenericos/Accordion";
 import { useEffect, useState } from "react";
-
+// a
 let info = {
   ligas: {},
   campeonatos: {},
