@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../imagens/Duvidas.png'; // Ajuste o caminho da imagem conforme necessário
 import Footer from '../components/Footer';
+import Accordion from '../componentesGenericos/Accordion';
+import Header from '../components/Header';
+import { IoIosArrowBack } from "react-icons/io";
 
 function Duvidas() {
   useEffect(() => {
@@ -9,20 +12,28 @@ function Duvidas() {
   }, []);
 
   return (
-    <div className='min-h-screen bg-blue-950 flex flex-col items-center'>
+    <div className='min-h-screen bg-Azul-Gol flex flex-col items-center'>
       {/* Container para a imagem e o botão */}
+      <div className='w-full max-w-screen'>
+        <Header/>
+      </div>
       <div className="relative w-full">
         {/* Botão Voltar */}
-        <Link
-          to="/"
-          className="absolute top-80 left-20 ml-40 mt-20 text-black bg-white px-4 py-3 rounded-md font-bold shadow-md z-10"
-        >
-          &lt; Voltar
-        </Link>
 
-        {/* Imagem do logo */}
-        <div className="absolute top-0 left-0 bg-black w-full h-32 opacity-35"></div>
-        <img src={Logo} alt="Logo GolFC" className="mt-2 -ml-4 w-full mb-10" />
+        <div className='relative'>
+          <Link
+            to="/Home">
+            <button
+              className="bg-white text-[#0A1835] absolute bottom-0 left-[5%] md:left-[10%] md:-translate-x-[50%]
+        translate-y-1/2 py-1 px-2 font-Carbona rounded-2xl flex items-center">
+              <IoIosArrowBack
+                className="mb-0.5 hover:animate-pulse"
+                size={20} />
+              Voltar
+            </button>
+          </Link>
+          <img src={Logo} alt="Logo GolFC" className="w-full mb-10" />
+        </div>
       </div>
 
       {/* Container para o título e retângulos */}
@@ -70,6 +81,7 @@ function Duvidas() {
           </button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
@@ -83,18 +95,19 @@ const ExpandingText = () => {
 
   return (
     <div className="mt-6 mb-6 flex flex-col items-center w-full">
-      <div className="w-full text-left flex items-center">
+      <div onClick={toggleExpand} className="w-full cursor-pointer text-left flex items-center">
         <p className="text-white font-Carbona">Lorem Ipsum</p>
-        <button onClick={toggleExpand} className="ml-2 text-white">
+        <button className="ml-2 text-white">
           {isExpanded ? '▲' : '▼'}
         </button>
       </div>
       <div className="border-t border-white w-full h-[0.5px] mt-2"></div>
-      {isExpanded && (
-        <div className="mt-2 p-4 rounded-lg border border-white bg-gray-800 w-full">
+      <Accordion
+      isOpen={isExpanded}>
+        <div className="mt-2 p-4 text-white font-Carbona w-full">
           {Array(5).fill('Lorem Ipsum').join(' ')}
         </div>
-      )}
+      </Accordion>
     </div>
   );
 };

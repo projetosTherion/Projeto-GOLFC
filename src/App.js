@@ -9,6 +9,8 @@ import Senha from './paginas/Senha';
 import HomeLogada from './paginas/homeLogada'
 import Carrinho from "./paginas/carrinho";
 import Favorito from "./paginas/Favoritos";
+import Duvidas from "./paginas/Duvidas";
+
 const App = () => {
   return (
    
@@ -22,10 +24,8 @@ const App = () => {
       <Route path='/Carrinho' element={<Carrinho/>} />
       <Route path='/Favoritos' element={<Favorito/>} />
       <Route path='/paginaPesquisa' element={<PaginaPesquisa/>} />
+      <Route path='/Duvidas' element={<Duvidas/>} />
     </Routes>
-      
-     
-  
   </Router>
   );
 };
