@@ -17,19 +17,19 @@ const HeaderHomeLogado = () => {
   return (
     <div 
     className='bg-opacity-70 filter md:backdrop-blur-lg py-[0.6%] px-[3%] flex justify-between items-center max-w-[100vw] w-full'>
-      <div className='flex w-[50%]'>
+      <div className='flex w-[50%] items-center'>
       <Link to="/Home" className='w-[20%]'>
         <img src={Logo} alt="Logo Gol" className='mr-[7%] my-[1%] w-[96%] h-[100%] md:w-[50%] md:h-auto ' />
      </Link>
         <div className=' md:flex hidden  justify-between md:w-[15%] items-center  text-white'>
           <FaFacebook
-            className='cursor-pointer hover:fill-black transition-colors ease-in-out duration-300'
+            className='cursor-pointer hover:fill-blue-900 transition-colors ease-in-out duration-300'
             size={16} />
           <FaInstagram
-            className='cursor-pointer hover:fill-black transition-colors ease-in-out duration-300'
+            className='cursor-pointer hover:fill-pink-500 transition-colors ease-in-out duration-300'
             size={16} />
           <FaLinkedin
-            className='cursor-pointer hover:fill-black transition-colors ease-in-out duration-300'
+            className='cursor-pointer hover:fill-blue-900 transition-colors ease-in-out duration-300'
             size={16} />
         </div>
 
@@ -38,7 +38,7 @@ const HeaderHomeLogado = () => {
 
       <div className='text-Verde-Gol md:flex font-Carbona w-[55%] lg:w-[50%] justify-between items-center hidden '>
 
-        <Link to="/">
+        <Link to="/PaginaPesquisa">
         <button className='relative group'>
               <span className='flex  text-Verde-Gol text-[90%]'>  <HiMiniMagnifyingGlass size={20} /> Pesquisar</span>
               <div className='absolute bottom-0 w-0 group-hover:w-full ease-in-out duration-300 transition-all bg-Verde-Gol h-[1px]'/>
@@ -74,7 +74,7 @@ const HeaderHomeLogado = () => {
       </div>
 
       <div className='mt-[2%] ml-[40%] md:ml-[0%]  md:hidden text-white' >
-        <div onClick={handleNav} className='block md:items-center  '>
+        <div onClick={handleNav} className='flex md:items-center  '>
           {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
 
@@ -88,11 +88,13 @@ const HeaderHomeLogado = () => {
 
               icon
             </div></div>
+            <Link to=" /PaginaPesquisa"> 
           <div className='flex mt-[5%] ml-[5%]  mb-[5%] '> <HiMiniMagnifyingGlass size={20} />
             <div className='text-white  text-customResponsiveHeader  ml-[3%] '>
               pesquisar
             </div>
           </div>
+          </Link>
           <Link to="/Carrinho"> 
           <div className='flex mb-[5%]  border-b-white ml-[5%] '>  <IoCartOutline size={20} />
             <div className='text-white  text-customResponsiveHeader ml-[3%] '>carrinho</div>

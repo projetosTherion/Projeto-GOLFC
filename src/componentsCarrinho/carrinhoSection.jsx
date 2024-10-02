@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { IoCartOutline } from "react-icons/io5";
 import { IoTrash } from "react-icons/io5";
 import LogoRedonda from "../imagens/logoRedonda.png";
-import Cards, { ref } from "../componentesHomeLogado/Card";
+import Cards from "../componentesHomeLogado/Card";
+import { FaCirclePlus } from "react-icons/fa6";
+import { FaCircleMinus } from "react-icons/fa6";
 
 export default function CarrinhoSection() {
   const golCardInfo = {
@@ -72,16 +74,16 @@ export default function CarrinhoSection() {
               <div className="w-[30%] h-auto md:inline hidden">
                 <Cards />
               </div>
-              <div className="flex flex-col justify-between h-full ml-[2%] text-nowrap">
+              <div className="flex flex-col justify-between h-full md:ml-[2%] text-nowrap max-w-[70%]">
                 <div className="flex flex-col">
-                  <h2 className="font-Carbona text-white">
+                  <h2 className="font-Carbona text-white text-wrap">
                     Golcard - {index}
                   </h2>
                   <h3 className="font-CarbonaBold text-white">
                     Data do sorteio: {dataSorteio}
                   </h3>
                 </div>
-                <div className="flex md:hidden justify-between items-center my-3">
+                <div className="flex flex-col md:hidden my-3">
                   <div className="flex items-center relative">
                     <img src={LogoRedonda} alt="Logo Gol" className="w-[7vw] h-auto mr-2" />
                     <div className="text-[120%] font-CarbonaBold tracking-[0.3em] text-[#44d62d]">
@@ -92,23 +94,30 @@ export default function CarrinhoSection() {
                     Golcard: {id}
                   </div>
                 </div>
-                <div className="flex mt-2 items-center">
-                  <div className="flex text-white text-center items-center p-1 border-2 border-solid border-white rounded-2xl">
-                    <p className="text-white font-Carbona tracking-wide">Qtd:</p>
-                    <button
-                    onClick={() => totalItens < 9 ? setTotalItens(totalItens + 1) : null}>+</button>
+                <div className="flex mt-2 md:items-center md:flex-row flex-col">
+                  <div className="flex items-center justify-start mb-2">
+                  <div className="flex text-Azul-Gol bg-white text-center font-CarbonaBold items-center p-1 border-2 border-solid border-white rounded-2xl">
+                    <p className="font-CarbonaBold tracking-wide">Qtd:</p>
+                    <FaCirclePlus
+                    className="w-5 h-5  fill-Azul-Gol mx-1"
+                    onClick={() => totalItens < 9 ? setTotalItens(totalItens + 1) : null}/>
                     {totalItens}
-                    <button
-                    onClick={() => totalItens === 1 ? null : setTotalItens(totalItens - 1)}>-</button>
+                    <FaCircleMinus
+                    className="w-5 h-5 fill-Azul-Gol mx-1"
+                    onClick={() => totalItens === 1 ? null : setTotalItens(totalItens - 1)}/>
                   </div>
                   <div className="h-[65%] w-[1px] bg-white mx-5" />
                   <div className="flex cursor-pointer">
                     <IoTrash color="white" size={20} className="mr-1" />
                     <p className="text-white tracking-wide font-Carbona text-[100%]">Excluir</p>
                   </div>
-                  <div className="h-[65%] w-[1px] bg-white mx-5" />
-                  <p className="text-white tracking-wide font-Carbona text-[100%] cursor-pointer">Compartilhar</p>
+                  </div>
+                  <div className="h-[65%] w-[1px] bg-white mx-5 md:inline hidden" />
+                  <p className="md:text-white md:rounded-none rounded-2xl bg-white md:bg-transparent w-fit text-Azul-Gol tracking-wide font-CarbonaBold p-2 text-[100%] cursor-pointer">Compartilhar</p>
                 </div>
+              </div>
+              <div className="md:hidden flex justify-end w-[full] h-fit  items-center">
+                <Cards/>
               </div>
             </div>
             <div className="md:flex hidden w-[23%] flex-col justify-between">

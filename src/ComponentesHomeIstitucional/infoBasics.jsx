@@ -7,7 +7,7 @@ import verificado from '../imagens/Frame.png';
 const InfoBasics = () => {
   const texts = {
     0: {
-      title: "AUTENCIDADE",
+      title: "Autencidade",
       img: verificado,
       content: <span>Cada bola de gol é cuidadosamente identificada e autenticada por<br/> comissários responsáveis, garantindo sua originalidade. Uma certificação de autenticidade única é fornecida, incluindo detalhes exclusivos sobre o gol.</span>,
     },
@@ -34,7 +34,7 @@ const InfoBasics = () => {
 
 
     <div  className=''>
-      <div className='font-tuskerGrotesk text-blue-950 text-customResponsiveTitulo mt-[5%] text-center mr-[20%]'>
+      <div className='font-CarbonaBold text-blue-950 text-customResponsiveTitulo1 mt-[5%] text-center mr-[20%]'>
         O MOMENTO <span className='text-Verde-Gol font-NorthZone'>MÁGICO</span> DO FUTEBOL <br />
         TRANSFORMADO EM <span className='text-Verde-Gol font-NorthZone'>MEMÓRIAS!</span>
         <br />

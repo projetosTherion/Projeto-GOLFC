@@ -36,8 +36,8 @@ const CarouselHome = () => {
     return (
       <button
         className={`${active ? "bg-white" : "bg-transparent"}
-        size-[4.6vw] md:size-[1.6vw] border-[1px] border-solid border-white ease-in-out duration-300
-        transition-colors rounded-full mx-2 mb-7`}
+        w-[5%] h-[4px] md:size-[1.6vw] border-[1px] border-solid border-gray-500 md:border-white ease-in-out duration-300
+        transition-colors rounded-full mx-[0.5%] mb-[0%] md:mx-2  md:mb-7`}
         onClick={() => onClick()}
       />
     );
@@ -51,7 +51,7 @@ const CarouselHome = () => {
          infinite={true}
          autoPlay={true}
         autoPlaySpeed={3000}
-          containerClass='w-screen h-screen'
+          containerClass='w-screen'
           partialVisible={true}
           draggable={true}
           customDot={<CustomDot/>}

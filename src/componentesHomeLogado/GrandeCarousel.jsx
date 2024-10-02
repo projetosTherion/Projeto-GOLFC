@@ -50,7 +50,7 @@ const CarouselJogadores = () => {
       </div>
       <div className=' mt-[5%] '>
     
-      <div className="border h-px ml-[10%] w-[80%] justify-center bg-white"></div>
+     
       <div className='flex justify-center'>
         <Carousel
           className='md: w-[80%]   h-[95%] md:h-[0%] mt-[3%]'
@@ -70,8 +70,8 @@ const CarouselJogadores = () => {
       </div>
       </div>
       <div className='mt-[5%] '>
-      <span className='ml-[10%]  text-white font-tuskerGrotesk'>GOLCARDS MAIS POPULARES</span>
-      <div className="border h-px ml-[10%] w-[80%] justify-center bg-white"></div>
+     
+      
       <div className='flex justify-center'>
         <Carousel
           className='md: w-[80%]   h-[95%] md:h-[0%] mt-[3%]'
@@ -91,8 +91,8 @@ const CarouselJogadores = () => {
       </div>
       </div>
       <div className=' mt-[5%] '>
-      <span className=' ml-[10%] text-white font-tuskerGrotesk'>GOLCARDS MAIS POPULARES</span>
-      <div className="border h-px ml-[10%] w-[80%] justify-center bg-white"></div>
+      
+
       <div className='flex justify-center'>
         <Carousel
           className='md: w-[80%]   h-[95%] md:h-[0%] mt-[3%]'

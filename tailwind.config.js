@@ -26,6 +26,7 @@ module.exports = {
         responsive: ['clamp(15px, 1.4vw, 71px)'],
         'customResponsive': ['clamp(10px, 1.5vw, 21px)'],
         'customResponsiveTitulo': ['clamp(13px, 2vw, 51px)'],
+        'customResponsiveTitulo1': ['clamp(13px, 5vw, 51px)'],
         'customResponsiveTituloRecuperação': ['clamp(25px, 2vw, 51px)'],
         'customResponsiveConteudo': ['clamp(13px, 1.5vw, 41px)'],
         'customResponsiveFooter': ['clamp(10px, 0.5vw, 41px)'],
