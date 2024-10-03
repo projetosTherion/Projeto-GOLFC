@@ -1,8 +1,10 @@
 import express from 'express';
 import { User } from '../models/userModel.js';
+import bcrypt from 'bcryptjs';
 
 const router = express.Router();
 
+// Rota para criar um novo usuário
 router.post("/", async (req, res, next) => {
   try {
     const {
@@ -23,10 +25,11 @@ router.post("/", async (req, res, next) => {
       time_do_usuario
     } = req.body;
 
+    // Verificação dos campos obrigatórios
     if (
       !nome ||
       !email ||
-      !senha,
+      !senha ||
       !data_nascimento ||
       !documentoID ||
       !celular ||
@@ -44,10 +47,13 @@ router.post("/", async (req, res, next) => {
       });
     }
 
+    const hashedPassword = await bcrypt.hash(senha, 10);
+
+    // Criação do novo usuário com os dados recebidos
     const newUser = {
       nome,
       email,
-      senha,
+      senha: hashedPassword, // Armazena a senha criptografada
       data_nascimento,
       documentoID,
       celular,
@@ -62,17 +68,23 @@ router.post("/", async (req, res, next) => {
       time_do_usuario
     };
 
+    // Salvando o usuário no banco de dados
     const user = await User.create(newUser);
+    const userWithoutPassword = user.toObject();
+    delete userWithoutPassword.senha;  // Remove a senha antes de retornar
 
-    return res.status(201).send(user);
+
+    // Retornando o usuário criado
+    return res.status(201).send(userWithoutPassword);
+    //return res.status(201).send(user);
   } catch (err) {
     console.log(err.message);
-    res.status(500).send({ message: err.message });
+    next(err); // Encaminha o erro para o middleware de tratamento de erros
   }
 });
 
-//get all users
-router.get("/", async (req, res) => {
+// Rota para obter todos os usuários
+router.get("/", async (req, res, next) => {
   console.log("Rota /users foi acessada");
   try {
     const users = await User.find({});
@@ -82,22 +94,26 @@ router.get("/", async (req, res) => {
     });
   } catch (err) {
     console.log(err.message);
-    res.status(500).send({ message: err.message });
+    next(err); // Encaminha o erro para o middleware de tratamento de erros
   }
 });
 
-//get user by id
-router.get("/:id", async (req, res) => {
+// Rota para obter usuário por ID
+router.get("/:id", async (req, res, next) => {
   try {
     const { id } = req.params;
     const user = await User.findById(id);
+
+    // Verifica se o usuário foi encontrado
     if (!user) {
       return res.status(404).json({ message: "Usuário não encontrado" });
     }
+
+    // Retorna os dados do usuário encontrado
     return res.status(200).json(user);
   } catch (err) {
     console.log(err.message);
-    res.status(500).send({ message: err.message });
+    next(err); // Encaminha o erro para o middleware de tratamento de erros
   }
 });
 

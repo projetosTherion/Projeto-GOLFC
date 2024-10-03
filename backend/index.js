@@ -5,18 +5,22 @@ import usersRoute from './routes/usersRoute.js';
 import cors from 'cors';
 import correiosRoute from './routes/correiosRoute.js';  // Importa a rota dos Correios
 
+//npm install br-validations
+//npm install bcryptjs
+//npm install express
+//npm install mongoose
+
 const app = express();
 
 app.use(express.json());
 
-app.use(cors());
-// app.use(
-//     cors({
-//         origin: 'http://localhost:3000',
-//         methods: ['GET','POST','PUT','DELETE'],
-//         allowedHeaders: ['Content-Type'],
-//     })
-// );
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    //allowedHeaders: ['Content-Type'],
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("Welcome to the API!");
