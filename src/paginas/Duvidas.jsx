@@ -56,7 +56,7 @@ function Duvidas() {
         </h2>
 
         {/* Div separada para o formulário */}
-        <div className="border-2 border-green-500 rounded-lg w-[200%] h-[500px] bg-transparent mt-4 flex flex-col items-center justify-center">
+        <div className="border-2 border-green-500 rounded-lg w-[100%] h-[500px] bg-transparent mt-4 flex flex-col items-center justify-center">
           <input
             type="text"
             placeholder="Nome"
