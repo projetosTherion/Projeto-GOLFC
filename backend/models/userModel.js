@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 import bcrypt from 'bcryptjs';  // Importa a biblioteca para criptografar senhas
-import brValidations from 'br-validations';  // Importa a biblioteca para validações brasileiras
+import {validateCPF,validateCep,validatePhone}  from 'validations-br';  // Importa a biblioteca para validações brasileiras
+
+
 
 // Definindo o schema do usuário
 const userSchema = mongoose.Schema({
@@ -17,14 +19,14 @@ const userSchema = mongoose.Schema({
         }
     },
     role: { type: String, required: true, default: 'user' },
-    senha: { type: String, required: true },
+    senha: { type: String, required: true },  // select: false para não retornar a senha nas consultas
     data_nascimento: { type: Date, required: true },
     documentoID: { 
         type: String, 
         required: true,
         validate: {
             validator: function(v) {
-                return brValidations.cpf.validate(v);  // Valida CPF usando o br-validations
+                return validateCPF(v);  // Valida o CPF usando o br-validations
             },
             message: props => `${props.value} CPF inválido!`
         }
@@ -34,7 +36,7 @@ const userSchema = mongoose.Schema({
         required: true,
         validate: {
             validator: function(v) {
-                return brValidations.phone.validate(v);  // Valida telefone usando o br-validations
+                return validatePhone(v);  // Valida o celular usando o br-validations
             },
             message: props => `${props.value} número de telefone inválido!`
         }
@@ -44,8 +46,8 @@ const userSchema = mongoose.Schema({
         required: true,
         validate: {
             validator: function(v) {
-                return brValidations.cep.validate(v);  // Valida o CEP usando o br-validations
-            },
+                return validateCep(v);  // Valida o CEP usando o br-validations
+        }   ,
             message: props => `${props.value} CEP inválido.`
         }
     },
@@ -63,9 +65,7 @@ const userSchema = mongoose.Schema({
 
 // Middleware para criptografar a senha antes de salvar
 userSchema.pre('save', async function(next) {
-    if (this.isModified('senha')) {  // Verifica se a senha foi modificada ou se é um novo usuário
-        this.senha = await bcrypt.hash(this.senha, 10);  // Criptografa a senha
-    }
+    this.senha = await bcrypt.hash(this.senha, 10);  // Criptografa a senha
     next();
 });
 
