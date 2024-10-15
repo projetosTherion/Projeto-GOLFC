@@ -30,6 +30,11 @@ router.post("/", async (req, res, next) => {
 
     const user = await User.create(newUser);
 
+    
+
+
+
+
     // Retornando o usuário criado
     return res.status(201).send(user);
 
