@@ -10,6 +10,7 @@ import HomeLogada from './paginas/homeLogada'
 import Carrinho from "./paginas/carrinho";
 import Favorito from "./paginas/Favoritos";
 import Duvidas from "./paginas/Duvidas";
+import JogadorPaginaCompra from './paginas/JogadorPaginaCompra';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <Route path='/Favoritos' element={<Favorito/>} />
       <Route path='/paginaPesquisa' element={<PaginaPesquisa/>} />
       <Route path='/Duvidas' element={<Duvidas/>} />
+      <Route path='/jogador' element={<JogadorPaginaCompra/>} />
     </Routes>
   </Router>
   );
