@@ -50,6 +50,22 @@ module.exports = {
         'Verde-Gol': '#44D62D',
         'verde-gol-escuro':'#247018',
       },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        getHeight: {
+          'from': { maxHeight: '0%'},
+          'to': { maxHeight: '0%' },
+          '0%': { maxHeight: '0%' },
+          '100%': { maxHeight: '100%' }
+        }
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'get-height': 'getHeight 0.3s ease-in 0.5s backwards'
+      }
     },
   },
   plugins: [],
