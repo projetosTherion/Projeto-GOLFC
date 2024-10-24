@@ -1,0 +1,13 @@
+{
+    "nomeJogador": "Arrascaeta",
+    "qtdPontos": "100",
+    "imgJogador": "algumaImagemAqui.png",
+    "time1": {
+        "img": "algumaImagemAqui.png",
+        "qtdGols": "1"
+    },
+    "time2": {
+        "img": "algumaImagemAqui.png",
+        "qtdGols": "2"
+    }
+}

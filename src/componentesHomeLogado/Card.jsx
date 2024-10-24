@@ -1,5 +1,4 @@
 import React from 'react';
-import LogoRedondaBranca from "../imagens/Frame 4731.png"
 import Tacinha from "../imagens/image 42 (1).svg"
 import Logo from "../imagens/logo 05 4.png"
 import LogoRedonda from "../imagens/logo 17 2.svg"

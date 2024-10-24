@@ -3,7 +3,7 @@ import imagemCarrinho from "../imagens/imagemCarrinho.png";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoMdAlarm } from "react-icons/io";
 import LogoGol from "../imagens/logo 17 2.png";
 import { AiOutlineTrophy } from "react-icons/ai";
@@ -108,6 +108,15 @@ export default function JogadorPaginaCompra() {
     return () => clearInterval(timerInterval);
   }, []);
 
+  const ref = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if(ref.current !== null) {
+      setHeight(ref.current.clientHeight);
+    }
+  }, [ref])
+
   return (
     <div className="w-full overflow-x-hidden max-w-screen min-h-screen bg-gradient-to-b from-Azul-Gol to-Azul-GolClaro-50">
       <div className="md:absolute top-0 left-0 w-full max-w-[100vw] h-auto z-50">
@@ -127,7 +136,7 @@ export default function JogadorPaginaCompra() {
       </div>
 
       <div className="flex flex-col items-center">
-        <div className="flex items-center mt-6 mb-12 text-center">
+        <div className="flex items-center my-8 md:mt-6 md:mb-12 text-center">
           <IoMdAlarm size={35} color="white" />
           <h1 className="text-white font-tuskerGrotesk uppercase ml-4 text-responsive">
             Tempo restante para participar
@@ -145,10 +154,10 @@ export default function JogadorPaginaCompra() {
                 : timeLeft.seconds;
 
             return (
-              <div key={label} className="flex w-[15%] justify-center relative flex-col items-center">
+              <div key={label} className="flex w-[25%] md:w-[15%] justify-center relative flex-col items-center">
                 <h1
                   id={label}
-                  className="text-[#44D62D] animate-fade-in transition-all ease-in-out duration-300 tracking-widest flex flex-col items-center font-tuskerGrotesk font-bold text-[350%] mb-2"
+                  className="text-[#44D62D] animate-fade-in transition-all ease-in-out duration-300 tracking-widest flex flex-col items-center font-tuskerGrotesk font-bold text-[300%] md:text-[350%] mb-2"
                   key={label}
                 >
                   {timeValue}
@@ -169,19 +178,24 @@ export default function JogadorPaginaCompra() {
           })}
         </div>
         <div className="h-[1px] opacity-40 w-[75%] bg-white my-8"/>
-        <div className="flex w-[72%] px-2 mb-10 gap-x-12">
-          <div className="bg-white w-[45%] h-auto rounded-2xl"/>
-          <div className="flex flex-col w-[55%]">
-            <div className="flex p-3  mb-4 bg-black items-center justify-between text-center bg-opacity-25 rounded-2xl border-solid border border-[#44D62D]">
+        <div 
+        ref={ref}
+        className="flex md:flex-row md:items-start items-center flex-col w-[72%] px-2 mb-2 md:mb-10 gap-x-12">
+          <div className="bg-white mb-8 md:mb-0 rounded-2xl w-full md:w-[45%]"
+          style={{
+            height: window.innerWidth > 768 ? height - 12 : "50vh"
+          }}/>
+          <div className="flex flex-col md:w-[55%] w-[125%]">
+            <div className="flex p-3 mb-4 bg-black items-center justify-between text-center bg-opacity-25 rounded-2xl border-solid border border-[#44D62D]">
               <div className="flex">
                 <img src={LogoGol} className="size-8 mr-2"/>
-                <h1 className="tracking-widest font-CarbonaBold text-white font-bold relative text-responsive">350
-                  <p className="font-Carbona font-light text-white text-[45%] ml-2 absolute tracking-normal left-[100%] top-1/2 -translate-y-1/2">golcoins</p>
+                <h1 className="tracking-widest font-CarbonaBold text-white font-bold relative text-[135%] md:text-responsive">350
+                  <p className="font-Carbona font-light text-white text-[65%] md:text-[45%] ml-2 absolute tracking-normal left-[100%] top-1/2 -translate-y-1/2">golcoins</p>
                 </h1>
               </div>
-              <p className="text-white opacity-40 text-[80%] font-Carbona font-light">GOLCARD #0123456789</p>
+              <p className="text-white opacity-40 text-[65%] md:text-[80%] font-Carbona font-light">GOLCARD #0123456789</p>
             </div>
-            <div className="flex flex-col py-4 px-8 bg-black bg-opacity-25 rounded-2xl border-solid border border-[#44D62D]">
+            <div className="flex flex-col py-4 px-4 md:px-8 bg-black bg-opacity-25 rounded-2xl border-solid border border-[#44D62D]">
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
                   <AiOutlineTrophy
@@ -194,16 +208,16 @@ export default function JogadorPaginaCompra() {
                 src={TrofeuGolSVG}
                 className="size-6"/>
               </div>
-              <div className="flex justify-between my-8">
+              <div className="flex justify-between items-center my-8">
                 <div className="flex flex-col">
-                  <p className="font-Carbona text-white text-[90%]">Autor do gol</p>
-                  <h1 className="font-CarbonaBold text-white text-customResponsiveTitulo italic">MASTRIANI</h1>
+                  <p className="font-Carbona text-white text-[95%] md:text-[90%]">Autor do gol</p>
+                  <h1 className="font-CarbonaBold text-white text-[110%] md:text-customResponsiveTitulo italic">MASTRIANI</h1>
                 </div>
                 <div className="flex w-[45%] justify-end">
                   <div className="rounded-full border-solid border w-14 h-14 flex items-center text-center justify-center border-[#44D62D]">
-                    <h1 className="font-CarbonaBold text-customResponsive text-[#44D62D] italic">56`</h1>
+                    <h1 className="font-CarbonaBold text-[115%] md:text-customResponsive text-[#44D62D] italic">56`</h1>
                   </div>
-                  <div className="flex flex-col ml-4 py-2 min-w-[35%]">
+                  <div className="flex flex-col ml-2 md:ml-4 py-2 min-w-[55%] md:min-w-[35%]">
                     <div className="flex justify-between text-center items-center">
                       <p className="font-Carbona text-white text-[80%] overflow-clip">Athletico</p>
                       <p className="font-Carbona text-[#44D62D] font-bold text-[80%]">1</p>
@@ -215,7 +229,7 @@ export default function JogadorPaginaCompra() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center px-[10%] items-center">
+              <div className="flex flex-col justify-center px-[3%] md:px-[10%] items-center">
                 <h2 className="text-white font-tuskerGrotesk text-[100%] tracking-wide">PLACAR FINAL</h2>
                 <div className="h-[1px] bg-white w-[60%]"/>
                 <div className="flex justify-between  w-full mb-6 mt-3 items-center">
@@ -237,23 +251,23 @@ export default function JogadorPaginaCompra() {
                   src={AthleticoImg}
                   className="bg-white rounded-lg size-16"/>
                 </div>
-                <div className="flex items-start">
+                <div className="flex items-center">
                   <MdStadium
                   size={22}
                   color="white"/>
-                  <p className="font-Carbona ml-3 text-white opacity-50 text-[100%]">Estádio Cícero Pompeu de Toledo - Morumbis</p>
+                  <p className="font-Carbona ml-1 md:ml-3 text-white opacity-50 text-[80%] text-nowrap md:text-[100%]">Estádio Cícero Pompeu de Toledo - Morumbis</p>
                 </div>
-                <div className="flex justify-between w-full my-2">
+                <div className="flex justify-between md:text-[100%] text-[90%] w-full my-2">
                   <div className="flex">
-                    <p className="font-Carbona text-white opacity-50 mr-2">Data</p>
+                    <p className="font-Carbona text-white opacity-50 mr-1 md:mr-2">Data</p>
                     <p className="font-Carbona text-white">20/10/23</p>
                   </div>
                   <div className="flex">
-                    <p className="font-Carbona text-white opacity-50 mr-2">Temporada</p>
+                    <p className="font-Carbona text-white opacity-50 mr-1 md:mr-2">Temporada</p>
                     <p className="font-Carbona text-white">2023</p>
                   </div>
                   <div className="flex">
-                    <p className="font-Carbona text-white opacity-50 mr-2">Rodada</p>
+                    <p className="font-Carbona text-white opacity-50 mr-1 md:mr-2">Rodada</p>
                     <p className="font-Carbona text-white">12ª</p>
                   </div>
                 </div>
@@ -281,37 +295,37 @@ export default function JogadorPaginaCompra() {
               </div>
             </div>
             <div className="flex justify-between my-3">
-              <button className="rounded-2xl border border-solid border-white text-white font-Carbona w-[40%] py-1 ease-in-out transition-colors duration-300 hover:bg-white hover:text-black">Adicionar ao Carrinho</button>
-              <button className="rounded-2xl text-white font-Carbona w-[40%] py-1 bg-gradient-to-b from-[#44D62D] to-[#247018]">Comprar</button>
+              <button className="rounded-2xl border border-solid border-white text-white font-Carbona text-[80%] md:text-[100%] w-[45%] md:w-[40%] py-1 ease-in-out transition-colors duration-300 hover:bg-white hover:text-black">Adicionar ao Carrinho</button>
+              <button className="rounded-2xl text-white font-Carbona w-[45%] md:w-[40%] py-1 bg-gradient-to-b from-[#44D62D] to-[#247018]">Comprar</button>
             </div>
           </div>
         </div>
-        <div className="flex justify-between w-[72%] my-6">
-          <div className="flex flex-col items-start w-[45%]">
+        <div className="flex md:flex-row flex-col justify-between w-[80%] md:w-[72%] my-6">
+          <div className="flex flex-col items-start w-full md:mb-0 mb-4 md:w-[45%]">
             <AiOutlineMenu
             size={32}
             color="#44D62D"/>
-            <h1 className="font-tuskerGrotesk text-white text-customResponsive my-2">DESCRIÇÃO</h1>
+            <h1 className="font-tuskerGrotesk text-white text-[120%] md:text-[100%] my-2">DESCRIÇÃO</h1>
             <p className="font-Carbona text-white text-[90%]">
             Adquira este GolCard exclusivo que celebra este gol marcado. Compre já e garanta sua chance de concorrer à bola oficial usada no jogo, autografada!</p>
           </div>
-          <div className="flex flex-col items-start w-[45%]">
+          <div className="flex flex-col items-start w-full md:w-[45%]">
             <MdOutlineQrCode
             size={32}
             color="#44D62D"/>
-            <h1 className="font-tuskerGrotesk text-white text-customResponsive my-2">DESCRIÇÃO</h1>
+            <h1 className="font-tuskerGrotesk text-white text-[120%] md:text-[100%] my-2">DESCRIÇÃO</h1>
             <p className="font-Carbona text-white text-[90%]">
               Um código QR exclusivo é atribuído a cada bola, contendo todos os detalhes do gol, como o jogador, a data e a partida. Este código só pode ser escaneado com a bola física para visualizar uma versão digital do gol e informações adicionais.
             </p>
           </div>
         </div>
-        <div className="w-[72%] flex flex-col">
+        <div className="w-[80%] md:w-[72%] flex flex-col">
           <ProdutosRelacionados/>
-          <div className="flex w-full justify-between mb-32">
+          <div className=" w-full justify-between mb-32 md:inline-flex hidden">
             <img src={GolFCBlackImg}
-            className="rounded-2xl h-auto w-[48%]"/>
+            className="rounded-2xl md:inline hidden h-auto w-[48%]"/>
             <img src={GolBallImg}
-            className="rounded-2xl h-auto w-[48%]"/>
+            className="rounded-2xl h-auto w-[48%] md:inline hidden"/>
           </div>
         </div>
       </div>
