@@ -13,8 +13,17 @@ const Login = () => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  useEffect(() => {
+    document.getElementById("buttonToggleVisibility").classList.add("animate-fade-in");
+    const timer = setTimeout(() => {
+      document.getElementById("buttonToggleVisibility").classList.remove("animate-fade-in");
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [showPassword]);
+
   return (
-    <div className=' bg-Login bg-cover h-screen '>
+    <div className=' bg-Login bg-cover h-screen'>
   
   
     <div className="h-screen  flex flex-col items-center justify-center  relative">
@@ -32,7 +41,7 @@ const Login = () => {
       
        
       
-      <div className="w-[80%] md:w-[29%] mt-4 h-[452px] filter backdrop-blur-xl rounded-2xl border border-gray-300 p-5 flex flex-col  ">
+      <div className="w-[80%] md:w-[29%] mt-4 h-[452px] filter backdrop-blur-2xl rounded-2xl border border-gray-300 p-5 flex flex-col  ">
         
         <p className=" font-Carbona text-xl justify-start text-white mb-6">Login</p>
 
@@ -41,7 +50,7 @@ const Login = () => {
         <input
           type="text"
           placeholder="exemplo@golfc.com"
-          className="w-[98%] h-[8%] text-white bg-transparent border border-white rounded-2xl px-2 "
+          className="w-[98%] text-white font-Carbona py-[8px] px-[16px] bg-Azul-Gol rounded-[16px] "
         />
 
 <div className="mb-4 mt-2 ">
@@ -50,9 +59,10 @@ const Login = () => {
         <input
           type={showPassword ? 'text' : 'password'}
           placeholder="seugol"
-          className="w-[98%]   text-white  bg-transparent border border-white rounded-2xl px-2 pr-10"
+          className="w-[98%] text-white font-Carbona py-[8px] px-[16px] bg-Azul-Gol rounded-[16px] "
         />
         <button
+        id="buttonToggleVisibility"
           onClick={togglePasswordVisibility}
           className="absolute right-6 top-1/2 transform -translate-y-1/2 text-white"
         >
@@ -81,15 +91,17 @@ const Login = () => {
            <label htmlFor="remember-me" className="font-Carbona mr-2 text-white text-base">
            Mantenha-me conectado
           </label> 
-          
-        
         </div>
+        <Link to={"/RecuperaçãoSenha"}>
+        <div className="text-white text-base  text-center w-full hover:underline">  Esqueceu sua senha? </div>
+        </Link>
         <Link to={"/Home"}>
         <button
-          className="w-[98%] h-[80%] bg-Verde-Gol text-white font-Carbona rounded-2xl hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 mb-4"
+          className="w-[98%] h-[80%] bg-Verde-Gol py-[5px] font-extrabold text-white font-Carbona rounded-2xl hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 mb-4"
         >
           Entrar
         </button> 
+        <div classname="bg-white w-[20%] h-[1px] my-8"/>
         </Link>
         <div className='text-base  text-center w-full'>
         <Link to={"/Home"}>
@@ -97,9 +109,7 @@ const Login = () => {
         <span className='hover:underline text-white'>Entrar como visitante</span>
         
         </Link>
-        <Link to={"/RecuperaçãoSenha"}>
-        <div className="text-white text-base  text-center w-full hover:underline">  Esqueceu sua senha? </div>
-        </Link></div>
+        </div>
       
       
         

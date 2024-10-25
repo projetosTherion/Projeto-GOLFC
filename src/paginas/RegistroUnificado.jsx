@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from "react-router-dom";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
@@ -118,7 +118,7 @@ const RegistroUnificado = () => {
 
     return (
         <div className=' bg-Registro bg-cover min-h-screen flex justify-center items-center'>
-            <div className="w-[90%] md:w-[30%] justify-around h-[80%] md:min-h-[20%] md:my-[1%]  bg-opacity-20 rounded-xl border border-gray-300 p-4 flex flex-col ">
+            <div className="w-[90%] md:w-[30%] justify-around h-[80%] md:min-h-[20%] md:my-[1%]  bg-opacity-20 rounded-xl border border-gray-300 p-4 flex flex-col ease-in-out transition-all duration-300">
                 <div className='flex justify-center mt-[5%]'>
                     <div 
                     onClick={() => valorTexto === 0 ? null : setValorTexto(0)}
