@@ -4,7 +4,7 @@ import { FaGoogle, FaApple } from 'react-icons/fa'; // Importa os ícones do Goo
 import { VscEye, VscEyeClosed } from "react-icons/vsc";
 import { Link } from 'react-router-dom';
 const Login = () => {
-  
+
   useEffect(() => {
     document.title = "Login - GolFC";
   }, [])
@@ -24,121 +24,109 @@ const Login = () => {
 
   return (
     <div className=' bg-Login bg-cover h-screen'>
-  
-  
-    <div className="h-screen  flex flex-col items-center justify-center  relative">
-      {/* Imagem acima do quadrado */}
-      <div className=' ml-[22%] md:ml-[10%] justify-center'>
+
+
+      <div className="min-h-screen w-screen  flex flex-col items-center justify-center  relative">
+        {/* Imagem acima do quadrado */}
         <Link to={"/"}>
-        <button className='ml-[25%]'>
           <img
-        src={Logo}
-        alt="Logo GOL"
-        className="h-[25%] w-[30%]"
-      />
-        </button>
-        </Link></div>
-      
-       
-      
-      <div className="w-[80%] md:w-[29%] mt-4 h-[452px] filter backdrop-blur-2xl rounded-2xl border border-gray-300 p-5 flex flex-col  ">
-        
-        <p className=" font-Carbona text-xl justify-start text-white mb-6">Login</p>
-
-        <p className="text-white font-Carbona text-base mb-1 text-left w-full">E-mail:</p>
-
-        <input
-          type="text"
-          placeholder="exemplo@golfc.com"
-          className="w-[98%] text-white font-Carbona py-[8px] px-[16px] bg-Azul-Gol rounded-[16px] "
-        />
-
-<div className="mb-4 mt-2 ">
-      <p className="text-white text-base mb-1  font-Carbona text-left w-full">Senha:</p>
-      <div className="relative ">
-        <input
-          type={showPassword ? 'text' : 'password'}
-          placeholder="seugol"
-          className="w-[98%] text-white font-Carbona py-[8px] px-[16px] bg-Azul-Gol rounded-[16px] "
-        />
-        <button
-        id="buttonToggleVisibility"
-          onClick={togglePasswordVisibility}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 text-white"
-        >
-          {showPassword ? <VscEye className="h-7 w-5" /> : <VscEyeClosed className="h-5 w-5" />}
-        </button>
-      </div>
-    </div>
-        
+            src={Logo}
+            alt="Logo GOL"
+            className="h-[10vh] md:h-[15vh] pt-[3vh] w-auto"
+          />
+        </Link>
 
 
 
-
-
-
-
-
-
-
-        {/* Checkbox "Lembre-se de mim" */}
-        <div className="flex items-center justify-start w-full mb-4">
+        <div className="w-[80%] md:w-[29%] mt-4  filter backdrop-blur-2xl rounded-2xl border border-gray-300 p-5 flex flex-col">
+          <p className=" font-Carbona text-xl justify-start text-white mb-6">Login</p>
+          <p className="text-white font-Carbona text-base mb-1 text-left w-full">E-mail:</p>
           <input
-        type="checkbox"
-        id="remember-me"
-        className="w-4 h-4 text-Azul-Gol mr-3 bg-Azul-Gol border-Azul-Gol rounded focus:ring-Azul-Gol"
-      />
-           <label htmlFor="remember-me" className="font-Carbona mr-2 text-white text-base">
-           Mantenha-me conectado
-          </label> 
-        </div>
-        <Link to={"/RecuperaçãoSenha"}>
-        <div className="text-white text-base  text-center w-full hover:underline">  Esqueceu sua senha? </div>
-        </Link>
-        <Link to={"/Home"}>
-        <button
-          className="w-[98%] h-[80%] bg-Verde-Gol py-[5px] font-extrabold text-white font-Carbona rounded-2xl hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 mb-4"
-        >
-          Entrar
-        </button> 
-        <div classname="bg-white w-[20%] h-[1px] my-8"/>
-        </Link>
-        <div className='text-base  text-center w-full'>
-        <Link to={"/Home"}>
+            type="text"
+            placeholder="exemplo@golfc.com"
+            className="w-[98%] text-white font-Carbona py-[8px] px-[16px] bg-Azul-Gol rounded-[16px] "
+          />
 
-        <span className='hover:underline text-white'>Entrar como visitante</span>
-        
-        </Link>
-        </div>
-      
-      
-        
-         <div className='text-Verde-Gol text-base mb-1 text-center w-full '>
-        <Link to={"/Registro"}>
-        <button >
-        <span className='text-white'>Não possui uma conta? </span>
-        <span className='hover:underline'>crie uma</span>
-      
-        </button>
-        </Link>
+          <div className="mb-4 mt-2 ">
+            <p className="text-white text-base mb-1  font-Carbona text-left w-full">Senha:</p>
+            <div className="relative ">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                placeholder="seugol"
+                className="w-[98%] text-white font-Carbona py-[8px] px-[16px] bg-Azul-Gol rounded-[16px] "
+              />
+              <button
+                id="buttonToggleVisibility"
+                onClick={togglePasswordVisibility}
+                className="absolute right-6 top-1/2 transform -translate-y-1/2 text-white"
+              >
+                {showPassword ? <VscEye className="h-7 w-5" /> : <VscEyeClosed className="h-5 w-5" />}
+              </button>
+            </div>
+          </div>
+          {/* Checkbox "Lembre-se de mim" */}
+          <div className="flex items-center justify-start w-full mb-2">
+            <input
+              type="checkbox"
+              id="remember-me"
+              className="w-4 h-4 text-Azul-Gol mr-3 bg-Azul-Gol border-Azul-Gol rounded focus:ring-Azul-Gol"
+            />
+            <label htmlFor="remember-me" className="font-Carbona mr-2 text-white text-base">
+              Mantenha-me conectado
+            </label>
+          </div>
+          <Link to={"/RecuperaçãoSenha"}>
+            <div className="text-white font-Carbona w-full underline mb-2">  Esqueceu sua senha? </div>
+          </Link>
+          <Link to={"/Home"}>
+            <button
+              className="w-[98%] h-[80%] bg-Verde-Gol py-[5px] font-extrabold text-white font-Carbona rounded-2xl hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 mb-4"
+            >
+              Entrar
+            </button>
+            <div classname="bg-white w-[20%] h-[1px] my-8" />
+          </Link>
+          {/* <div className='text-base  text-center w-full'>
+            <Link to={"/Home"}>
 
- 
-  </div>
-        <button
-          className="w-[98%] h-[36px] bg-transparent border border-white text-white rounded-2xl mb-2 flex items-center justify-center hover:bg-white hover:text-blue-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
-        >
-          <FaGoogle className="mr-2 font-Carbona" />
-          Login com Google
-        </button>
-   
-        <button
-          className="w-[98%] font-Carbona h-[36px] bg-transparent border border-white text-white rounded-2xl mb-2 flex items-center justify-center hover:bg-white hover:text-blue-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
-        >
-          <FaApple className="mr-2" />
-          Login com iOS
-        </button>
-      </div>
-    </div></div>
+              <span className='hover:underline text-white'>Entrar como visitante</span>
+
+            </Link>
+          </div> */}
+
+
+
+          {/* <div className='text-Verde-Gol text-base mb-1 text-center w-full '>
+            <Link to={"/Registro"}>
+              <button >
+                <span className='text-white'>Não possui uma conta? </span>
+                <span className='hover:underline'>crie uma</span>
+
+              </button>
+            </Link>
+          </div> */}
+          <div className="w-[98%] flex justify-center">
+            <div className="bg-white h-[1px] w-[40%] mb-4 mt-2 "/>
+          </div>
+          <button
+            className="w-full py-[8px] px-[16px] bg-black bg-opacity-25 font-Carbona text-[95%] ease-in-out transition-colors duration-300 rounded-[16px] border border-white text-white mb-2 flex items-center justify-center hover:bg-white hover:text-blue-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
+          >
+            <FaGoogle 
+            size="14"
+            className="mr-2" />
+            Login com Google
+          </button>
+
+          <button
+            className="w-full py-[8px] px-[16px] bg-black bg-opacity-25 font-Carbona text-[95%] ease-in-out transition-colors duration-300 rounded-[16px] border border-white text-white mb-2 flex items-center justify-center hover:bg-white hover:text-blue-950 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
+          >
+            <FaApple 
+            size="18"
+            className="mr-2" />
+            Login com iOS
+          </button>
+        </div>
+      </div></div>
   );
 };
 
