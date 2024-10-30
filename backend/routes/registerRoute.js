@@ -16,11 +16,13 @@ router.post("/", async (req, res, next) => {
       !nome || !email || !senha || !data_nascimento || !documentoID ||
       !celular || !cep || !pais || !estado || !cidade || !bairro || !rua || !numero || !time_do_usuario
     ) {
+      console.log('Campos obrigatórios ausentes:', req.body);
       return res.status(400).send({
         message: "Send all required fields",
       });
     }
 
+    console.log('Dados recebidos para criar o usuário:', req.body);
 
     // Criação do novo usuário com os dados recebidos
     const newUser = {
@@ -30,16 +32,13 @@ router.post("/", async (req, res, next) => {
 
     const user = await User.create(newUser);
 
-    
-
-
-
+    console.log('Usuário criado com sucesso:', user);
 
     // Retornando o usuário criado
     return res.status(201).send(user);
 
   } catch (err) {
-    console.log(err.message);
+    console.log('Erro ao criar usuário:', err.message);
     next(err); // Encaminha o erro para o middleware de tratamento de erros
   }
 });
