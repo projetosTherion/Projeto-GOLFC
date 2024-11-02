@@ -113,7 +113,7 @@ const RegistroUnificado = () => {
                 break;
             default:
                 break;
-        }
+            }
     };
 
     return (
