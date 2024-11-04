@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "tuskerGrotesk";
     src: url("../public/fonts/Tusker.Grotesk/TuskerGrotesk-6500Medium.ttf") format("truetype");
