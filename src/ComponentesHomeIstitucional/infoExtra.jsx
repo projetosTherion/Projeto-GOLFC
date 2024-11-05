@@ -32,7 +32,7 @@ const infoExtra = () => {
     <div className='bg-FundoComFita mt-[10%]  bg-cover'>
       <div className='flex'>
         <img src={pc} className='  w-[30%] mt-[5%] md:mt-[0%] h-[30%] md:w-[50%]   hidden md:block' />
-        <div classname='flex'>
+        <div classname='flex md:flex-row flex-col'>
           {Object.values(texts).map((item, index) => (
             <div key={index} className='border-[3px] md:ml-[15%] flex justify-between mt-[3%] bg-gradient-to-b from-Azul-GolClaro-50 via-Azul-GolClaro to-Azul-Gol w-[90%] md:w-[70%] py-3 px-5  border-Verde-Gol rounded-xl'>
               <div className="flex justify-start w-[20%]">

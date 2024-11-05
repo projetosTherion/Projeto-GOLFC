@@ -26,14 +26,14 @@ const ComoFunciona = () => {
 
   return (
     <div className=' flex flex-col items-center justify-center bg-Estadio text-white bg-cover'>
-      <div className='flex justify-center pt-[6%]'>
+      <div className='justify-center pt-[6%] md:flex hidden'>
         <img src={LogoBranca} alt="Logo GOL" className='size-[20%] md:size-[100%] mb-2' />
       </div>
-      <div className='flex font-tuskerGrotesk justify-center text-responsive'>
+      <div className='font-tuskerGrotesk justify-center text-responsive md:flex hidden'>
         COMO FUNCIONA?
       </div>
-      <div className='pb-[15%]'>
-        <div className="flex flex-col   items-center justify-center">
+      <div className='md:pb-[15%] pb-0'>
+        <div className="flex flex-col md:w-auto w-screen items-center justify-center">
           {Object.values(nome).map((item, index) => (
             <div key={index}  className=" border flex items-center md:h-[15%] w-[90%] md:w-[60%] mt-[2%]  border-white rounded-[24px] p-4">
               <div className="w-[15%]">
