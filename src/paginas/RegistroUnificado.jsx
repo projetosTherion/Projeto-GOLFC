@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from "react-router-dom";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
@@ -113,12 +113,12 @@ const RegistroUnificado = () => {
                 break;
             default:
                 break;
-        }
+            }
     };
 
     return (
-        <div className=' bg-Registro bg-cover min-h-screen flex justify-center items-center'>
-            <div className="w-[90%] md:w-[30%] justify-around h-[80%] md:min-h-[20%] md:my-[1%]  bg-opacity-20 rounded-xl border border-gray-300 p-4 flex flex-col ">
+        <div className=' bg-Registro bg-cover min-h-screen flex justify-center items-center ease-in-out duration-300 transition-all'>
+            <div className="w-[90%] md:w-[30%] justify-around h-[80%] md:min-h-[20%] md:my-[1%]  bg-opacity-20 rounded-xl border border-gray-300 p-4 flex flex-col ease-in-out transition-all duration-300">
                 <div className='flex justify-center mt-[5%]'>
                     <div 
                     onClick={() => valorTexto === 0 ? null : setValorTexto(0)}
@@ -137,18 +137,21 @@ const RegistroUnificado = () => {
                     </div>
                 </div>
                 <p className="font-Carbona text-xl text-center text-white mt-4 mb-2">Crie sua conta</p>
-                {Object.values(handleValueChange()).map((item, index) => (
-                    <div key={index}>
-                        <p className="text-gray-300 font-Carbona text-base  text-left w-full">{item.title}</p>
-                        <input
-                            type="text"
-                            placeholder={item.content}
-                            value={item.value}
-                            onChange={(event) => handleInputChange(event, index)}
-                            className="w-[97%] text-white mb-[3%] bg-[#060f20] rounded-2xl px-2 py-2"
-                        />
-                    </div>
-                ))}
+                <div 
+                className="flex flex-col">
+                    {Object.values(handleValueChange()).map((item, index) => (
+                        <div key={index}>
+                            <p className="text-gray-300 font-Carbona text-base  text-left w-full">{item.title}</p>
+                            <input
+                                type="text"
+                                placeholder={item.content}
+                                value={item.value}
+                                onChange={(event) => handleInputChange(event, index)}
+                                className="w-[97%] text-white mb-[3%] bg-[#060f20] rounded-2xl px-2 py-2"
+                            />
+                        </div>
+                    ))}
+                </div>
                 <div className='flex justify-end'>
                     <div className=''>
                         <Link to={valorTexto === 2 ? "/Home" : "#"}>
