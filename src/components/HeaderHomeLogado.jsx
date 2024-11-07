@@ -58,7 +58,7 @@ const HeaderHomeLogado = () => {
               <div className='absolute bottom-0 w-0 group-hover:w-full ease-in-out duration-300 transition-all bg-Verde-Gol h-[1px]'/>
             </button></Link>
 
-        <Link to="/">
+        <Link to="/Duvidas">
           <button className='relative group'>
               <span className='flex  text-Verde-Gol  text-[90%]'><AiOutlineQuestionCircle size={20} /><span className='ml-[4%]' > Suporte </span> </span>
               <div className='absolute bottom-0 w-0 group-hover:w-full ease-in-out duration-300 transition-all bg-Verde-Gol  h-[1px]'/>
@@ -106,8 +106,10 @@ const HeaderHomeLogado = () => {
               
              
           </div> </Link>
+          <Link to ="/Duvidas">
           <div className='flex mb-[5%] border-b-white ml-[5%] '> <AiOutlineQuestionCircle size={20} />
             <div className='text-white   text-customResponsiveHeader ml-[3%]  '>suporte</div></div>
+          </Link>
 
           <div className='w-[40%] mb-[5%]   flex -mt-[1%] ml-[5%]   rounded-full border border-Verde-Gol  '>
             <img src={LogoRedonda} alt="Logo Gol" className='ml-[3%] ' />

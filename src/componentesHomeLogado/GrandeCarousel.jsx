@@ -3,6 +3,7 @@ import Cards from './Card.jsx';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { FaArrowLeft } from "react-icons/fa"; 
+import { Link } from "react-router-dom";
 const CarouselJogadores = () => {
   const responsive = {
     desktop: {
@@ -43,7 +44,9 @@ const CarouselJogadores = () => {
        
        >
           {cardData.map((card) => (
-            <Cards key={card.id} className='mr-[1%]  md:ml-[0%]' />
+            <Link
+            to="/jogador">
+            <Cards key={card.id} className='mr-[1%]  md:ml-[0%]' /></Link>
           ))}
     </Carousel>
     
@@ -63,7 +66,9 @@ const CarouselJogadores = () => {
        
        >
           {cardData.map((card) => (
-            <Cards key={card.id} className='mr-[1%]  md:ml-[0%]' />
+             <Link
+             to="/jogador">
+            <Cards key={card.id} className='mr-[1%]  md:ml-[0%]' /> </Link>
           ))}
     </Carousel>
     

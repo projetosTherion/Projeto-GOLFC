@@ -3,20 +3,27 @@ import { Link } from 'react-router-dom';
 import Logo from '../imagens/Duvidas.png'; // Ajuste o caminho da imagem conforme necessário
 import Footer from '../components/Footer';
 import Accordion from '../componentesGenericos/Accordion';
-import Header from '../components/Header';
+import Header from '../components/HeaderHomeLogado.jsx';
 import { IoIosArrowBack } from "react-icons/io";
 
 function Duvidas() {
   useEffect(() => {
-    document.title = "Dúvidas Frequentes - GolFC";
+    document.title = "Dúvidas - GolFC";
   }, []);
 
   return (
     <div className='min-h-screen bg-Azul-Gol flex flex-col items-center'>
       {/* Container para a imagem e o botão */}
-      <div className='w-full max-w-screen'>
-        <Header/>
+      <div 
+      className="md:absolute top-0 left-0 w-full max-w-screen h-auto z-50">
+      <Header/>
       </div>
+      <div className="relative">
+      <img 
+      className="w-screen max-w-screen h-auto"
+      src={Logo}/> 
+
+ </div>
       <div className="relative w-full">
         {/* Botão Voltar */}
 
@@ -32,7 +39,7 @@ function Duvidas() {
               Voltar
             </button>
           </Link>
-          <img src={Logo} alt="Logo GolFC" className="w-full mb-10" />
+         
         </div>
       </div>
 
