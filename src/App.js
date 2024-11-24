@@ -11,6 +11,7 @@ import Carrinho from "./paginas/carrinho";
 import Favorito from "./paginas/Favoritos";
 import Duvidas from "./paginas/Duvidas";
 import JogadorPaginaCompra from './paginas/JogadorPaginaCompra';
+import Certificacao from "./paginas/Certificacao";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
       <Route path='/paginaPesquisa' element={<PaginaPesquisa/>} />
       <Route path='/Duvidas' element={<Duvidas/>} />
       <Route path='/jogador' element={<JogadorPaginaCompra/>} />
+      <Route path='/Certificacao' element={<Certificacao/>} />
     </Routes>
   </Router>
   );
