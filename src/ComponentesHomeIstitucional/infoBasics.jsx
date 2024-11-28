@@ -44,7 +44,7 @@ const InfoBasics = () => {
   return (
     <div className=''>
       <GradientIcon /> {/* Esse componente insere o gradiente no documento */}
-      <div className='font-CarbonaBold text-blue-950 text-customResponsiveTitulo1 mt-[5%] text-center mr-[20%]'>
+      <div className='font-CarbonaBold text-blue-950 text-customResponsiveTitulo1 mt-[5%] text-center md:mr-[20%]'>
         O MOMENTO <span className='text-Verde-Gol font-NorthZone'>MÁGICO</span> DO FUTEBOL <br />
         TRANSFORMADO EM <span className='text-Verde-Gol font-NorthZone'>MEMÓRIAS!</span>
         <br />
@@ -66,24 +66,24 @@ const InfoBasics = () => {
           ))}
         </div>
 
-        <img src={fundoColorido} className='w-[35%] h-[5%] mt-[5%]' />
+        <img src={fundoColorido} className='w-[35%] h-[5%] mt-[5%] md:inline hidden' />
       </div>
       
       <div className="w-screen flex justify-center relative mt-[2%]">
         <img src={FaixasGolFC} className='w-screen absolute left-0'/>
-        <div className="md:flex items-center px-8 py-4 bg-[#CACED3] bg-opacity-50 
-        w-[70%] h-[10%] border-[5px] border-solid border-[#0A1835] border-opacity-20 rounded-[16px]
-        relative backdrop-filter backdrop-blur-sm mt-[5%]">
+        <div className="md:flex items-center px-4 md:px-8 py-4 bg-[#CACED3] bg-opacity-50 
+        w-[90%] md:w-[70%] h-[10%] border-[5px] border-solid border-[#0A1835] border-opacity-20 rounded-[16px]
+        relative backdrop-filter backdrop-blur-sm mt-[5%] text-center">
           <img src={qrCode} className='md:w-[45%] md:h-[45%] xl:h-[50%] hidden md:block' />
           
-          <div className='flex flex-col-reverse h-[10%] overflow-auto mx-[3%]'>
+          <div className='flex flex-col-reverse h-[10%] overflow-auto md:mx-[3%]'>
             <span className='text-Azul-Gol font-CarbonaBold font-extrabold bg-clip-text from-azul bg-gradient-to-b text-transparent from-40% from-[#3C2290] to-[#120A2A] text-customResponsiveTitulo uppercase italic '>O Processo Exclusivo do golfc</span>
-            <span className='text-black text-customResponsiveConteudo font-Carbona'>
+            <span className='text-black text-customResponsiveConteudo font-Carbona mb-[5%]'>
               Um código QR exclusivo é atribuído a cada bola, contendo todos os detalhes do gol e certificação Golfc. Este código só pode ser escaneado com a bola física, ou seja, a própria bola carrega sua certificação para visualizar uma versão digital que comprova sua autenticidade.
             </span>
           </div>
           
-          <img src={plaquinha} className='md:h-auto flex justify-center h-[80%] w-[50%] md:w-[50%] md:block' />
+          <img src={plaquinha} className='md:h-auto md:inline-flex hidden justify-center h-[80%] w-[50%] md:w-[50%]' />
         </div>
       </div>
     </div>
