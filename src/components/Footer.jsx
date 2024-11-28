@@ -15,7 +15,7 @@ const Footer = () => {
 
           <Link to={"/Registro"}>
             <button className='relative group'>
-              <span className='text-white text-[90%]  text-center'>Ajuda</span>
+              <span className='text-white text-[90%] text-center'>Ajuda</span>
               <div className='absolute bottom-0 w-0 group-hover:w-full ease-in-out duration-300 transition-all bg-white h-[1px]'/>
             </button>
           </Link>

@@ -42,43 +42,46 @@ const InfoBasics = () => {
   );
 
   return (
-    <div className=''>
+    <div className='flex flex-col min-h-screen z-10'>
       <GradientIcon /> {/* Esse componente insere o gradiente no documento */}
-      <div className='font-CarbonaBold text-blue-950 text-customResponsiveTitulo1 mt-[5%] text-center md:mr-[20%]'>
+      <div className='font-CarbonaBold px-[3%] text-blue-950 text-[125%] md:text-[200%] mt-[2%] md:text-start text-center'>
         O MOMENTO <span className='text-Verde-Gol font-NorthZone'>MÁGICO</span> DO FUTEBOL <br />
         TRANSFORMADO EM <span className='text-Verde-Gol font-NorthZone'>MEMÓRIAS!</span>
         <br />
       </div>
-      <div className='flex relative'>
+      <div className='flex relative px-[3%] items-center'>
         <div>
           {Object.values(texts).map((item, index) => (
             <div key={index}>
-              <div className='flex justify-start items-center font-tuskerGrotesk text-blue-950 px-[5%] text-customResponsiveTitulo mt-[2%]'>
-                <FaCheckCircle style={{ fill: "url(#gradient1)", width: "5%", height: "auto", marginRight: "2%" }} />
-                <div className='font-CarbonaBold uppercase italic font-extrabold bg-gradient-to-b text-transparent bg-clip-text from-Azul-GolClaro100 to-Azul-Gol from-30% text-[130%]'>
+              <div className='flex justify-start items-center font-tuskerGrotesk text-blue-950 text-[140%] mt-[2%]'>
+                <FaCheckCircle 
+                className='w-[10%]
+                md:w-[3.5%]'
+                style={{ fill: "url(#gradient1)", marginRight: "1%" }} />
+                <div className='font-CarbonaBold uppercase italic font-extrabold bg-gradient-to-b text-transparent bg-clip-text from-Azul-GolClaro100 to-Azul-Gol from-30% text-[110%] md:text-[130%]'>
                   {item.title}
                 </div>
               </div>
-              <div className='flex justify-start font-Carbona px-[5%] text-blue-950 text-customResponsiveConteudo'>
+              <div className='flex justify-start font-Carbona text-blue-950 text-[100%]'>
                 {item.content}
               </div>
             </div>
           ))}
         </div>
 
-        <img src={fundoColorido} className='w-[35%] h-[5%] mt-[5%] md:inline hidden' />
+        <img src={fundoColorido} className='w-[35%] h-[5%] md:inline hidden' />
       </div>
       
       <div className="w-screen flex justify-center relative mt-[2%]">
-        <img src={FaixasGolFC} className='w-screen absolute left-0'/>
+        <img src={FaixasGolFC} className='w-[105vw] absolute left-0'/>
         <div className="md:flex items-center px-4 md:px-8 py-4 bg-[#CACED3] bg-opacity-50 
         w-[90%] md:w-[70%] h-[10%] border-[5px] border-solid border-[#0A1835] border-opacity-20 rounded-[16px]
         relative backdrop-filter backdrop-blur-sm mt-[5%] text-center">
           <img src={qrCode} className='md:w-[45%] md:h-[45%] xl:h-[50%] hidden md:block' />
           
           <div className='flex flex-col-reverse h-[10%] overflow-auto md:mx-[3%]'>
-            <span className='text-Azul-Gol font-CarbonaBold font-extrabold bg-clip-text from-azul bg-gradient-to-b text-transparent from-40% from-[#3C2290] to-[#120A2A] text-customResponsiveTitulo uppercase italic '>O Processo Exclusivo do golfc</span>
-            <span className='text-black text-customResponsiveConteudo font-Carbona mb-[5%]'>
+            <span className='text-Azul-Gol font-CarbonaBold font-extrabold bg-clip-text from-azul bg-gradient-to-b text-transparent from-40% from-[#3C2290] to-[#120A2A] text-[150%] uppercase italic '>O Processo Exclusivo do golfc</span>
+            <span className='text-black text-[100%] font-Carbona mb-[5%]'>
               Um código QR exclusivo é atribuído a cada bola, contendo todos os detalhes do gol e certificação Golfc. Este código só pode ser escaneado com a bola física, ou seja, a própria bola carrega sua certificação para visualizar uma versão digital que comprova sua autenticidade.
             </span>
           </div>

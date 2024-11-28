@@ -25,30 +25,32 @@ const ComoFunciona = () => {
  
 
   return (
-    <div className=' flex flex-col items-center justify-center bg-Estadio text-white bg-cover'>
-      <div className='justify-center pt-[6%] md:flex hidden'>
-        <img src={LogoBranca} alt="Logo GOL" className='size-[5%] md:size-[100%]' />
-      </div>
-      <div className='font-tuskerGrotesk justify-center text-responsive md:flex hidden'>
-        COMO FUNCIONA?
-      </div>
-      <div className='md:pb-[15%] pb-0 mb-[2%] md:mb-0'>
-        <div className="flex flex-col md:w-auto w-screen items-center justify-center">
-          {Object.values(nome).map((item, index) => (
-            <div key={index}  className=" border flex items-center md:h-[15%] w-[90%] md:w-[60%] mt-[2%] h-[20vh] border-white rounded-[24px] p-4">
-              <div className="w-[30%] md:w-[15%]">
-                <img src={item.img} alt="" className="w-full h-auto md:min-w-[120px]" />
+    <div className='flex h-[80vh] md:h-[120vh] bg-Estadio bg-cover'>
+      <div className="flex flex-col h-full md:h-screen items-center justify-center text-white">
+        <div className='justify-center md:flex hidden'>
+          <img src={LogoBranca} alt="Logo GOL" className='size-[5%] md:size-[100%]' />
+        </div>
+        <div className='font-tuskerGrotesk justify-center text-responsive md:flex hidden mt-[1%]'>
+          COMO FUNCIONA?
+        </div>
+        <div className=' pb-0 mb-[2%] md:mb-0'>
+          <div className="flex flex-col md:w-auto w-screen items-center justify-center">
+            {Object.values(nome).map((item, index) => (
+              <div key={index}  className=" border flex items-center w-[90%] md:w-[65%] mt-[2%] md:mt-[1%] h-[20vh] border-white rounded-[24px] p-2 md:p-6">
+                <div className="max-md:min-w-[25%] max-md:max-w-[25%] md:min-w-auto md:w-[13%]">
+                  <img src={item.img} alt="" className="w-full h-auto md:min-w-[50px]" />
+                </div>
+                <div className="flex flex-col md:w-full ml-[3%] max-md:max-h-[80%]">
+                  <span className=" font-CarbonaBold italic font-extrabold uppercase text-[95%] md:text-[150%]">
+                    {item.title}
+                  </span>
+                  <span className=" mt-2 font-Carbona overflow-y-auto text-[90%] md:text-[100%]">
+                    {item.content}
+                  </span>
+                </div>
               </div>
-              <div className="flex flex-col w-[70%] ml-[3%] max-h-[90%]">
-                <span className=" font-CarbonaBold italic font-extrabold uppercase text-[100%]">
-                  {item.title}
-                </span>
-                <span className=" mt-2 font-Carbona overflow-y-auto text-customResponsive mr-8">
-                  {item.content}
-                </span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

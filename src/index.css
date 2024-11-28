@@ -54,3 +54,26 @@ html {
     src: url("../public/fonts/Carbona Test/CarbonaTest-Bold.otf") format("opentype");
 
   }
+  /* Aplica a scrollbar em elementos com overflow scroll */
+.scroll-custom {
+  scrollbar-width: thin; /* Para navegadores compatíveis com Firefox */
+  scrollbar-color: white transparent; /* Cor do polegar e do fundo */
+}
+
+/* Estilo para navegadores baseados em Webkit (Chrome, Edge, Safari) */
+.scroll-custom::-webkit-scrollbar {
+  width: 10px; /* Largura da scrollbar */
+}
+
+.scroll-custom::-webkit-scrollbar-track {
+  background: transparent; /* Cor do fundo da scrollbar */
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+  background: transparent; /* Cor do polegar da scrollbar */
+  border-radius: 10px; /* Bordas arredondadas no polegar */
+}
+
+.scroll-custom::-webkit-scrollbar-thumb:hover {
+  background: white; /* Cor do polegar ao passar o mouse */
+}
