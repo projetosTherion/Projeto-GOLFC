@@ -6,6 +6,12 @@ html {
   scroll-behavior: smooth;
 }
 
+.shadow-inner-custom {
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 40px 30px black;
+}
+
 @font-face {
     font-family: "tuskerGrotesk";
     src: url("../public/fonts/Tusker.Grotesk/TuskerGrotesk-6500Medium.ttf") format("truetype");
@@ -14,6 +20,15 @@ html {
   @font-face {
     font-family: "Carbona";
     src: url("../public/fonts/CarbonaTest-Regular.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "North Zone";
+    src: url("../public/fonts/North_Zone.otf") format("opentype");
+  }
+
+  .font-NorthZone {
+    font-family: "North Zone";
   }
 
   .font-Carbona {

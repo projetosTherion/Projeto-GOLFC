@@ -6,9 +6,11 @@ import { IoGiftSharp } from "react-icons/io5";
 import { useState, lazy, Suspense } from "react";
 import { FiLoader } from "react-icons/fi";
 import Inicial from "../secoesPaginaPerfil/Inicial";
-import CampoImg from "../imagens/image 167 (1).jpg";
+import SalaImgPerfil from "../imagens/salaImgPerfil.png";
 import { IoExitOutline } from "react-icons/io5";
 import { useEffect, useRef } from "react";
+
+
 export default function Perfil() {
   const secoesPerfil = {
     "Histórico de compras": {
@@ -85,49 +87,36 @@ useEffect(() => {
   };
 }, []);
 
-const [posicaoX, setPosicaoX] = useState(0);
-const [posicaoY, setPosicaoY] = useState(0);
-const [larguraMenu, setLarguraMenu] = useState(0);
-const [alturaMenu, setAlturaMenu] = useState(0);
+const headerRef = useRef(null);
+const [height, setHeight] = useState(0);
 
-const flexRef = useRef(null);
-
-const menuLateralRef = useRef(null);
-
-  useEffect(() => {
-    if(menuLateralRef !== null && posicaoX === 0) {
-      setPosicaoX(menuLateralRef.current.offsetLeft);
-      setPosicaoY(menuLateralRef.current.offsetTop);
-      setLarguraMenu(menuLateralRef.current.clientWidth);
-      setAlturaMenu(menuLateralRef.current.clientHeight);
-    }
-  }, [menuLateralRef])
-
+useEffect(() => {
+  if(headerRef.current !== null) {
+    setHeight(headerRef.current.clientHeight);
+  }
+}, [headerRef]);
 
   return(
     <div className="w-screen min-h-screen bg-[#0b1835]">
-      <Header/>
       <div 
-        ref={flexRef}
+      ref={headerRef}
+      className="absolute w-screen left-0 top-0 z-10">
+        <Header/>
+      </div>
+      <img 
+      src={SalaImgPerfil}
+      className="absolute top-0 left-0 w-screen"/>
+      <div 
+      style={{
+        marginTop: height
+      }}
         id="start"
-        className="flex max-w-screen w-full h-screen px-[5%] mt-[2%] justify-center relative">
+        className="flex max-w-screen w-full h-screen px-[5%] mt-[2%] justify-center relative">   
           <div 
-            ref={pontoReferenciaRef}
-            className="absolute top-1 bg-white w-[1px] h-[1px]"/>
-        <div 
-        className={`${!menuLateralFixo ? `w-[25%] h-[1px]` : `w-0`}`}/>        
-        <div className={`h-screen w-[25%] flex items-center ${!menuLateralFixo ? `fixed left-0 top-0 flex justify-center items-center` : ``}`}>
-          <div 
-          ref={menuLateralRef}
-          style={{
-            left: posicaoX,
-            top: posicaoY,
-            width: larguraMenu !== 0 ? larguraMenu : "auto",
-          }}
-          className={`w-full flex justify-between h-[80vh] border-[#44D62D] border-b-2
-          border-r-2 filter backdrop-blur-xl
+          className={`flex justify-between h-[100vh] border-white border-b-2
+          border-r-2 filter backdrop-blur-xl w-[30%]
           border-solid rounded-[24px] bg-Azul-Gol bg-opacity-50 flex-col 
-          py-[25%] px-[6%] self-center`}>
+          py-[10%] px-[4%] self-center`}>
             <div className="flex items-center">
               <div className="rounded-full bg-white h-12 w-12 mr-2"/>
               <div className="flex flex-col">
@@ -161,7 +150,6 @@ const menuLateralRef = useRef(null);
                   absolute bottom-0 left-0"/>
               </div>
           </div>
-        </div>
         <div  className="w-full min-h-[600vh] mx-[5%] py-[3%]">
           <Suspense fallback={LoadingScreen}>
             {secaoAtual === "Inicial" ? <Inicial/> : secoesPerfil[secaoAtual].componente}
