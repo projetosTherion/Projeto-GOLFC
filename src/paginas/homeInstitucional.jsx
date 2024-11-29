@@ -13,35 +13,29 @@ export default function HomeInstitucional() {
   useEffect(() => {
     document.title = "GolFC"
   }, [])
-  
-  return (
- <div className=' overflow-hidden  '>
-    <Header/>
-  <div className="w-[100%] h-[50%] m-auto">
-      <Carousel />
-    </div>
-   
 
-    <div>
-      <LinhaLogo/> 
-    </div>
+  return (
+    <div className=' overflow-hidden  '>
+      <Header />
+      <div className="w-[100%] h-[50%] m-auto">
+        <Carousel />
+      </div>
+      <div>
+        <LinhaLogo />
+      </div>
       <div className='relative'>
-       <Funciona/>
-       <img src={waves} className='md:w-screen absolute bottom-0 -mb-4 md:absolute md:bottom-0 md:-mb-9 '/>
-  
-   </div>
-   <div>
-       <Basics/> 
-   </div>
-   <div>
-    <Extra/>
-   </div>
-   <div>
-    <Footer/>
-   </div>
-    </div> 
-     
-    
-    
+        <Funciona />
+        <img src={waves} className='md:w-screen absolute bottom-0 md:inline -mb-4 md:absolute md:bottom-0 md:-mb-9 ' />
+      </div>
+      <div>
+        <Basics />
+      </div>
+      <div>
+        <Extra />
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </div>
   );
 };

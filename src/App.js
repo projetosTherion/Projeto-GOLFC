@@ -12,6 +12,8 @@ import Favorito from "./paginas/Favoritos";
 import Duvidas from "./paginas/Duvidas";
 import JogadorPaginaCompra from './paginas/JogadorPaginaCompra';
 import Certificacao from "./paginas/Certificacao";
+import Perfil from "./paginas/Perfil";
+
 
 const App = () => {
   return (
@@ -29,6 +31,8 @@ const App = () => {
       <Route path='/Duvidas' element={<Duvidas/>} />
       <Route path='/jogador' element={<JogadorPaginaCompra/>} />
       <Route path='/Certificacao' element={<Certificacao/>} />
+      <Route path='/perfil' element={<Perfil/>} />
+
     </Routes>
   </Router>
   );

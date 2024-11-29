@@ -60,11 +60,16 @@ module.exports = {
           'to': { maxHeight: '0%' },
           '0%': { maxHeight: '0%' },
           '100%': { maxHeight: '100%' }
-        }
+        },
+        spinInfinite: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
-        'get-height': 'getHeight 0.3s ease-in 0.5s backwards'
+        'get-height': 'getHeight 0.3s ease-in 0.5s backwards',
+        'spin-infinite': 'spinInfinite 1s linear infinite',
       }
     },
   },
