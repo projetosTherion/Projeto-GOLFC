@@ -70,12 +70,13 @@ router.post("/", async (req, res, next) => {
     //const token = jwt.sign({ userId: user._id, email: user.email }, 'secret_key', { expiresIn: '1h' });
 
     // Envia email de verificação
-    
-    await enviarEmailValidacao(user.email);
+    //COMENTADO PARA TESTES, REMOVER QUANDO TIVER ACESSO AO BREVO DO PREDO
+    //await enviarEmailValidacao(user.email); 
     // Retornando o usuário criado
     return res.status(201).send({ message: "Usuário criado. Verifique seu email." });
 
   } catch (err) {
+    
     console.log(err.message);
     next(err); // Encaminha o erro para o middleware de tratamento de erros
   }

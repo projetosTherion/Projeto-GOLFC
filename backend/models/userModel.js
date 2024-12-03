@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
     },
     role: { type: String, required: true, default: 'user' },
     senha: { type: String, required: true },  // select: false para não retornar a senha nas consultas
-    data_nascimento: { type: Date, required: true },
+    data_nascimento: { type: String, required: true },
     documentoID: { 
         type: String, 
         required: true,
@@ -42,7 +42,7 @@ const userSchema = mongoose.Schema({
         }
     },
     cep: { 
-        type: String, 
+        type: String,
         required: true,
         validate: {
             validator: function(v) {
