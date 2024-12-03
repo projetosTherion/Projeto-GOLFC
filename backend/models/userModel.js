@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 import bcrypt from 'bcryptjs';  // Importa a biblioteca para criptografar senhas
-import {validateCPF,validateCep,validatePhone}  from 'validations-br';  // Importa a biblioteca para validações brasileiras
-
-
+import {validateCPF, validateCep, validatePhone} from 'validations-br';  // Importa a biblioteca para validações brasileiras
 
 // Definindo o schema do usuário
 const userSchema = mongoose.Schema({
@@ -13,7 +11,9 @@ const userSchema = mongoose.Schema({
         unique: true,  // Email deve ser único
         validate: {
             validator: function(v) {
-                return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v);  // Expressão regular para validação de e-mail
+                const isValid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v);
+                console.log(`Validando e-mail: ${v}, válido: ${isValid}`);
+                return isValid;  // Expressão regular para validação de e-mail
             },
             message: props => `${props.value} E-mail inválido!`
         }
@@ -26,7 +26,9 @@ const userSchema = mongoose.Schema({
         required: true,
         validate: {
             validator: function(v) {
-                return validateCPF(v);  // Valida o CPF usando o br-validations
+                const isValid = validateCPF(v);
+                console.log(`Validando CPF: ${v}, válido: ${isValid}`);
+                return isValid;  // Valida o CPF usando o br-validations
             },
             message: props => `${props.value} CPF inválido!`
         }
@@ -36,7 +38,9 @@ const userSchema = mongoose.Schema({
         required: true,
         validate: {
             validator: function(v) {
-                return validatePhone(v);  // Valida o celular usando o br-validations
+                const isValid = validatePhone(v);
+                console.log(`Validando celular: ${v}, válido: ${isValid}`);
+                return isValid;  // Valida o celular usando o br-validations
             },
             message: props => `${props.value} número de telefone inválido!`
         }
@@ -46,8 +50,10 @@ const userSchema = mongoose.Schema({
         required: true,
         validate: {
             validator: function(v) {
-                return validateCep(v);  // Valida o CEP usando o br-validations
-        }   ,
+                const isValid = validateCep(v);
+                console.log(`Validando CEP: ${v}, válido: ${isValid}`);
+                return isValid;  // Valida o CEP usando o br-validations
+            },
             message: props => `${props.value} CEP inválido.`
         }
     },
@@ -65,7 +71,9 @@ const userSchema = mongoose.Schema({
 
 // Middleware para criptografar a senha antes de salvar
 userSchema.pre('save', async function(next) {
+    console.log('Iniciando criptografia da senha...');
     this.senha = await bcrypt.hash(this.senha, 10);  // Criptografa a senha
+    console.log('Senha criptografada com sucesso.');
     next();
 });
 

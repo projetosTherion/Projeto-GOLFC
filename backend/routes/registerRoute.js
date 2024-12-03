@@ -6,6 +6,12 @@ import jwtUtils from '../middleware/auth.js';
 import { enviarEmailValidacao } from '../routes/verificaEmailRoute.js';
 //var SibApiV3Sdk = require('sib-api-v3-sdk');
 //var defaultClient = SibApiV3Sdk.ApiClient.instance;
+//import jwt from 'jsonwebtoken';
+import axios from 'axios';
+import jwtUtils from '../middleware/auth.js';
+import { enviarEmailValidacao } from '../routes/verificaEmailRoute.js';
+//var SibApiV3Sdk = require('sib-api-v3-sdk');
+//var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 const router = express.Router();
 
@@ -33,6 +39,7 @@ const router = express.Router();
 //   }
 // };
 
+
 // Rota para criar um novo usuário
 router.post("/", async (req, res, next) => {
   try {
@@ -46,11 +53,14 @@ router.post("/", async (req, res, next) => {
       !nome || !email || !senha || !data_nascimento || !documentoID ||
       !celular || !cep || !pais || !estado || !cidade || !bairro || !rua || !numero || !time_do_usuario
     ) {
+      console.log('Campos obrigatórios ausentes:', req.body);
       return res.status(400).send({
         message: "Send all required fields",
       });
     }
 
+    console.log('Dados recebidos para criar o usuário:', req.body);
+    
     // Criação do novo usuário com os dados recebidos
     const newUser = {
       nome, email, senha, data_nascimento, documentoID, celular, cep,
@@ -73,7 +83,7 @@ router.post("/", async (req, res, next) => {
     //COMENTADO PARA TESTES, REMOVER QUANDO TIVER ACESSO AO BREVO DO PREDO
     //await enviarEmailValidacao(user.email); 
     // Retornando o usuário criado
-    return res.status(201).send({ message: "Usuário criado. Verifique seu email." });
+    return res.status(201).send(user);
 
   } catch (err) {
     
