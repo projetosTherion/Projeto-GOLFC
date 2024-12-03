@@ -6,12 +6,6 @@ import jwtUtils from '../middleware/auth.js';
 import { enviarEmailValidacao } from '../routes/verificaEmailRoute.js';
 //var SibApiV3Sdk = require('sib-api-v3-sdk');
 //var defaultClient = SibApiV3Sdk.ApiClient.instance;
-//import jwt from 'jsonwebtoken';
-import axios from 'axios';
-import jwtUtils from '../middleware/auth.js';
-import { enviarEmailValidacao } from '../routes/verificaEmailRoute.js';
-//var SibApiV3Sdk = require('sib-api-v3-sdk');
-//var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 const router = express.Router();
 
@@ -82,6 +76,7 @@ router.post("/", async (req, res, next) => {
     // Envia email de verificação
     //COMENTADO PARA TESTES, REMOVER QUANDO TIVER ACESSO AO BREVO DO PREDO
     //await enviarEmailValidacao(user.email); 
+    
     // Retornando o usuário criado
     return res.status(201).send(user);
 
