@@ -14,32 +14,32 @@ const Footer = () => {
           {/*trocar as rotas para as suas repectivas paginas*/}
 
           <Link to={"/Registro"}>
-            <button className='relative group'>
-              <span className='text-white text-[90%]  text-center'>Ajuda</span>
+            <button className='relative group font-Carbona'>
+              <span className='text-white text-[90%] text-center'>Ajuda</span>
               <div className='absolute bottom-0 w-0 group-hover:w-full ease-in-out duration-300 transition-all bg-white h-[1px]'/>
             </button>
           </Link>
           <Link to={"/Registro"}>
-            <button className='relative group'>
+            <button className='relative group font-Carbona'>
               <span className='text-white text-[90%]'>Indicar Amigos</span>
               <div className='absolute bottom-0 w-0 group-hover:w-full ease-in-out duration-300 transition-all bg-white h-[1px]'/>
             </button>
           </Link>
           <Link to={"/Registro"}>
-            <button className='relative group'>
+            <button className='relative group font-Carbona'>
               <span className='text-white text-[90%]'>Compra Golcoins</span>
               <div className='absolute bottom-0 w-0 group-hover:w-full ease-in-out duration-300 transition-all bg-white h-[1px]'/>
             </button>
           </Link>
           <Link to={"/Registro"}>
-            <button className='relative group'>
+            <button className='relative group font-Carbona'>
               <span className='text-white text-[90%]'>Códigos Promocionais</span>
               <div className='absolute bottom-0 w-0 group-hover:w-full ease-in-out duration-300 transition-all bg-white h-[1px]'/>
             </button>
           </Link>
 
         </div>
-        <div className='text-white w-[45%] md:w-[15%] text-center self-center md:self-auto text-[90%] md:my-0 my-2'>
+        <div className='text-white w-[45%] md:w-[15%] font-Carbona text-center self-center md:self-auto text-[90%] md:my-0 my-2'>
           Redes Sociais
           <div className='flex pt-1 mb-3 md:my-0 justify-around w-[100%] md:justify-between md:w-[100%]'>
             <Link to={"/Registro"}>

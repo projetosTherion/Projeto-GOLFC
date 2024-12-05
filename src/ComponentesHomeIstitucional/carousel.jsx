@@ -3,7 +3,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Frame1 from'../imagens/Frame 4808 (2).svg'
 import Frame2 from'../imagens/Frame 4827 (5).jpg'
-import Frame3 from'../imagens/Frame 4828 (1).svg'
+import Frame3 from'../imagens/Frame 4828 (2).jpg'
 
 const CarouselHome = () => {
   const responsive = {
@@ -45,14 +45,14 @@ const CarouselHome = () => {
 
   return (
     <div>
-      <div className='flex justify-center w-screen'>
+      <div className='flex justify-center w-screen h-screen'>
         <Carousel
          infinite={true}
          autoPlay={true}
         autoPlaySpeed={3000}
         renderDotsOutside={false}
         customDot={<CustomDot/>}
-        className=' md:w-screen  '
+        className=' md:w-screen h-screen '
         partialVisible={true}
         draggable={true}
           removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -60,9 +60,9 @@ const CarouselHome = () => {
           showDots={true}
        >
           
-          <img src={Frame2} alt="" className='' />
-          <img src={Frame1} alt="" className='' />
-          <img src={Frame3} alt=""  className='' />
+          <img src={Frame2} alt="" className='w-screen h-auto' />
+          <img src={Frame1} alt="" className='w-screen h-auto' />
+          <img src={Frame3} alt=""  className='w-screen h-auto' />
           
     </Carousel>
     

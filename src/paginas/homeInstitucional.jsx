@@ -25,7 +25,7 @@ export default function HomeInstitucional() {
       </div>
       <div className='relative'>
         <Funciona />
-        <img src={waves} className='md:w-screen absolute bottom-0 hidden md:inline -mb-4 md:absolute md:bottom-0 md:-mb-9 ' />
+        <img src={waves} className='md:w-screen absolute bottom-0 md:inline -mb-4 md:absolute md:bottom-0 md:-mb-9 ' />
       </div>
       <div>
         <Basics />

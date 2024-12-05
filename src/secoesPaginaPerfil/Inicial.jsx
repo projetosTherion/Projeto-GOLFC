@@ -2,10 +2,13 @@ import { LuWallet } from "react-icons/lu";
 import GolFCLogo from "../imagens/logo 17 2.svg";
 import { useEffect, useState } from "react";
 import { IoReloadSharp } from "react-icons/io5";
-import LogoGolAzul from "../imagens/logoGolAzul.svg";
-import LogoGolVerde from "../imagens/logoGolVerde.svg";
 import { RiBarcodeFill } from "react-icons/ri";
 import { MdPersonAdd } from "react-icons/md";
+import EstadioImg from "../imagens/estadioMinhasComprasButton.png";
+import { AiOutlineHistory } from "react-icons/ai";
+import { BiSolidStopwatch } from "react-icons/bi";
+import ProximosSorteiosImg from "../imagens/proximosSorteiosButton.png";
+
 export default function Inicial() {
   const [saldo, setSaldo] = useState(0);
   const duracao = 1000;
@@ -82,35 +85,33 @@ export default function Inicial() {
           </div>
         </div>
         <div className="flex w-full justify-between mt-[3%]">
-          <div className="w-[48%] md:h-[30vh] rounded-[24px] cursor-pointer
-          border-[1px] border-solid border-[#44D62D] flex items-center justify-start
+          <div className="w-[48%] md:h-[26vh] rounded-[24px] cursor-pointer
+          border-[1px] border-solid border-[#44D62D] flex items-center justify-center
           px-[2%] bg-black bg-opacity-50 relative overflow-hidden group">
-            <div className="w-[45vh] h-[45vh] rounded-full absolute -right-[35%] -bottom-[40%] 
-            bg-[#3C2290] blur-xl"/>
-            <img
-            src={LogoGolVerde}
-            className="absolute bottom-0 -right-[0%] w-[38%] z-10 h-auto ease-in-out duration-300 transition-opacity
-            group-hover:opacity-100 opacity-0"/>
-            <img
-            src={LogoGolAzul}
-            className="absolute bottom-0 right-[15%] w-[38%] h-auto ease-in-out duration-300 transition-opacity
-            group-hover:opacity-100 opacity-0"/>
-            <h1 className="font-Carbona text-white text-[150%] z-10">Última compra</h1>
+            <img 
+            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 min-w-[120%]"
+            src={EstadioImg}/>
+            <div 
+            className="w-full h-full bg-black bg-opacity-40 absolute rounded-[24px] shadow-2xl shadow-inner-custom"/>
+            <AiOutlineHistory
+            color="#44D62D"
+            size={28}
+            className="z-10 mr-2"/>
+            <h1 className="font-NorthZone text-[#44D62D] text-[150%] z-10">Minhas compras</h1>
           </div>
-          <div className="w-[48%] md:h-[30vh] rounded-[24px] cursor-pointer
-          border-[1px] border-solid border-[#44D62D] flex items-center justify-start
+          <div className="w-[48%] md:h-[26vh] rounded-[24px] cursor-pointer
+          border-[1px] border-solid border-[#44D62D] flex items-center justify-center
           px-[2%] bg-black bg-opacity-50 relative overflow-hidden group">
-            <div className="w-[45vh] h-[45vh] rounded-full absolute -right-[35%] -bottom-[40%] 
-            bg-[#3C2290] blur-xl"/>
-            <img
-            src={LogoGolVerde}
-            className="absolute bottom-0 -right-[0%] w-[38%] z-10 h-auto ease-in-out duration-300 transition-opacity
-            group-hover:opacity-100 opacity-0"/>
-            <img
-            src={LogoGolAzul}
-            className="absolute bottom-0 right-[15%] w-[38%] h-auto ease-in-out duration-300 transition-opacity
-            group-hover:opacity-100 opacity-0"/>
-            <h1 className="font-Carbona text-white text-[150%] z-10">Última compra</h1>
+            <img 
+            className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 min-w-[120%]"
+            src={ProximosSorteiosImg}/>
+            <div 
+            className="w-full h-full bg-black bg-opacity-40 absolute rounded-[24px] shadow-2xl shadow-inner-custom"/>
+            <BiSolidStopwatch
+            color="#44D62D"
+            size={28}
+            className="z-10 mr-2 rotate-[15deg]"/>
+            <h1 className="font-NorthZone text-[#44D62D] text-[150%] z-10">Próximos sorteios</h1>
           </div>
         </div>
       </div>
