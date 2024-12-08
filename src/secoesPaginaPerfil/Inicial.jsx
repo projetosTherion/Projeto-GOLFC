@@ -8,7 +8,7 @@ import EstadioImg from "../imagens/estadioMinhasComprasButton.png";
 import { AiOutlineHistory } from "react-icons/ai";
 import { BiSolidStopwatch } from "react-icons/bi";
 import ProximosSorteiosImg from "../imagens/proximosSorteiosButton.png";
-
+import { MdLockReset } from "react-icons/md";
 export default function Inicial() {
   const [saldo, setSaldo] = useState(0);
   const duracao = 1000;
@@ -35,7 +35,7 @@ export default function Inicial() {
   }, [maximo, duracao]);
 
   return (
-    <div className="flex animate-fade-in">
+    <div className="flex flex-col animate-fade-in">
       <div className="w-[85%] flex flex-col">
         <div className="flex flex-col">
           <h1 className="font-Carbona text-white text-[120%] mb-[5%]">Visão Geral</h1>
@@ -115,23 +115,33 @@ export default function Inicial() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-[15%] animate-fade-in justify-center items-center gap-y-3">
-        <div className="flex flex-col items-center text-center cursor-pointer w-[80%] py-3 ease-in-out duration-300
-        transition-all outline hover:outline-white outline-transparent outline-[1px] rounded-[24px]
+      <div className="flex justify-between w-[100%] animate-fade-in gap-y-3">
+        <div className="flex  items-center text-center cursor-pointer w-[80%] py-3 ease-in-out duration-300
+        transition-all outline  outline-transparent outline-[1px] rounded-[24px]
         animate-fade-in">
           <RiBarcodeFill
           color="#0a1835"
           size={45}
           className="bg-white rounded-full p-1"/>
-          <h1 className="font-Carbona text-white text-[90%] text-wrap leading-6 w-fit">Códigos Promocionais</h1>
+          <h1 className="font-Carbona text-white text-[90%] px-2 text-wrap leading-6 w-fit">Códigos Promocionais</h1>
         </div>
-        <div className="flex flex-col items-center text-center cursor-pointer w-[80%] py-3 ease-in-out duration-300
-        transition-all outline hover:outline-white outline-transparent outline-[1px] rounded-[24px]">
+        <div className="flex  items-center text-center cursor-pointer w-[80%] px-3 ease-in-out duration-300
+        transition-all   outline-transparent outline-[1px] rounded-[24px]">
           <MdPersonAdd
           color="#0a1835"
           size={45}
           className="bg-white rounded-full p-1"/>
-          <h1 className="font-Carbona text-white text-[90%] text-wrap leading-6 w-fit">Convidar amigos</h1>
+          <h1 className="flex font-Carbona text-white px-2 text-[90%] text-wrap leading-6 w-fit">Convidar amigos</h1>
+          
+        </div>
+        <div className="flex  items-center text-center cursor-pointer w-[80%] py-3 ease-in-out duration-300
+        transition-all ">
+          <MdLockReset
+          color="#0a1835"
+          size={45}
+          className="bg-white rounded-full p-1"/>
+          <h1 className="flex font-Carbona text-white px-2 text-[90%] text-wrap leading-6 w-fit">Alterar senha</h1>
+          
         </div>
       </div>
     </div>);

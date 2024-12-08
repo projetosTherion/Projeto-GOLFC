@@ -2,9 +2,13 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  theme: {
+
+    theme: {
+
     extend: {
+
       backgroundImage: {
+        
         'Estadio': "url('../src/imagens/soccer-stadium-full-people 1.jpg')",
         'FundoComFita': "url('../src/imagens/Component 3 (1).png')",
         'Login': "url('../src/imagens/Tela de Login.png')",

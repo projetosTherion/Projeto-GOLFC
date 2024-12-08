@@ -150,7 +150,7 @@ useEffect(() => {
                   absolute bottom-0 left-0"/>
               </div>
           </div>
-        <div  className="w-full min-h-[600vh] mx-[5%] py-[3%]">
+        <div  className="w-full  mx-[5%] py-[3%]">
           <Suspense fallback={LoadingScreen}>
             {secaoAtual === "Inicial" ? <Inicial/> : secoesPerfil[secaoAtual].componente}
           </Suspense>
